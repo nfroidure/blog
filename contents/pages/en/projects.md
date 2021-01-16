@@ -20,7 +20,7 @@ I particularily like JavaScript, TypeScript and Rust languages.
 
 ### NodeJS
 
-As as early NodeJS user, I made several modules I
+As an early NodeJS user, I made several modules I
 [published on NPM](https://www.npmjs.org/~nfroidure 'View my NPM profile').
 
 In particular, I like to create JavaScript parsers (CSV, VarStream, SVG...),
@@ -30,7 +30,7 @@ work with streams, make plugins and tools for developers.
 
 I also build HTML5 games for fun and skills, like:
 
-- [BeloreRE](https://belote.insertafter.com/): a simple franch card game (close
+- [BeloreRE](https://belote.insertafter.com/): a simple french card game (close
   to the bridge game),
 - [Sumuraÿ](http://sumuray.insertafter.com/): a simple math game where you must
   find sums,
