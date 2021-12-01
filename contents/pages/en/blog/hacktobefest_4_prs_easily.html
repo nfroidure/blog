@@ -32,23 +32,23 @@ disqus=true
   It leads to wasted disk space and network bandwidth.
 </p>
 <p>
-  A simple yet usefeul way to contribute to the open-source
+  A simple yet useful way to contribute to the open-source
   community is to reduce the NPM modules size. To identify which
   modules needs your help, go to any of your NodeJS project and
   run the following command:<br />
   <code>du -ch -d0 node_modules/*</code><br />
-  To focus on the biggest modules, you can filter the output:
+  To focus on the biggest modules, you can filter the output:<br />
   <code>du -ch -d0 node_modules/* | grep M</code>
   </strong>
 </p>
 <p>
-  Now we know which modules are too heavy on the DiagRAMS Technologies
-  API, the heaviest  is <code>typescript</code> with 61Mb.<br />
+  Now we know which modules are too heavy. On the DiagRAMS Technologies
+  API, the heaviest is <code>typescript</code> with 61Mb.<br />
   To browse the repository code, just run:<br />
   <code>npm repo typescript</code>
 </p>
 <p>
-  Now we can investigate, I think you should avoids bigs modules like
+  Now we can investigate, I think you should avoid big modules like
   TypeScript for your first PRs since it can be complicated to understand.
   Most heavy modules are not using the
   <a href="https://docs.npmjs.com/cli/v7/configuring-npm/package-json#files"><code>files</code></a>
@@ -82,6 +82,7 @@ disqus=true
   npm test;
 </pre>
 <p>
-  Your are now ready to submit your pull-request !<br />
+  Your are now ready to submit your pull-request with the
+  package size before and after your modifications!<br />
   Simple, ecological and useful, mission accomplished!
 </p>

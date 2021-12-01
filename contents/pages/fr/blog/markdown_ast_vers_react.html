@@ -1,0 +1,72 @@
+<!--VarStream
+title=Rendre votre contenu Markdown avec React via l'AST
+description=Où comment ne plus jamais utiliser dangerouslySetInnerHTML.
+shortTitle=AST Markdown et React
+shortDesc=Découvrez ma façon de rendre le contenu Markdown en React
+published=2021-12-01T22:00:00.000Z
+lang=fr
+location=FR
+keywords.+=JavaScript
+keywords.+=TypeScript
+keywords.+=React
+keywords.+=Markdown 
+keywords.+=AST
+categories.+=.*
+disqus=true
+-->
+
+<h2>Rendre votre contenu Markdown avec React via l'AST</h2>
+<p>
+  Si vous avez déjà utilisé Contentful, un head-less CMS, vous avez probablement,
+  comme moi <a
+    href="https://github.com/nfroidure/douaisis-2021/blob/7c154197556fea1a86744c38a730a9cc21f567aa/utils/contentful.tsx#L131-L160">écrit
+    du code pour transformer vos blocs Contentful vers vos composants React</a>.
+</p>
+<p>
+  J'ai trouvé ça très propre, mais pour mon <a href="https://nicolasfroidure.fr">blog politique</a>,
+  je ne voulais pas utiliser Contenful mais simplement commiter mon contenu
+  sur le dépôt idoïne en Markdown.
+</p>
+<h2>Du Markdown vers l'arbre AST</h2>
+<p>
+  J'ai donc commencé à chercher un module qui me permettrait
+  d'obtenir de mon Markdown le même genre d'arbre qui sort
+  de l'éditeur de contenu de Contenful.
+</p>
+<p>
+  J'ai trouvé que la combinaison <a
+    href="https://github.com/nfroidure/politics/blob/main/utils/markdown.tsx#L323-L325">unified et
+    remark</a> donnait quelquechose de très similaire à ce que propose Contenful.
+</p>
+<h2>Gestion du HTML</h2>
+<p>
+  La partie complexe a été de gérer les balises HTML présentes dans
+  le markdown. En effet, ce n'était pas parsé en prenant en compte les
+  balises entrantes/fermantes. J'ai dû créer un petit algorithme récusif <a
+    href="https://github.com/nfroidure/politics/blob/main/utils/markdown.tsx#L361-L439">pour gérer cette
+    problématique</a>. Je dois toujours gérer les attributs HTML.
+</p>
+<h2>Faire la correspondance avec les composants</h2>
+<p>
+  Au final, <a href="https://github.com/nfroidure/politics/blob/main/utils/markdown.tsx#L327-L342">la
+    fonction qui rend le contenu</a> est quasiment identique à celle de Contenful.
+  Plus question d'utiliser <code>dangerouslySetInnerHTML</code> ;).
+</p>
+<h2>Petits plus</h2>
+<p>
+  En sus, j'ai pris le soin de transformer tous les titres de type <code>&lt;h2+&gt;</code>
+  pour créer des ancres automatiquement et pouvoir lier <a
+    href="https://nicolasfroidure.fr/blog/pour-une-region-actrice-d-un-numerique-humain#une-fuite-en-avant-sans-vision-politique">une
+    section en particulier (comme ici avec le titre "Une fuite en avant sans vision politique")</a>.
+</p>
+<p>
+  J'ai simplement dû créer une fonction pour récupérer le texte d'un titre <a
+    href="https://github.com/nfroidure/politics/blob/main/utils/markdown.tsx#L344-L359">quel que
+    soit son contenu et la profondeur de ses sous-éléments imbriqués</a> et ajouter mon <a
+    href="https://github.com/nfroidure/politics/blob/main/components/anchored.tsx">composant d'ancrage</a> au <a
+    href="https://github.com/nfroidure/politics/blob/main/utils/markdown.tsx#L156-L161">mapper de composant</a>.
+</p>
+<p>
+  J'espère que le code vous a plût, n'hésitez pas à le réutiliser. J'en ferais une librairie
+  quand cela deviendra un peu plus stable et facilement réutilisable.
+</p>
