@@ -1,0 +1,156 @@
+<!--VarStream
+title=Leveraging docker-compose and SwaggerUI
+description=Having a local SwaggerUI instance and deal with CORS by a single command to easily get your API documentation.
+shortTitle=Using SwaggerUI and docker-compose
+shortDesc=See how to use SwaggerUI and docker-compose altogether
+published=2022-02-04T10:00:00.000Z
+lang=en
+location=US
+keywords.+=SwaggerUI
+keywords.+=Docker
+keywords.+=OpenAPI
+categories.+=.*
+disqus=true
+-->
+
+<h2>Your API documentation locally with SwaggerUI and docker-compose</h2>
+<p>
+  <strong lang="en">
+    <abbr title="Too Long Didn't Read">TL; DR</abbr>:<br />
+    <code><pre>
+git clone git@gist.github.com:79f6f33b6907af59fb496365cd7a5054.git swagger_compose
+cd swagger_compose
+NGINX_API_URL=https://api.example.com API_PATH=/v0/openAPI docker-compose up
+    </pre></code>
+  </strong>
+</p>
+<p>
+  Back-end developers often gets their own SwaggerUI instance while
+  developing their own APIs. Accessing the API documentation is
+  not a problem for them.
+</p>
+<p>
+  I often had to build APIs but there
+  is still a moment when you don't want to put API docs online
+  but you neither want to require your teammates to fork your
+  project and run the whole project just for docs.
+</p>
+<p>
+  I encountered that situation at DiagRAMS since data scientists
+  needed to get access to the docs but it was a bit overkill for
+  them to clone and setup the project locally.
+</p>
+<h3>OpenAPI goodness</h3>
+<p>
+  I made a back-end framework (called
+  <a href="https://github.com/nfroidure/whook">Whook</a>) that
+  leverage a nice standard for documenting APIs:
+  <a href="https://www.openapis.org/">OpenAPI</a>.
+</p>
+<p>
+  You cannot create a new route without documenting it. It
+  not only ties documenting and coding. It ensures that
+  documentation and code cannot drift overtime thanks to
+  TypeScript and the
+  <a href="https://github.com/nfroidure/schema2dts">schema2dts</a>
+  project.
+</p>
+<p>
+  We plan to put our documentation online but we are currently
+  moving fast on features and our API is not public at the moment.
+  I also didn't want to create a new website for 3 visits a month,
+  it wouldn't be green at all. So we needed a B plan.
+</p>
+<h3>Docker to the rescue</h3>
+<p>
+  As usual, Docker can be a great tool to give access to nice
+  features locally. That way, you only run the server when you
+  need it.
+</p>
+<p>
+  My first approach was to use <code>docker run</code> with
+  a local copy of the OpenAPI declaration:<br>
+</p>
+<code><pre>docker run -e "SWAGGER_JSON_URL=openapi.json" -v "$PWD/openapi.json:/usr/share/nginx/html/openapi.json" --rm -p 16640:8080 swaggerapi/swagger-ui</pre></code>
+<p>
+  But I then evolved to something more live since our API serves
+  its own OpenAPI file, let's just use it.
+</p>
+<h3>Using docker-compose</h3>
+<p>
+  I couldn't simply fill up the <code>SWAGGER_JSON_URL</code> with our
+  documentation URL. Indeed, for security reasons, the CORS are
+  enabled on our API and it simply doesn't work.
+</p>
+<p>
+  This is why I finally used 2 Docker images. One for SwaggerUI and
+  another for proxying the API and change the
+  <code> Access-Control-Allow-Origin</code> header.
+</p>
+<p>
+  I made it generic and write this blog post since I think it can
+  benefit to you or my future self. So here is the code:
+</p>
+<p>
+  <script src="https://gist.github.com/nfroidure/79f6f33b6907af59fb496365cd7a5054.js"></script>
+</p>
+<noscript>
+  <p>default.conf.template</p>
+  <code><pre>
+  server {
+    listen ${NGINX_PORT} default_server;
+    server_name ${NGINX_HOST};
+    server_name_in_redirect off;
+
+    location / {
+      proxy_pass ${NGINX_API_URL};
+
+      proxy_hide_header Access-Control-Allow-Origin;
+      add_header    'Access-Control-Allow-Origin' 'http://docs.localhost:16640' always;
+    }
+}
+</pre></code>
+  <p>docker-compose.yml</p>
+  <code><pre>
+version: "3.5"
+networks:
+  api_docs:
+    name: 'api_docs'
+    driver: bridge
+    # Avoid colliding with the AWS VPC subnet
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.6.0.0/16
+          ip_range: 10.6.0.0/24
+          gateway: 10.6.0.1
+          aux_addresses:
+            swagger: 10.6.0.2
+            api: 10.6.0.3
+services:
+  swagger:
+    image: swaggerapi/swagger-ui
+    networks:
+      - 'api_docs'
+    ports:
+      - "16640:8080"
+    environment:
+      - SWAGGER_JSON_URL=http://api.localhost:16641${API_PATH-/openapi.json}
+  api:
+    image: nginx
+    networks:
+      - 'api_docs'
+    volumes:
+      - ./default.conf.template:/etc/nginx/templates/default.conf.template
+    ports:
+      - "16641:80"
+    environment:
+      - NGINX_HOST=_
+      - NGINX_PORT=80
+      - NGINX_API_URL
+</pre></code>
+</noscript>
+<p>
+  The same approach can be taken for allowing frontend devs to
+  build the app without cloning the API.
+</p>
