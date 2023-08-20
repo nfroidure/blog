@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0">
+  <channel>
+    <title>InsertAfter : Nicolas Froidure&#39;s Blog, Fullstack JavaScript Developper - 2</title>
+    <description>Learn more about me</description>
+    <link>https://insertafter.com/en/blog/index-2.html</link>
+    <lastBuildDate>2023-08-20T08:32:09.420Z</lastBuildDate>
+    <pubDate>2023-08-20T08:32:09.420Z</pubDate>
+    <ttl>1800</ttl>
+
+    
+
+
+
+    <item>
+      <title>Easily Implement Stacks (Fifo) And Queues (Lifo) With JavaScript</title>
+      <description>I&#39;m currently reviewing Javascript basis for a personnal project
+ and it appears I often use stacks and queues implicitly. Let&#39;s make it
+ explicit and easyer to debug/use.</description>
+      <link>https://insertafter.com/en/blog/fifo_lifo_javascript.html</link>
+      <pubDate>2013-04-09T09:50:52.000Z</pubDate>
+    </item>
+
+
+
+
+
+  </channel>
+</rss>

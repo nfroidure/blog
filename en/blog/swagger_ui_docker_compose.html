@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>InsertAfter : Leveraging docker-compose and SwaggerUI</title>
+  <meta name="description" content="Having a local SwaggerUI instance and deal with CORS by a single command to easily get your API documentation.">
+  <link rel="bookmark" href="https://insertafter.com/en/blog/swagger_ui_docker_compose.html" />
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <meta name="robots" content="index,follow">
+  <link rel="stylesheet" href="/css/main.css">
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+  
+</head>
+<body class="ia-standalone">
+  <!--[if lt IE 7]>
+  <script>document.location.href=http://browsehappy.com;</script>
+  <![endif]-->
+  <header class="ia-header">
+    <div class="ia-header__title">
+      <h1><a href="/en/index.html" title="Back to home"
+        class="ia-logo">
+        <img src="/images/logo.svg" alt="Logo Insert After" />
+      </a></h1>
+    </div>
+  </header>
+  <nav class="ia-languages">
+    <a class="ia-flag ia-flag--en" href="/en/index.html"
+      title="Back to home">
+      <span>Home</span>
+    </a>
+    <a class="ia-flag ia-flag--fr" href="/fr/index.html"
+      title="Retour à l&#39;accueil">
+      <span>Accueil</span>
+    </a>
+  </nav>
+
+  <nav class="ia-menu">
+    <ul class="ia-menu__body">
+      <li class="ia-menu__item ia-menu__item--index">
+        <a href="/en/index.html"
+          title="Back to home">Home</a>
+      </li>
+      <li class="ia-menu__item ia-menu__item--index">
+        <a href="/en/blog/index.html"
+          title="Back to home"
+          class="selected">Blog</a>
+      </li>
+      <li class="ia-menu__item ia-menu__item--projects">
+        <a href="/en/projects.html"
+          title="Learn more about my projects">Projects</a>
+      </li>
+      <li class="ia-menu__item ia-menu__item--about">
+        <a href="/en/about.html"
+          title="Learn more about me">About</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="ia-main ia-content">
+    <div>
+    
+<article class="ia-main__content">
+  
+
+<h2>Your API documentation locally with SwaggerUI and docker-compose</h2>
+<p>
+  <strong lang="en">
+    <abbr title="Too Long Didn't Read">TL; DR</abbr>:<br />
+    <code><pre>
+git clone git@gist.github.com:79f6f33b6907af59fb496365cd7a5054.git swagger_compose
+cd swagger_compose
+NGINX_API_URL=https://api.example.com API_PATH=/v0/openAPI docker-compose up
+    </pre></code>
+  </strong>
+</p>
+<p>
+  Back-end developers often gets their own SwaggerUI instance while
+  developing their own APIs. Accessing the API documentation is
+  not a problem for them.
+</p>
+<p>
+  I often had to build APIs but there
+  is still a moment when you don't want to put API docs online
+  but you neither want to require your teammates to fork your
+  project and run the whole project just for docs.
+</p>
+<p>
+  I encountered that situation at DiagRAMS since data scientists
+  needed to get access to the docs but it was a bit overkill for
+  them to clone and setup the project locally.
+</p>
+<h3>OpenAPI goodness</h3>
+<p>
+  I made a back-end framework (called
+  <a href="https://github.com/nfroidure/whook">Whook</a>) that
+  leverage a nice standard for documenting APIs:
+  <a href="https://www.openapis.org/">OpenAPI</a>.
+</p>
+<p>
+  You cannot create a new route without documenting it. It
+  not only ties documenting and coding. It ensures that
+  documentation and code cannot drift overtime thanks to
+  TypeScript and the
+  <a href="https://github.com/nfroidure/schema2dts">schema2dts</a>
+  project.
+</p>
+<p>
+  We plan to put our documentation online but we are currently
+  moving fast on features and our API is not public at the moment.
+  I also didn't want to create a new website for 3 visits a month,
+  it wouldn't be green at all. So we needed a B plan.
+</p>
+<h3>Docker to the rescue</h3>
+<p>
+  As usual, Docker can be a great tool to give access to nice
+  features locally. That way, you only run the server when you
+  need it.
+</p>
+<p>
+  My first approach was to use <code>docker run</code> with
+  a local copy of the OpenAPI declaration:<br>
+</p>
+<code><pre>docker run -e "SWAGGER_JSON_URL=openapi.json" -v "$PWD/openapi.json:/usr/share/nginx/html/openapi.json" --rm -p 16640:8080 swaggerapi/swagger-ui</pre></code>
+<p>
+  But I then evolved to something more live since our API serves
+  its own OpenAPI file, let's just use it.
+</p>
+<h3>Using docker-compose</h3>
+<p>
+  I couldn't simply fill up the <code>SWAGGER_JSON_URL</code> with our
+  documentation URL. Indeed, for security reasons, the CORS are
+  enabled on our API and it simply doesn't work.
+</p>
+<p>
+  This is why I finally used 2 Docker images. One for SwaggerUI and
+  another for proxying the API and change the
+  <code> Access-Control-Allow-Origin</code> header.
+</p>
+<p>
+  I made it generic and write this blog post since I think it can
+  benefit to you or my future self. So here is the code:
+</p>
+<p>
+  <script src="https://gist.github.com/nfroidure/79f6f33b6907af59fb496365cd7a5054.js"></script>
+</p>
+<noscript>
+  <p>default.conf.template</p>
+  <code><pre>
+  server {
+    listen ${NGINX_PORT} default_server;
+    server_name ${NGINX_HOST};
+    server_name_in_redirect off;
+
+    location / {
+      proxy_pass ${NGINX_API_URL};
+
+      proxy_hide_header Access-Control-Allow-Origin;
+      add_header    'Access-Control-Allow-Origin' 'http://docs.localhost:16640' always;
+    }
+}
+</pre></code>
+  <p>docker-compose.yml</p>
+  <code><pre>
+version: "3.5"
+networks:
+  api_docs:
+    name: 'api_docs'
+    driver: bridge
+    # Avoid colliding with the AWS VPC subnet
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.6.0.0/16
+          ip_range: 10.6.0.0/24
+          gateway: 10.6.0.1
+          aux_addresses:
+            swagger: 10.6.0.2
+            api: 10.6.0.3
+services:
+  swagger:
+    image: swaggerapi/swagger-ui
+    networks:
+      - 'api_docs'
+    ports:
+      - "16640:8080"
+    environment:
+      - SWAGGER_JSON_URL=http://api.localhost:16641${API_PATH-/openapi.json}
+  api:
+    image: nginx
+    networks:
+      - 'api_docs'
+    volumes:
+      - ./default.conf.template:/etc/nginx/templates/default.conf.template
+    ports:
+      - "16641:80"
+    environment:
+      - NGINX_HOST=_
+      - NGINX_PORT=80
+      - NGINX_API_URL
+</pre></code>
+</noscript>
+<p>
+  The same approach can be taken for allowing frontend devs to
+  build the app without cloning the API.
+</p>
+</article>
+<nav class="ia-main__back">
+  <a href="/en/blog/index.html"
+    title="Nicolas Froidure&#39;s Blog, Fullstack JavaScript Developper">
+    &lt; Blog
+  </a>
+</nav>
+
+    
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES * * */
+      var disqus_shortname = 'insertafter';
+      var disqus_config = function () {
+        this.language = "en";
+        this.callbacks.onNewComment = [function() {
+          ga('send', 'event', 'interaction', 'comment');
+        }];
+      };
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    
+    </div>
+  </section>
+
+  <aside class="ia-icons ia-content">
+    <nav>
+      <a href="https://twitter.com/nfroidure" title="Follow me on Twitter"
+        class="ia-social ia-social--twitter">
+        <span>Twitter</span>
+      </a>
+      <a href="https://github.com/nfroidure" title="Follow me on GitHub"
+        class="ia-social ia-social--github">
+        <span>GitHub</span>
+      </a>
+      <a href="https://www.npmjs.org/~nfroidure" title="Find NPM modules"
+        class="ia-social ia-social--npm">
+        <span>NPM</span>
+      </a>
+      <a href="https://www.linkedin.com/in/nfroidure" title="Find me on LinkedIn"
+        class="ia-social ia-social--linkedin">
+        <span>LinkedIn</span>
+      </a>
+      <a href="/en/blog/index.atom" title="Don't miss my blog posts"
+        class="ia-social ia-social--feed">
+        <span>ATOM feed</span>
+      </a>
+    </nav>
+  </aside>
+
+  <footer class="ia-footer">
+    <p class="ia-footer__content">
+      © Nicolas Froidure 2012-2023
+    </p>
+  </footer>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-21477946-7', 'insertafter.com');
+    ga('send', 'pageview');
+
+  </script>
+</body>
+</html>
