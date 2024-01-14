@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">    
+  <id>https://insertafter.com/en/blog</id>
+  <title>Nicolas Froidure&apos;s Technical Blog - page 1 - Nicolas Froidure - Nicolas Froidure</title>
+  <subtitle>Check the blog of a french JavaScript Developer.</subtitle>
+  <link href="https://insertafter.com/en/blog.atom" rel="self" type="application/atom+xml" />
+  <link href="https://insertafter.com/en/blog" rel="alternate" type="text/html" />
+  <updated>2022-02-04T10:00:00.000Z</updated>
+  <entry>
+    <id>https://insertafter.com/en/blog/swagger_ui_docker_compose</id>
+    <title>Leveraging docker-compose and SwaggerUI</title>
+    <link href="https://insertafter.com/en/blog/swagger_ui_docker_compose" rel="alternate" type="text/html" />
+    <updated>2022-02-04T10:00:00.000Z</updated>
+    <published>2022-02-04T10:00:00.000Z</published>
+    <summary>Having a local SwaggerUI instance and deal with CORS by a single command to easily get your API documentation.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/markdown_ast_to_react</id>
+    <title>Print your Markdown content with React through AST</title>
+    <link href="https://insertafter.com/en/blog/markdown_ast_to_react" rel="alternate" type="text/html" />
+    <updated>2021-12-01T22:00:00.000Z</updated>
+    <published>2021-12-01T22:00:00.000Z</published>
+    <summary>A journey to printing my blog Markdown contents with my custom components.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/hacktobefest_4_prs_easily</id>
+    <title>Get 4 PRs easily and usefully for the Hacktoberfest</title>
+    <link href="https://insertafter.com/en/blog/hacktobefest_4_prs_easily" rel="alternate" type="text/html" />
+    <updated>2021-10-12T09:07:32.000Z</updated>
+    <published>2021-10-12T09:07:32.000Z</published>
+    <summary>You want to get involved into the Hacktoberfest an win a shirt or plant a tree? Follow your guide!</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/kafka_docker_compose</id>
+    <title>Kafka with docker-compose</title>
+    <link href="https://insertafter.com/en/blog/kafka_docker_compose" rel="alternate" type="text/html" />
+    <updated>2020-12-31T13:07:32.000Z</updated>
+    <published>2020-12-31T13:07:32.000Z</published>
+    <summary>Run Apache Kafka locally with docker-compose.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/toward_stricter_query_string_parserunobstrusive_dependency_injection_with_knifecycle</id>
+    <title>Unobtrusive Dependency Injection with Knifecycle</title>
+    <link href="https://insertafter.com/en/blog/toward_stricter_query_string_parserunobstrusive_dependency_injection_with_knifecycle" rel="alternate" type="text/html" />
+    <updated>2019-01-26T12:00:00.000Z</updated>
+    <published>2019-01-26T12:00:00.000Z</published>
+    <summary>Knifecycle is a NodeJS module aimed to provide DI power without the headaches.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/my_vscode_configuration</id>
+    <title>My VSCode Configuration</title>
+    <link href="https://insertafter.com/en/blog/my_vscode_configuration" rel="alternate" type="text/html" />
+    <updated>2019-01-03T20:00:00.000Z</updated>
+    <published>2019-01-03T20:00:00.000Z</published>
+    <summary>A quick tour of my VSCode configuration.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/json_structure_for_rest_apis</id>
+    <title>Normalizing JSON Data from REST APIs</title>
+    <link href="https://insertafter.com/en/blog/json_structure_for_rest_apis" rel="alternate" type="text/html" />
+    <updated>2017-03-03T10:07:32.000Z</updated>
+    <published>2017-03-03T10:07:32.000Z</published>
+    <summary>Very few developer takes the time to think about how they structure their JSON at the very beginning of the project, it is the best moment to do so though.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/considerations_for_generating_api_clients</id>
+    <title>Considerations for Automatic Generation of API Clients</title>
+    <link href="https://insertafter.com/en/blog/considerations_for_generating_api_clients" rel="alternate" type="text/html" />
+    <updated>2017-02-19T15:00:00.000Z</updated>
+    <published>2017-02-19T15:00:00.000Z</published>
+    <summary>No one should loose time writing code that can be generated automatically. Here are some tips on how I do it.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/webservices_at_7digital</id>
+    <title>Project Webservices at 7Digital</title>
+    <link href="https://insertafter.com/en/blog/webservices_at_7digital" rel="alternate" type="text/html" />
+    <updated>2017-02-07T13:09:30.000Z</updated>
+    <published>2017-02-07T13:09:30.000Z</published>
+    <summary>A sum-up of my last 6 months working at 7Digital.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/metapak</id>
+    <title>Meta NPM Packages</title>
+    <link href="https://insertafter.com/en/blog/metapak" rel="alternate" type="text/html" />
+    <updated>2017-02-02T04:29:10.000Z</updated>
+    <published>2017-02-02T04:29:10.000Z</published>
+    <summary>On managing a lot of NPM modules.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/toward_stricter_query_string_parser</id>
+    <title>Toward a stricter query string parser</title>
+    <link href="https://insertafter.com/en/blog/toward_stricter_query_string_parser" rel="alternate" type="text/html" />
+    <updated>2016-12-12T19:50:52.000Z</updated>
+    <published>2016-12-12T19:50:52.000Z</published>
+    <summary>With most query string parsers, a lot of URIs can point to the same content. It not only mess you cache system but make your logs less expressive. To avoid those problems I just wrote a stricter query string parser.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/http_rest_apis_with_nodejs</id>
+    <title>Designing HTTP REST APIs with NodeJS</title>
+    <link href="https://insertafter.com/en/blog/http_rest_apis_with_nodejs" rel="alternate" type="text/html" />
+    <updated>2016-11-12T09:50:52.000Z</updated>
+    <published>2016-11-12T09:50:52.000Z</published>
+    <summary>Designing good HTTP services is still a hard thing despite the many tools you can find to make them with NodeJS. I&apos;m trying to define a formal approach to architecture them by embracing the HTTP protocol nature and the RESTful principles.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/no_more_middlewares</id>
+    <title>No more middlewares, please</title>
+    <link href="https://insertafter.com/en/blog/no_more_middlewares" rel="alternate" type="text/html" />
+    <updated>2016-11-05T19:50:20.000Z</updated>
+    <published>2016-11-05T19:50:20.000Z</published>
+    <summary>Why I think middlewares are a bad thing, how I am replacing them.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/lets_subset_javascript</id>
+    <title>Let&apos;s Subset JavaScript</title>
+    <link href="https://insertafter.com/en/blog/lets_subset_javascript" rel="alternate" type="text/html" />
+    <updated>2015-07-10T13:38:03.000Z</updated>
+    <published>2015-07-10T13:38:03.000Z</published>
+    <summary>Currently, it&apos;s all about JavaScript and how to compile, transpile and every &quot;ile&quot;y things you could imagine. But what about making JavaScript smaller?</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/native-node-module</id>
+    <title>Create Native NodeJS Modules Fallbacking To Emscripten Ones</title>
+    <link href="https://insertafter.com/en/blog/native-node-module" rel="alternate" type="text/html" />
+    <updated>2015-06-26T15:50:23.000Z</updated>
+    <published>2015-06-26T15:50:23.000Z</published>
+    <summary>Suprisingly, creating a native module is not that hard. Making it compile on any platform and gracefully handle compilation fails is a bit more tricky.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/watchdeps</id>
+    <title>Watching Your NodeJS Projects&apos;s Dependencies The Easy Way</title>
+    <link href="https://insertafter.com/en/blog/watchdeps" rel="alternate" type="text/html" />
+    <updated>2015-03-08T10:07:32.000Z</updated>
+    <published>2015-03-08T10:07:32.000Z</published>
+    <summary>Using watchdeps to automagically watch your project&apos;s dependencies.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/reaccess</id>
+    <title>REST API access control with reaccess</title>
+    <link href="https://insertafter.com/en/blog/reaccess" rel="alternate" type="text/html" />
+    <updated>2014-10-01T11:44:58.000Z</updated>
+    <published>2014-10-01T11:44:58.000Z</published>
+    <summary>A presentation introducing reaccess an its use on a MEAN stack.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/match_ie8_with_gulp_and_rework</id>
+    <title>Match IE8 With Rework And Gulp!</title>
+    <link href="https://insertafter.com/en/blog/match_ie8_with_gulp_and_rework" rel="alternate" type="text/html" />
+    <updated>2014-03-15T15:05:01.000Z</updated>
+    <published>2014-03-15T15:05:01.000Z</published>
+    <summary>Rework is a very powerful tool. It allows working with CSS contents in a friendly manner. Let&apos;s improve you IE8 compatibility with it.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/jsperf_use_with_caution</id>
+    <title>Detecting Bad JavaScript Performance Tests On JSPerf</title>
+    <link href="https://insertafter.com/en/blog/jsperf_use_with_caution" rel="alternate" type="text/html" />
+    <updated>2013-06-06T16:21:50.000Z</updated>
+    <published>2013-06-06T16:21:50.000Z</published>
+    <summary>JSPerf gives us a simple way to write JavaScript performance tests.Unfortunately, tests found aren&apos;t always well designed. Here&apos;s how to detect and avoid them.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/revisiting_js_singleton_pattern</id>
+    <title>Revisiting The JavaScript Singleton Pattern</title>
+    <link href="https://insertafter.com/en/blog/revisiting_js_singleton_pattern" rel="alternate" type="text/html" />
+    <updated>2013-05-30T07:38:19.000Z</updated>
+    <published>2013-05-30T07:38:19.000Z</published>
+    <summary>JavaScript design patterns are quite good examples to sharp your JavaScript skills. Let&apos;s take a look to the singleton pattern.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/en/blog/fifo_lifo_javascript</id>
+    <title>Easily Implement Stacks (Fifo) And Queues (Lifo) With JavaScript</title>
+    <link href="https://insertafter.com/en/blog/fifo_lifo_javascript" rel="alternate" type="text/html" />
+    <updated>2013-04-09T09:50:52.000Z</updated>
+    <published>2013-04-09T09:50:52.000Z</published>
+    <summary>I&apos;m currently reviewing Javascript basis for a personnal project and it appears I often use stacks and queues implicitly. Let&apos;s make it explicit and easyer to debug/use.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+</feed>

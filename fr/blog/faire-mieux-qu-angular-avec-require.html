@@ -1,461 +1,113 @@
-<!DOCTYPE html>
-<html class="no-js" lang="fr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>InsertAfter : Faire mieux qu&#39;AngularJS avec require()</title>
-  <meta name="description" content="Le système CommonJS-like de NodeJS permet un grand nombre de
- subtilités. Je vous propose de les découvrir en reproduisant les
- fonctionnalités du système de modules d&#39;AngularJS.">
-  <link rel="bookmark" href="https://insertafter.com/fr/blog/faire-mieux-qu-angular-avec-require.html" />
-  <link rel="icon" type="image/png" href="/images/favicon.png" />
-  <meta name="robots" content="index,follow">
-  <link rel="stylesheet" href="/css/main.css">
-  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
-  
-</head>
-<body class="ia-standalone">
-  <!--[if lt IE 7]>
-  <script>document.location.href=http://browsehappy.com;</script>
-  <![endif]-->
-  <header class="ia-header">
-    <div class="ia-header__title">
-      <h1><a href="/fr/index.html" title="Retour à l&#39;accueil"
-        class="ia-logo">
-        <img src="/images/logo.svg" alt="Logo Insert After" />
-      </a></h1>
-    </div>
-  </header>
-  <nav class="ia-languages">
-    <a class="ia-flag ia-flag--en" href="/en/index.html"
-      title="Back to home">
-      <span>Home</span>
-    </a>
-    <a class="ia-flag ia-flag--fr" href="/fr/index.html"
-      title="Retour à l&#39;accueil">
-      <span>Accueil</span>
-    </a>
-  </nav>
+<!DOCTYPE html><html lang="fr"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/images/logo.svg"/><link rel="stylesheet" href="https://insertafter.com/_next/static/css/655a273f6fe37552.css" crossorigin="" data-precedence="next"/><link rel="stylesheet" href="https://insertafter.com/_next/static/css/7202abb5c6529620.css" crossorigin="" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="https://insertafter.com/_next/static/chunks/webpack-df4a5e9c808eb5e4.js" crossorigin=""/><script src="https://insertafter.com/_next/static/chunks/fd9d1056-5bc70f044f3cb802.js" async="" crossorigin=""></script><script src="https://insertafter.com/_next/static/chunks/938-bf741a2eb8fd4828.js" async="" crossorigin=""></script><script src="https://insertafter.com/_next/static/chunks/main-app-2e6280b5273157a5.js" async="" crossorigin=""></script><script src="https://insertafter.com/_next/static/chunks/176-0a03be62efe5672b.js" async=""></script><script src="https://insertafter.com/_next/static/chunks/app/(withLocale)/%5Blocale%5D/layout-3730889d272dc34b.js" async=""></script><script src="https://insertafter.com/_next/static/chunks/876-4c07c683293830f5.js" async=""></script><script src="https://insertafter.com/_next/static/chunks/app/(withLocale)/%5Blocale%5D/blog/%5Bid%5D/page-b34423019a386624.js" async=""></script><meta name="theme-color" content="#3e78b2"/><title>Faire mieux qu&#x27;AngularJS avec require() - Nicolas Froidure</title><meta name="description" content="Le système CommonJS-like de NodeJS permet un grand nombre de subtilités. Je vous propose de les découvrir en reproduisant les fonctionnalités du système de modules d&#x27;AngularJS."/><link rel="author" href="https://insertafter.com"/><meta name="author" content="Nicolas Froidure"/><meta name="robots" content="index, follow"/><link rel="canonical" href="https://insertafter.com/fr/blog/faire-mieux-qu-angular-avec-require"/><meta property="og:title" content="Faire mieux qu&#x27;AngularJS avec require() - Nicolas Froidure"/><meta property="og:description" content="Le système CommonJS-like de NodeJS permet un grand nombre de subtilités. Je vous propose de les découvrir en reproduisant les fonctionnalités du système de modules d&#x27;AngularJS."/><meta property="og:url" content="https://insertafter.com/fr/blog/faire-mieux-qu-angular-avec-require"/><meta property="og:site_name" content="Nicolas Froidure"/><meta property="og:locale" content="fr_FR"/><meta property="og:image:alt" content="Bannière du site"/><meta property="og:image" content="https://insertafter.com/images/banner.png"/><meta property="og:type" content="article"/><meta name="twitter:card" content="summary"/><meta name="twitter:site" content="@nfroidure"/><meta name="twitter:creator" content="@nfroidure"/><meta name="twitter:title" content="Faire mieux qu&#x27;AngularJS avec require() - Nicolas Froidure"/><meta name="twitter:description" content="Le système CommonJS-like de NodeJS permet un grand nombre de subtilités. Je vous propose de les découvrir en reproduisant les fonctionnalités du système de modules d&#x27;AngularJS."/><meta name="twitter:image:alt" content="Bannière du site"/><meta name="twitter:image" content="https://insertafter.com/images/banner.png"/><link rel="icon" href="/images/favicon.svg" type="image/svg+xml" sizes="any"/><link rel="icon" href="/images/favicon-16.png" type="image/png" sizes="16x16"/><link rel="icon" href="/images/favicon-128.png" type="image/png" sizes="128x128"/><script src="https://insertafter.com/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js" crossorigin="" noModule=""></script></head><body class="layout_body__jFZuu"><header class="header_iaHeader__4vCMA"><div><h1><a href="/fr" title="Retour à l’accueil" class="header_iaHeaderLogo__0uNr1"><img src="/images/logo.svg" alt="Logo d’InsertAfter"/></a></h1></div></header><nav class="menu_iaMenu__B_rtj"><ul class="menu_iaMenuBody__0Zveq"><li class="menu_iaMenuItem__rOch4"><a href="/fr" title="Retour à l’accueil" class="">Accueil</a></li><li class="menu_iaMenuItem__rOch4"><a href="/fr/blog" title="Retour à l’index du blog" class="">Blog</a></li><li class="menu_iaMenuItem__rOch4"><a href="/fr/projets" title="Découvrir mes divers projets" class="">Projets</a></li><li class="menu_iaMenuItem__rOch4"><a href="/fr/a_propos" title="En savoir plus à mon sujet" class="">À propos</a></li></ul></nav><nav class="languages_iaLanguages__K2J3W"><ul><li class="languages_iaLanguagesFlag__ruQ4j languages_iaLanguagesFlagEn__angfJ languages_selected__w1dKv"><a href="/en/blog"><span>en</span></a></li><li class="languages_iaLanguagesFlag__ruQ4j languages_iaLanguagesFlagFr__Us5Jb"><a href="/fr/blog"><span>fr</span></a></li></ul></nav><main class="layout_iaMain__6s2gl"><div><section class="contentBlock_root__802UK"><h1 class="h1_root__VPXQG"><span>Faire mieux qu&#x27;AngularJS avec require()</span></h1><p class="p_root__SHE_W"><span>Lors de </span><a class="a_root__WEPS7" title="Voir la présentation sur YouTube" target="_blank" href="https://www.youtube.com/watch?v=n8nvHFfEFC4"><span>ma dernière présentation</span></a><span> pour </span><a class="a_root__WEPS7" title="Voir le résumé de cette édition" target="_blank" href="http://chtijs.francejs.org/archives/2015-02-05/index.html"><span>#ChtiJS10</span></a><span>, j&#x27;ai cédé au troll à propos du système de modules d&#x27;AngularJS. En effet, bien qu&#x27;il m&#x27;ait paru plutôt smart au début, j&#x27;ai vite compris ses limites.</span></p><p class="p_root__SHE_W"><span>En effet, le fait de devoir wrapper le moindre code JavaScript d&#x27;une série de lignes qui peuvent sembler un peu déroutante pour un non initié est particulièrement ennuyeux. De plus, la création de builds pour AngularJS est très fastidieux du fait de l&#x27;usage de bower pour les récupérer.</span></p><p class="p_root__SHE_W"><span>Bref, à côté de la simplicité et de l&#x27;efficacité de NPM et des modules CommonJS ce système fait pâle figure. La question est donc, peut-on faire les même choses avec </span><code class="code_root__5JLV_">require()</code><span> qu&#x27;avec le système de gestion de modules d&#x27;Angular ? La réponse est oui et voici comment !</span></p><h2 class="h2_root__Y02lX"><span class="anchored_root__HWi6K"><span>Service simple</span> <small><a class="anchored_icon__N5Sem" id="service-simple" title="Lien vers cette section" href="#service-simple"><span>🔗</span></a></small></span></h2><p class="p_root__SHE_W"><span>Si vous avez déjà utilisé Angular, vous savez que l&#x27;une des bonnes pratiques est de publier votre code sous forme de services. Les services sont une sorte de singleton namespacé et configurables pour votre application :</span></p><div class="code_root__5JLV_"><code><pre>angular
+  .module(&quot;my.app.namespace&quot;, [&quot;my.dep1.namespace&quot;, &quot;my.dep2.namespace&quot;])
+  .service(&quot;MyService&quot;, [
+    &quot;dep1&quot;,
+    &quot;dep2&quot;,
+    function (dep1, dep2) {
+      var _myPrivateVar = &quot;secret&quot;;
+      var myServiceInstance = {
+        getPrivate: function () {
+          return _myPrivateVar;
+        },
+        myPublicVar: &quot;hello!&quot;,
+        myPublicFunction: function () {},
+      };
 
-  <nav class="ia-menu">
-    <ul class="ia-menu__body">
-      <li class="ia-menu__item ia-menu__item--index">
-        <a href="/fr/index.html"
-          title="Retour à l&#39;accueil">Accueil</a>
-      </li>
-      <li class="ia-menu__item ia-menu__item--index">
-        <a href="/fr/blog/index.html"
-          title="Retour à l&#39;index du blog"
-          class="selected">Blog</a>
-      </li>
-      <li class="ia-menu__item ia-menu__item--projets">
-        <a href="/fr/projets.html"
-          title="Découvrez mes divers projets">Projets</a>
-      </li>
-      <li class="ia-menu__item ia-menu__item--a_propos">
-        <a href="/fr/a_propos.html"
-          title="Learn more about me">À propos</a>
-      </li>
-    </ul>
-  </nav>
-
-  <section class="ia-main ia-content">
-    <div>
-    
-<article class="ia-main__content">
-  
-
-<h2>Faire mieux qu'AngularJS avec require()</h2>
-<p>
-  Lors de
-  <a
-    href="https://www.youtube.com/watch?v=n8nvHFfEFC4"
-    title="Voir la présentation sur YouTube"
-    >ma dernière présentation</a
-  >
-  pour
-  <a
-    href="http://chtijs.francejs.org/archives/2015-02-05/index.html"
-    title="Voir le résumé de cette édition"
-    >#ChtiJS10</a
-  >, j'ai cédé au troll à propos du système de modules d'AngularJS. En effet,
-  bien qu'il m'ait paru plutôt smart au début, j'ai vite compris ses limites.
-</p>
-<p>
-  En effet, le fait de devoir wrapper le moindre code JavaScript d'une série de
-  lignes qui peuvent sembler un peu déroutante pour un non initié est
-  particulièrement ennuyeux. De plus, la création de builds pour AngularJS est
-  très fastidieux du fait de l'usage de bower pour les récupérer.
-</p>
-<p>
-  Bref, à côté de la simplicité et de l'efficacité de NPM et des modules
-  CommonJS ce système fait pâle figure. La question est donc, peut-on faire les
-  même choses avec <code>require()</code> qu'avec le système de gestion de
-  modules d'Angular&nbsp;? La réponse est oui et voici comment&nbsp;!
-</p>
-
-<h2>Service simple</h2>
-<p>
-  Si vous avez déjà utilisé Angular, vous savez que l'une des bonnes pratiques
-  est de publier votre code sous forme de services. Les services sont une sorte
-  de singleton namespacé et configurables pour votre application&nbsp;:
-</p>
-<pre>
-angular.module('my.app.namespace', [
-  'my.dep1.namespace', 'my.dep2.namespace'
-]).service('MyService', [
-  'dep1', 'dep2',
-  function(dep1, dep2) {
-
-  var _myPrivateVar = 'secret';
-  var myServiceInstance = {
-    getPrivate: function() {
-      return _myPrivateVar;
+      return myServiceInstance;
     },
-    myPublicVar: 'hello!',
-    myPublicFunction: function() {}
-  };
+  ]);</pre></code></div><p class="p_root__SHE_W"><span>Cette syntaxe a plusieurs buts avoués :</span></p><ul class="ul_ul__qh0e9"><li class="li_root__oY9Dv"><p class="p_root__SHE_W"><span>cloisonner le code en espace de noms (pour éviter les collisions),</span></p></li><li class="li_root__oY9Dv"><p class="p_root__SHE_W"><span>rendre le code maintenable et réutilisable (grâce à la modularisation),</span></p></li><li class="li_root__oY9Dv"><p class="p_root__SHE_W"><span>rendre le code testable (grâce à l&#x27;injection de dépendances).</span></p></li></ul><p class="p_root__SHE_W"><span>Cependant, elle est assez verbeuse. Voici son équivalent sous la forme de module CommonJS (pour NodeJS) :</span></p><div class="code_root__5JLV_"><code><pre>var dep1 = require(&quot;dep1&quot;);
+var dep2 = require(&quot;./lib/dep2&quot;);
 
-  return myServiceInstance;
-}]);
-</pre>
-<p>Cette syntaxe a plusieurs buts avoués&nbsp;:</p>
-<ul>
-  <li>cloisonner le code en espace de noms (pour éviter les collisions),</li>
-  <li>
-    rendre le code maintenable et réutilisable (grâce à la modularisation),
-  </li>
-  <li>rendre le code testable (grâce à l'injection de dépendances).</li>
-</ul>
-<p>
-  Cependant, elle est assez verbeuse. Voici son équivalent sous la forme de
-  module CommonJS (pour NodeJS)&nbsp;:
-</p>
-<pre>
-var dep1 = require('dep1');
-var dep2 = require('./lib/dep2');
-
-var _myPrivateVar = 'secret';
+var _myPrivateVar = &quot;secret&quot;;
 var myServiceInstance = {
-  getPrivate: function() {
+  getPrivate: function () {
     return _myPrivateVar;
   },
-  myPublicVar: 'hello!',
-  myPublicFunction: function() {}
+  myPublicVar: &quot;hello!&quot;,
+  myPublicFunction: function () {},
 };
 
-module.exports = myServiceInstance;
-</pre>
-<p>
-  Au delà du fait qu'elle est plus concise, cette syntaxe est aussi plus claire.
-  Il n'est pas nécessaire de connaître le fonctionnement de JavaScript pour
-  comprendre ce que fait ce code.
-</p>
-<p>
-  Tout d'abord, il requiert les dépendances dont il a besoin. Ici, les espaces
-  de nom sont gérés d'une façon beaucoup plus intéressante. L'unicité de la
-  dépendance <code>dep2</code> est assurée par un dépôt centralisé de modules
-  (ici NPM). Celle de la dépendance <code>dep1</code> quand à elle est assurée
-  par l'arborescence du projet.
-</p>
-<p>
-  Enfin, il exporte le contenu de <code>myServiceInstance</code> comme étant le
-  "contenu" du module. Bref, le fonctionnement classique des modules CommonJS,
-  jusqu'ici, rien d'insurmontable.
-</p>
-<h2>Service configuré</h2>
-<p>
-  Mais un habitué d'Angular me rétorquera que les services Angular sont
-  configurables, grâce aux service providers. Ce qui en Angular, donne ça&nbsp;:
-</p>
-<pre>
-// Définition
-angular.module('my.app.namespace', [
-  'my.dep1.namespace', 'my.dep2.namespace'
-]).provider('MyServiceProvider', [
-  'dep1', 'dep2',
-  function(dep1, dep2) {
+module.exports = myServiceInstance;</pre></code></div><p class="p_root__SHE_W"><span>Au delà du fait qu&#x27;elle est plus concise, cette syntaxe est aussi plus claire. Il n&#x27;est pas nécessaire de connaître le fonctionnement de JavaScript pour comprendre ce que fait ce code.</span></p><p class="p_root__SHE_W"><span>Tout d&#x27;abord, il requiert les dépendances dont il a besoin. Ici, les espaces de nom sont gérés d&#x27;une façon beaucoup plus intéressante. L&#x27;unicité de la dépendance </span><code class="code_root__5JLV_">dep2</code><span> est assurée par un dépôt centralisé de modules (ici NPM). Celle de la dépendance </span><code class="code_root__5JLV_">dep1</code><span> quand à elle est assurée par l&#x27;arborescence du projet.</span></p><p class="p_root__SHE_W"><span>Enfin, il exporte le contenu de </span><code class="code_root__5JLV_">myServiceInstance</code><span> comme étant le &quot;contenu&quot; du module. Bref, le fonctionnement classique des modules CommonJS, jusqu&#x27;ici, rien d&#x27;insurmontable.</span></p><h2 class="h2_root__Y02lX"><span class="anchored_root__HWi6K"><span>Service configuré</span> <small><a class="anchored_icon__N5Sem" id="service-configure" title="Lien vers cette section" href="#service-configure"><span>🔗</span></a></small></span></h2><p class="p_root__SHE_W"><span>Mais un habitué d&#x27;Angular me rétorquera que les services Angular sont configurables, grâce aux service providers. Ce qui en Angular, donne ça :</span></p><div class="code_root__5JLV_"><code><pre>// Définition
+angular
+  .module(&quot;my.app.namespace&quot;, [&quot;my.dep1.namespace&quot;, &quot;my.dep2.namespace&quot;])
+  .provider(&quot;MyServiceProvider&quot;, [
+    &quot;dep1&quot;,
+    &quot;dep2&quot;,
+    function (dep1, dep2) {
+      var _myPrivateVar = &quot;secret&quot;;
 
-  var _myPrivateVar = 'secret';
+      this.setSecret = function (newSecret) {
+        _myPrivateVar = newSecret;
+      };
 
-  this.setSecret = function(newSecret) {
-    _myPrivateVar = newSecret;
-  };
+      this.$get(function () {
+        var myServiceInstance = {
+          getPrivate: function () {
+            return _myPrivateVar;
+          },
+          myPublicVar: &quot;hello!&quot;,
+          myPublicFunction: function () {},
+        };
 
-  this.$get(function() {
-
-    var myServiceInstance = {
-      getPrivate: function() {
-        return _myPrivateVar;
-      },
-      myPublicVar: 'hello!',
-      myPublicFunction: function() {}
-    };
-
-    return myServiceInstance;
-  });
-}]);
+        return myServiceInstance;
+      });
+    },
+  ]);
 
 // Configuration
-myApp.config('MyServiceProvider', [
-  'MyServiceProvider',
-  function(MyServiceProvider) {
-    MyServiceProvider.setSecret('kikoo');
-}]);
+myApp.config(&quot;MyServiceProvider&quot;, [
+  &quot;MyServiceProvider&quot;,
+  function (MyServiceProvider) {
+    MyServiceProvider.setSecret(&quot;kikoo&quot;);
+  },
+]);
 
 // Utilisation par injection dans un controller/module...
-// à la manière de dep1
-
-</pre>
-<p>
-  Ça en fait du code. Je vous laisse voir ça en détail sur la
-  <a href="https://docs.angularjs.org/guide/providers">
-    documentation d'AngularJS</a
-  >, retenez simplement que l'idée ici est de configurer un singleton global.
-  Chose que l'on réalise comme ceci avec CommonJS&nbsp;:
-</p>
-<pre>
-// Définition getmyservice.js
+// à la manière de dep1</pre></code></div><p class="p_root__SHE_W"><span>Ça en fait du code. Je vous laisse voir ça en détail sur la</span><a class="a_root__WEPS7" target="_blank" href="https://docs.angularjs.org/guide/providers"><span> documentation d&#x27;AngularJS</span></a><span>, retenez simplement que l&#x27;idée ici est de configurer un singleton global. Chose que l&#x27;on réalise comme ceci avec CommonJS :</span></p><div class="code_root__5JLV_"><code><pre>// Définition getmyservice.js
 function getMyServiceInstance(mySecret) {
-  var dep1 = require('dep1');
-  var dep2 = require('./lib/dep2');
+  var dep1 = require(&quot;dep1&quot;);
+  var dep2 = require(&quot;./lib/dep2&quot;);
 
-  var _myPrivateVar = 'secret';
+  var _myPrivateVar = &quot;secret&quot;;
   var myServiceInstance = {
-    getPrivate: function() {
+    getPrivate: function () {
       return _myPrivateVar;
     },
-    myPublicVar: 'hello!',
-    myPublicFunction: function() {}
+    myPublicVar: &quot;hello!&quot;,
+    myPublicFunction: function () {},
   };
 
   return myServiceInstance;
-};
+}
 
 module.exports = getMyServiceInstance;
 
 // Configuration myservice.js
-module.exports = require('./getmyservice')('secretdefense')
+module.exports = require(&quot;./getmyservice&quot;)(&quot;secretdefense&quot;);
 
-// Utilisation par require dans n'importe quel module
-var myService = require('./myservice');
+// Utilisation par require dans n&#x27;importe quel module
+var myService = require(&quot;./myservice&quot;);
 
-myService.myPublicFunction('hello!');
-</pre>
-<p>
-  L'idée est de créer un module qui soit simplement le retour d'appel d'une
-  fonction permettant de récupérer une version configurée d'un service donné. De
-  cette façon on peut accèder à celui-ci n'importe où dans le programme par
-  simple appel à require.
-</p>
-<p>
-  Cependant, j'ai rarement recours à cette technique car c'est une sorte de
-  singleton et à vrai dire, ce design pattern est de plus en plus décrié car il
-  fait rarement sens.
-</p>
-<h2>Service "wrappés"</h2>
-<p>
-  Angular a eu la merveilleuse idée de fournir des services pour les variables
-  globales exposées par le système. Ainsi, pour accéder à <code>window</code>,
-  il suffit d'injecter le service <code>$window</code>, idem pour
-  <code>window.location</code> avec <code>$location</code> etc.
-</p>
-<p>
-  Pour le code en lui-même ceci n'a pas d'intérêt, mais pour les tests unitaires
-  cette façon de procéder est essentielle. Ainsi, on peut injecter un service
-  dédié au test mockant les fonctionnalités exposées par le service requis.
-</p>
-<p>
-  Avec <code>require()</code>, appliquer ce principe est également possible. Il
-  suffit de créer le module correspondant. Ici, nous créeons un "service"
-  fournissant un accès au constructeur <code>Date</code>&nbsp;:
-</p>
-<pre>
-// contenu de date.js
+myService.myPublicFunction(&quot;hello!&quot;);</pre></code></div><p class="p_root__SHE_W"><span>L&#x27;idée est de créer un module qui soit simplement le retour d&#x27;appel d&#x27;une fonction permettant de récupérer une version configurée d&#x27;un service donné. De cette façon on peut accéder à celui-ci n&#x27;importe où dans le programme par simple appel à require.</span></p><p class="p_root__SHE_W"><span>Cependant, j&#x27;ai rarement recours à cette technique car c&#x27;est une sorte de singleton et à vrai dire, ce design pattern est de plus en plus décrié car il fait rarement sens.</span></p><h2 class="h2_root__Y02lX"><span class="anchored_root__HWi6K"><span>Services &quot;wrappés&quot;</span> <small><a class="anchored_icon__N5Sem" id="services-wrappes" title="Lien vers cette section" href="#services-wrappes"><span>🔗</span></a></small></span></h2><p class="p_root__SHE_W"><span>Angular a eu la merveilleuse idée de fournir des services pour les variables globales exposées par le système. Ainsi, pour accéder à </span><code class="code_root__5JLV_">window</code><span>, il suffit d&#x27;injecter le service </span><code class="code_root__5JLV_">$window</code><span>, idem pour </span><code class="code_root__5JLV_">window.location</code><span> avec </span><code class="code_root__5JLV_">$location</code><span> etc.</span></p><p class="p_root__SHE_W"><span>Pour le code en lui-même ceci n&#x27;a pas d&#x27;intérêt, mais pour les tests unitaires cette façon de procéder est essentielle. Ainsi, on peut injecter un service dédié au test mockant les fonctionnalités exposées par le service requis.</span></p><p class="p_root__SHE_W"><span>Avec </span><code class="code_root__5JLV_">require()</code><span>, appliquer ce principe est également possible. Il suffit de créer le module correspondant. Ici, nous créons un &quot;service&quot; fournissant un accès au constructeur </span><code class="code_root__5JLV_">Date</code><span> :</span></p><div class="code_root__5JLV_"><code><pre>// contenu de date.js
 module.exports = Date;
 
 // utilisation
-var Date = require('./date');
-</pre>
-<p>Il ne nous reste plus qu'à mocker les dates lors de nos tests unitaires.</p>
-<h2>Les tests</h2>
-<p>
-  Justement, parlons-en&nbsp;! Angular a la réputation de faciliter les tests
-  unitaires, en est-il de même pour les modules CommonJS.
-</p>
-<p>
-  La réponse est non. Ce n'est pas automatique. Là où Angular vous mâche le
-  travail en vous imposant un cadre, avec CommonJS, nous l'avons vu, créer des
-  modules testables est une démarche consciente et non-obligatoire.
-</p>
-<p>
-  Cela reste cependant possible grâce au module <code>mockery</code>. Par
-  exemple, pour tester un module qui reposerait sur notre service wrappant
-  <code>Date</code>, il suffirait de procéder ainsi&nbsp;:
-</p>
-<pre>
-var mockery = require('mockery');
-var DateMock = require('date-mock');
+var Date = require(&quot;./date&quot;);</pre></code></div><p class="p_root__SHE_W"><span>Il ne nous reste plus qu&#x27;à mocker les dates lors de nos tests unitaires.</span></p><h2 class="h2_root__Y02lX"><span class="anchored_root__HWi6K"><span>Les tests</span> <small><a class="anchored_icon__N5Sem" id="les-tests" title="Lien vers cette section" href="#les-tests"><span>🔗</span></a></small></span></h2><p class="p_root__SHE_W"><span>Justement, parlons-en ! Angular a la réputation de faciliter les tests unitaires, en est-il de même pour les modules CommonJS.</span></p><p class="p_root__SHE_W"><span>La réponse est non. Ce n&#x27;est pas automatique. Là où Angular vous mâche le travail en vous imposant un cadre, avec CommonJS, nous l&#x27;avons vu, créer des modules testables est une démarche consciente et non-obligatoire.</span></p><p class="p_root__SHE_W"><span>Cela reste cependant possible grâce au module </span><code class="code_root__5JLV_">mockery</code><span>. Par exemple, pour tester un module qui reposerait sur notre service wrappant </span><code class="code_root__5JLV_">Date</code><span>, il suffirait de procéder ainsi :</span></p><div class="code_root__5JLV_"><code><pre>var mockery = require(&quot;mockery&quot;);
+var DateMock = require(&quot;date-mock&quot;);
 
-describe('myModule', function() {
-
-  beforeEach(function() {
+describe(&quot;myModule&quot;, function () {
+  beforeEach(function () {
     mockery.enable({ useCleanCache: true });
-    mockery.registerMock('./date', DateMock);
+    mockery.registerMock(&quot;./date&quot;, DateMock);
     DateMock.curTime = 360000;
   });
 
-  afterEach(function() {
-    mockery.deregisterMock('./date');
+  afterEach(function () {
+    mockery.deregisterMock(&quot;./date&quot;);
     mockery.disable();
   });
 
-  it('should do stuff', function() {
+  it(&quot;should do stuff&quot;, function () {
     // Code des tests
   });
-
-});
-</pre>
-<p>
-  Ici <code>mockery</code> substitue à la volée le module
-  <code>./date</code> par du code qui vous permet de simuler le temps. Il est
-  également possible de simplement remplacer la variable globale Date, mais ceci
-  peut avoir d'autres effets par ailleurs, je vous conseille donc plutôt cette
-  technique.
-</p>
-<h2>Quel rapport avec le front&nbsp;?</h2>
-<p>
-  À ce stade il se peut que vous vous demandiez comment utiliser des modules
-  CommonJS pour vos projets front. Autrefois on
-  <a href="utiliser_requirejs.html">utilisait RequireJS</a> et on créait ses
-  <a href="module_javascript.html">modules AMD</a> avec ses ptites mimines (ne
-  faîtes plus ça&nbsp;!).
-</p>
-<p>
-  Avec <a href="browserify.html"><code>browserify</code></a> ou webpack vous
-  pourrez gérer finement la façon dont vous consommerez vos modules CommonJS
-  sans efforts ;).
-</p>
-<h2>ES6</h2>
-<p>
-  Les modules ES6 vont bientôt être la règle et vous vous posez sûrement la
-  question. Comment appliquer les préceptes ci-dessus à vos modules ES6&nbsp;?
-</p>
-<p>
-  À ce jour, vos modules ES6 sont en fait transformés en modules CommonJS et
-  utilisés via <code>require()</code>. La question ne se pose donc pas vraiment.
-</p>
-<p>
-  À l'avenir, en revanche, nos amis d'ECMA ont tout prévu, notamment une façon
-  d'overrider le comportement du loader de module à la volée. Ça devrait se
-  concrétiser via
-  <a href="http://babeljs.io/docs/learn-es6/#module-loaders"
-    ><code>System</code></a
-  >. Cette fonctionnalité devrait pouvoir être utilisée comme
-  <code>mockery</code> pour modifier le comportement de l'injection de
-  dépendance d'ES6.
-</p>
-<p>
-  Voilà, j'espère que ce petit article vous a plût. Pour les angulariens, sachez
-  que Angular 2.0 va supprimer son ancien système de module ce qui n'est pas une
-  mauvaise nouvelles ;).
-</p>
-<ins datetime="2016-11-12T09:37:02.193Z">
-  <p>
-    Petite mise à jour pour ajouter qu'il est possible d'appliquer ceci aux
-    applications Angular également pour simplifier les tests et se passer de
-    Karma,
-    <a
-      href="https://github.com/SimpliField/angular-sf-load/blob/7ae1467c4ce914fdc8fed940d96a39c6b4cce026/src/load.service.specs.js#L8-L18"
-      >voici un exemple</a
-    >.
-  </p>
-  <p>
-    Le système d'injection d'Angular reste sympa malgré tout pour gérer les
-    états globaux, mais son principal soucis est d'être trop intrusif sur la
-    façon de gérer le code à mon goût. C'est pourquoi j'ai créé
-    <a href="https://github.com/nfroidure/knifecycle">Knifecycle</a> qui reprend
-    ses concepts mais de façon moins intrusive et surtout applicable pour le
-    backend (prise en compte du graceful shutdown).
-  </p>
-  <p>
-    Enfin, le système d'injection d'Angular2 a tiré pas mal de leçons des
-    erreurs précédentes et même si je ne suis pas fan d'Angular2 je reconnais
-    qu'il y a eu des progrès de ce côté.
-  </p>
-</ins>
-
-</article>
-<nav class="ia-main__back">
-  <a href="/fr/blog/index.html"
-    title="Blog d&#39;un développeur web à Lille">
-    &lt; Blog
-  </a>
-</nav>
-
-    
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES * * */
-      var disqus_shortname = 'insertafter';
-      var disqus_config = function () {
-        this.language = "fr";
-        this.callbacks.onNewComment = [function() {
-          ga('send', 'event', 'interaction', 'comment');
-        }];
-      };
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-    
-    </div>
-  </section>
-
-  <aside class="ia-icons ia-content">
-    <nav>
-      <a href="https://twitter.com/nfroidure" title="Follow me on Twitter"
-        class="ia-social ia-social--twitter">
-        <span>Twitter</span>
-      </a>
-      <a href="https://github.com/nfroidure" title="Follow me on GitHub"
-        class="ia-social ia-social--github">
-        <span>GitHub</span>
-      </a>
-      <a href="https://www.npmjs.org/~nfroidure" title="Find NPM modules"
-        class="ia-social ia-social--npm">
-        <span>NPM</span>
-      </a>
-      <a href="https://www.linkedin.com/in/nfroidure" title="Find me on LinkedIn"
-        class="ia-social ia-social--linkedin">
-        <span>LinkedIn</span>
-      </a>
-      <a href="/fr/blog/index.atom" title="Don't miss my blog posts"
-        class="ia-social ia-social--feed">
-        <span>ATOM feed</span>
-      </a>
-    </nav>
-  </aside>
-
-  <footer class="ia-footer">
-    <p class="ia-footer__content">
-      © Nicolas Froidure 2012-2023
-    </p>
-  </footer>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-21477946-7', 'insertafter.com');
-    ga('send', 'pageview');
-
-  </script>
-</body>
-</html>
+});</pre></code></div><p class="p_root__SHE_W"><span>Ici </span><code class="code_root__5JLV_">mockery</code><span> substitue à la volée le module </span><code class="code_root__5JLV_">./date</code><span> par du code qui vous permet de simuler le temps. Il est également possible de simplement remplacer la variable globale Date, mais ceci peut avoir d&#x27;autres effets par ailleurs, je vous conseille donc plutôt cette technique.</span></p><h2 class="h2_root__Y02lX"><span class="anchored_root__HWi6K"><span>Quel rapport avec le front ?</span> <small><a class="anchored_icon__N5Sem" id="quel-rapport-avec-le-front" title="Lien vers cette section" href="#quel-rapport-avec-le-front"><span>🔗</span></a></small></span></h2><p class="p_root__SHE_W"><span>À ce stade il se peut que vous vous demandiez comment utiliser des modules CommonJS pour vos projets front. Autrefois on </span><a class="a_root__WEPS7" target="_self" href="./utiliser_requirejs"><span>utilisait RequireJS</span></a><span> et on créait ses </span><a class="a_root__WEPS7" target="_self" href="./module_javascript"><span>modules AMD</span></a><span> avec ses p&#x27;tites mimines (ne faîtes plus ça !).</span></p><p class="p_root__SHE_W"><span>Avec </span><a class="a_root__WEPS7" target="_self" href="./browserify"><span>browserify</span></a><span> ou webpack vous pourrez gérer finement la façon dont vous consommerez vos modules CommonJS sans efforts ;).</span></p><h2 class="h2_root__Y02lX"><span class="anchored_root__HWi6K"><span>ES6</span> <small><a class="anchored_icon__N5Sem" id="es6" title="Lien vers cette section" href="#es6"><span>🔗</span></a></small></span></h2><p class="p_root__SHE_W"><span>Les modules ES6 vont bientôt être la règle et vous vous posez sûrement la question. Comment appliquer les préceptes ci-dessus à vos modules ES6 ?</span></p><p class="p_root__SHE_W"><span>À ce jour, vos modules ES6 sont en fait transformés en modules CommonJS et utilisés via </span><code class="code_root__5JLV_">require()</code><span>. La question ne se pose donc pas vraiment.</span></p><p class="p_root__SHE_W"><span>À l&#x27;avenir, en revanche, nos amis d&#x27;ECMA ont tout prévu, notamment une façon d&#x27;overrider le comportement du loader de module à la volée. Ça devrait se concrétiser via </span><a class="a_root__WEPS7" target="_blank" href="http://babeljs.io/docs/learn-es6/#module-loaders"><span>System</span></a><span>. Cette fonctionnalité devrait pouvoir être utilisée comme </span><code class="code_root__5JLV_">mockery</code><span> pour modifier le comportement de l&#x27;injection de dépendance d&#x27;ES6.</span></p><p class="p_root__SHE_W"><span>Voilà, j&#x27;espère que ce petit article vous a plût. Pour les angulariens, sachez que Angular 2.0 va supprimer son ancien système de module ce qui n&#x27;est pas une mauvaise nouvelles ;).</span></p><p class="p_root__SHE_W"><span>Petite mise à jour pour ajouter qu&#x27;il est possible d&#x27;appliquer ceci aux applications Angular également pour simplifier les tests et se passer de Karma, </span><a class="a_root__WEPS7" target="_blank" href="https://github.com/SimpliField/angular-sf-load/blob/7ae1467c4ce914fdc8fed940d96a39c6b4cce026/src/load.service.specs.js#L8-L18"><span>voici un exemple</span></a><span>.</span></p><p class="p_root__SHE_W"><span>Le système d&#x27;injection d&#x27;Angular reste sympa malgré tout pour gérer les états globaux, mais son principal soucis est d&#x27;être trop intrusif sur la façon de gérer le code à mon goût. C&#x27;est pourquoi j&#x27;ai créé </span><a class="a_root__WEPS7" target="_blank" href="https://github.com/nfroidure/knifecycle"><span>Knifecycle</span></a><span> qui reprend ses concepts mais de façon moins intrusive et surtout applicable pour le backend (prise en compte du graceful shutdown).</span></p><p class="p_root__SHE_W"><span>Enfin, le système d&#x27;injection d&#x27;Angular2 a tiré pas mal de leçons des erreurs précédentes et même si je ne suis pas fan d&#x27;Angular2 je reconnais qu&#x27;il y a eu des progrès de ce côté.</span></p><p class="p_root__SHE_W">Published at<!-- --> <!-- -->jeudi 12 mars 2015 à 08:49:00<!-- -->.</p></section><section class="contentBlock_root__802UK"><aside class="share_root__Qm_RR"><h2 class="h2_root__Y02lX">Commenter et partager</h2><p class="p_root__SHE_W"><a class="a_root__WEPS7" title="Commenter sur Facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Finsertafter.com%2Fblog%2Ffaire-mieux-qu-angular-avec-require"><span class="share_icon__bi4Q3 share_facebook__JKn8d"></span>Facebook</a> - <a class="a_root__WEPS7" title="Commenter sur Twitter" target="_blank" href="https://twitter.com/intent/tweet/?url=https%3A%2F%2Finsertafter.com%2Fblog%2Ffaire-mieux-qu-angular-avec-require&amp;text=Faire%20mieux%20qu&#x27;AngularJS%20avec%20require()&amp;via=nfroidure"><span class="share_icon__bi4Q3 "></span>Twitter</a> - <a class="a_root__WEPS7" title="Me répondre par mail" target="_self" href="mailto:nicolas.froidure@gmail.com"><span class="share_icon__bi4Q3 share_mail__yvBDK"></span>Courriel</a></p></aside></section><section class="contentBlock_root__802UK"><aside class="page_linkedEntries__jiPuT"><h2 class="h2_root__Y02lX">Articles similaires</h2><p class="p_root__SHE_W">Dans les catégories<!-- --> <!-- -->JavaScript<!-- -->.</p><div class="items_entries__5hkLG"><div class="items_entry_item__GWeg7"><h2 class="h2_root__Y02lX items_entry_title__vJ_8h"><a class="a_root__WEPS7 items_entry_link__EtVod" title="Lire cet article de blog" target="_self" href=".//watchdeps">Surveillez les dépendances de vos projets NodeJS</a></h2><p class="p_root__SHE_W items_entry_description__ZWt9y">Avec watchdeps abonnez-vous automatiquement aux dépendences de vos projets NodeJS sur GitHub.<!-- --> <br/><a class="a_root__WEPS7" title="Lire cet article de blog" target="_self" href=".//watchdeps">Lire la suite</a></p><p class="p_root__SHE_W items_entry_time__iNrot">Published at<!-- --> <!-- -->dimanche 8 mars 2015 à 11:07:32<!-- -->.</p><div class="items_clear__3fyGk"></div></div><div class="items_entry_item__GWeg7"><h2 class="h2_root__Y02lX items_entry_title__vJ_8h"><a class="a_root__WEPS7 items_entry_link__EtVod" title="Lire cet article de blog" target="_self" href=".//isomorphisme_par_l_exemple">L&#x27;isomorphisme par l&#x27;exemple</a></h2><p class="p_root__SHE_W items_entry_description__ZWt9y">Présentation sur la gestion des droits dans une application JavaScript de façon universelle.<!-- --> <br/><a class="a_root__WEPS7" title="Lire cet article de blog" target="_self" href=".//isomorphisme_par_l_exemple">Lire la suite</a></p><p class="p_root__SHE_W items_entry_time__iNrot">Published at<!-- --> <!-- -->mardi 3 février 2015 à 08:08:19<!-- -->.</p><div class="items_clear__3fyGk"></div></div><div class="items_entry_item__GWeg7"><h2 class="h2_root__Y02lX items_entry_title__vJ_8h"><a class="a_root__WEPS7 items_entry_link__EtVod" title="Lire cet article de blog" target="_self" href=".//retour_experience_gulp">Gulp : Retour d&#x27;expérience</a></h2><p class="p_root__SHE_W items_entry_description__ZWt9y">Comme promis, Gulp revient à l&#x27;ordre du jour de ce Blog avec un retour d&#x27;expérience sur l&#x27;utilisation de Gulp et le développement de plugins.<!-- --> <br/><a class="a_root__WEPS7" title="Lire cet article de blog" target="_self" href=".//retour_experience_gulp">Lire la suite</a></p><p class="p_root__SHE_W items_entry_time__iNrot">Published at<!-- --> <!-- -->dimanche 26 janvier 2014 à 09:01:26<!-- -->.</p><div class="items_clear__3fyGk"></div></div></div></aside></section></div></main><aside class="social_iaSocial__kdR1x"><nav><ul><li><a href="https://mastodon.social/@nfroidure" rel="me" title="Me suivre sur Mastodon" class="social_iaSocialMastodon__MTF6o"><span>Mastodon</span></a></li><li><a href="https://bsky.app/profile/nfroidure.bsky.social" rel="me" title="Me suivre sur Bluesky" class="social_iaSocialBluesky__fKW6M"><span>Bluesky</span></a></li><li><a href="https://twitter.com/nfroidure" title="Me suivre sur Twitter" class="social_iaSocialTwitter__9nU6R"><span>Twitter</span></a></li><li><a href="https://github.com/nfroidure" title="Voir mes projets sur GitHub" class="social_iaSocialGithub__vcU5_"><span>GitHub</span></a></li><li><a href="https://www.npmjs.org/~nfroidure" title="Voir mon compte NPM" class="social_iaSocialNpm__6nku5"><span>NPM</span></a></li><li><a href="https://www.linkedin.com/in/nfroidure/" rel="me" title="Voir mon profil LinkedIn" class="social_iaSocialLinkedin__pWACO"><span>LinkedIn</span></a></li><li><a href="https://facebook.com/nicolas.froidure.douai" rel="me" title="Me suivre sur Facebook" class="social_iaSocialFacebook__w4wfH"><span>Facebook</span></a></li><li><a href="/fr/blog/index.atom" title="S’abonner au flux RSS" class="social_iaSocialFeed__gEQQ0"><span>Flux RSS</span></a></li></ul></nav></aside><footer class="footer_iaFooter__rhlnQ"><p class="footer_iaFooterContent__VZndF">© Nicolas Froidure 2012-<!-- -->2024</p></footer><script src="https://insertafter.com/_next/static/chunks/webpack-df4a5e9c808eb5e4.js" crossorigin="" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])</script><script>self.__next_f.push([1,"0:\"$L1\"\n"])</script><script>self.__next_f.push([1,"2:HL[\"https://insertafter.com/_next/static/css/655a273f6fe37552.css\",\"style\",{\"crossOrigin\":\"\"}]\n3:HL[\"https://insertafter.com/_next/static/css/7202abb5c6529620.css\",\"style\",{\"crossOrigin\":\"\"}]\n"])</script><script>self.__next_f.push([1,"4:I[7690,[],\"\"]\n7:I[5613,[],\"\"]\na:I[1778,[],\"\"]\n11:I[8955,[],\"\"]\n8:[\"locale\",\"fr\",\"d\"]\n9:[\"id\",\"faire-mieux-qu-angular-avec-require\",\"d\"]\nc:{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"}\nd:{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"li"])</script><script>self.__next_f.push([1,"neHeight\":\"49px\"}\ne:{\"display\":\"inline-block\"}\nf:{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0}\n"])</script><script>self.__next_f.push([1,"1:[null,[\"$\",\"$L4\",null,{\"buildId\":\"QtVK61TW6FdEz0vqMu-ol\",\"assetPrefix\":\"https://insertafter.com\",\"initialCanonicalUrl\":\"/fr/blog/faire-mieux-qu-angular-avec-require\",\"initialTree\":[\"\",{\"children\":[\"(withLocale)\",{\"children\":[[\"locale\",\"fr\",\"d\"],{\"children\":[\"blog\",{\"children\":[[\"id\",\"faire-mieux-qu-angular-avec-require\",\"d\"],{\"children\":[\"__PAGE__?{\\\"locale\\\":\\\"fr\\\",\\\"id\\\":\\\"faire-mieux-qu-angular-avec-require\\\"}\",{}]}]}]},\"$undefined\",\"$undefined\",true]}]}],\"initialSeedData\":[\"\",{\"children\":[\"(withLocale)\",{\"children\":[[\"locale\",\"fr\",\"d\"],{\"children\":[\"blog\",{\"children\":[[\"id\",\"faire-mieux-qu-angular-avec-require\",\"d\"],{\"children\":[\"__PAGE__\",{},[\"$L5\",\"$L6\",null]]},[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"(withLocale)\",\"children\",\"$8\",\"children\",\"blog\",\"children\",\"$9\",\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$La\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\",\"styles\":[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"https://insertafter.com/_next/static/css/7202abb5c6529620.css\",\"precedence\":\"next\",\"crossOrigin\":\"\"}]]}]]},[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"(withLocale)\",\"children\",\"$8\",\"children\",\"blog\",\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$La\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$undefined\",\"notFoundStyles\":\"$undefined\",\"styles\":null}]]},[null,\"$Lb\",null]]},[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"(withLocale)\",\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$La\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[],\"styles\":[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"https://insertafter.com/_next/static/css/655a273f6fe37552.css\",\"precedence\":\"next\",\"crossOrigin\":\"\"}]]}]]},[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$La\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":\"$c\",\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":\"$d\",\"children\":\"404\"}],[\"$\",\"div\",null,{\"style\":\"$e\",\"children\":[\"$\",\"h2\",null,{\"style\":\"$f\",\"children\":\"This page could not be found.\"}]}]]}]}]],\"notFoundStyles\":[],\"styles\":null}]],\"initialHead\":[false,\"$L10\"],\"globalErrorComponent\":\"$11\"}]]\n"])</script><script>self.__next_f.push([1,"12:\"$Sreact.strict_mode\"\n13:I[4630,[\"176\",\"static/chunks/176-0a03be62efe5672b.js\",\"960\",\"static/chunks/app/(withLocale)/%5Blocale%5D/layout-3730889d272dc34b.js\"],\"\"]\n14:I[4341,[\"176\",\"static/chunks/176-0a03be62efe5672b.js\",\"960\",\"static/chunks/app/(withLocale)/%5Blocale%5D/layout-3730889d272dc34b.js\"],\"\"]\n"])</script><script>self.__next_f.push([1,"b:[\"$\",\"$12\",null,{\"children\":[\"$\",\"html\",null,{\"lang\":\"fr\",\"children\":[\"$\",\"body\",null,{\"className\":\"layout_body__jFZuu\",\"children\":[null,[\"$\",\"header\",null,{\"className\":\"header_iaHeader__4vCMA\",\"children\":[\"$\",\"div\",null,{\"className\":\"$undefined\",\"children\":[\"$\",\"h1\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"/fr\",\"title\":\"Retour à l’accueil\",\"className\":\"header_iaHeaderLogo__0uNr1\",\"children\":[\"$\",\"img\",null,{\"src\":\"/images/logo.svg\",\"alt\":\"Logo d’InsertAfter\"}]}]}]}]}],[\"$\",\"$L13\",null,{\"locale\":\"fr\",\"dictionary\":{\"home\":{\"label\":\"Accueil\",\"title\":\"Retour à l’accueil\"},\"blog\":{\"label\":\"Blog\",\"title\":\"Retour à l’index du blog\"},\"projects\":{\"label\":\"Projets\",\"title\":\"Découvrir mes divers projets\"},\"about\":{\"label\":\"À propos\",\"title\":\"En savoir plus à mon sujet\"}}}],[\"$\",\"$L14\",null,{\"locale\":\"fr\"}],[\"$\",\"main\",null,{\"className\":\"layout_iaMain__6s2gl\",\"children\":[\"$\",\"div\",null,{\"children\":[\"$\",\"$L7\",null,{\"parallelRouterKey\":\"children\",\"segmentPath\":[\"children\",\"(withLocale)\",\"children\",\"$8\",\"children\"],\"loading\":\"$undefined\",\"loadingStyles\":\"$undefined\",\"loadingScripts\":\"$undefined\",\"hasLoading\":false,\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$La\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":\"$L15\",\"notFoundStyles\":[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"https://insertafter.com/_next/static/css/719d59f1b635ba1d.css\",\"precedence\":\"next\",\"crossOrigin\":\"\"}]],\"styles\":null}]}]}],[\"$\",\"aside\",null,{\"className\":\"social_iaSocial__kdR1x\",\"children\":[\"$\",\"nav\",null,{\"children\":[\"$\",\"ul\",null,{\"children\":[[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://mastodon.social/@nfroidure\",\"rel\":\"me\",\"title\":\"Me suivre sur Mastodon\",\"className\":\"social_iaSocialMastodon__MTF6o\",\"children\":[\"$\",\"span\",null,{\"children\":\"Mastodon\"}]}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://bsky.app/profile/nfroidure.bsky.social\",\"rel\":\"me\",\"title\":\"Me suivre sur Bluesky\",\"className\":\"social_iaSocialBluesky__fKW6M\",\"children\":[\"$\",\"span\",null,{\"children\":\"Bluesky\"}]}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://twitter.com/nfroidure\",\"title\":\"Me suivre sur Twitter\",\"className\":\"social_iaSocialTwitter__9nU6R\",\"children\":[\"$\",\"span\",null,{\"children\":\"Twitter\"}]}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://github.com/nfroidure\",\"title\":\"Voir mes projets sur GitHub\",\"className\":\"social_iaSocialGithub__vcU5_\",\"children\":[\"$\",\"span\",null,{\"children\":\"GitHub\"}]}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://www.npmjs.org/~nfroidure\",\"title\":\"Voir mon compte NPM\",\"className\":\"social_iaSocialNpm__6nku5\",\"children\":[\"$\",\"span\",null,{\"children\":\"NPM\"}]}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://www.linkedin.com/in/nfroidure/\",\"rel\":\"me\",\"title\":\"Voir mon profil LinkedIn\",\"className\":\"social_iaSocialLinkedin__pWACO\",\"children\":[\"$\",\"span\",null,{\"children\":\"LinkedIn\"}]}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"https://facebook.com/nicolas.froidure.douai\",\"rel\":\"me\",\"title\":\"Me suivre sur Facebook\",\"className\":\"social_iaSocialFacebook__w4wfH\",\"children\":[\"$\",\"span\",null,{\"children\":\"Facebook\"}]}]}],[\"$\",\"li\",null,{\"children\":[\"$\",\"a\",null,{\"href\":\"/fr/blog/index.atom\",\"title\":\"S’abonner au flux RSS\",\"className\":\"social_iaSocialFeed__gEQQ0\",\"children\":[\"$\",\"span\",null,{\"children\":\"Flux RSS\"}]}]}]]}]}]}],[\"$\",\"footer\",null,{\"className\":\"footer_iaFooter__rhlnQ\",\"children\":[\"$\",\"p\",null,{\"className\":\"footer_iaFooterContent__VZndF\",\"children\":[\"© Nicolas Froidure 2012-\",2024]}]}]]}]}]}]\n"])</script><script>self.__next_f.push([1,"15:[\"$\",\"section\",null,{\"className\":\"contentBlock_root__802UK\",\"children\":[[\"$\",\"h1\",null,{\"className\":\"h1_root__VPXQG\",\"children\":\"Page not found\"}],[\"$\",\"p\",null,{\"className\":\"not-found_p__fvcGn\",\"children\":[[\"$\",\"img\",null,{\"className\":\"not-found_img__IT2jY\",\"src\":\"https://media.giphy.com/media/12mPcp41D9a1i0/giphy.gif\",\"alt\":\"404.png\"}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":\"It seems that the page you look for doesn't exist.\"}]]}]]}]\n"])</script><script>self.__next_f.push([1,"16:I[5250,[\"176\",\"static/chunks/176-0a03be62efe5672b.js\",\"876\",\"static/chunks/876-4c07c683293830f5.js\",\"798\",\"static/chunks/app/(withLocale)/%5Blocale%5D/blog/%5Bid%5D/page-b34423019a386624.js\"],\"\"]\n"])</script><script>self.__next_f.push([1,"6:[[\"$\",\"section\",null,{\"className\":\"contentBlock_root__802UK\",\"children\":[[[\"$\",\"h1\",null,{\"className\":\"h1_root__VPXQG\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Faire mieux qu'AngularJS avec require()\"}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Lors de \"}],[\"$\",\"$L16\",null,{\"href\":\"https://www.youtube.com/watch?v=n8nvHFfEFC4\",\"className\":\"a_root__WEPS7\",\"title\":\"Voir la présentation sur YouTube\",\"target\":\"_blank\",\"children\":[null,[[\"$\",\"span\",\"0\",{\"children\":\"ma dernière présentation\"}]]]}],[\"$\",\"span\",\"2\",{\"children\":\" pour \"}],[\"$\",\"$L16\",null,{\"href\":\"http://chtijs.francejs.org/archives/2015-02-05/index.html\",\"className\":\"a_root__WEPS7\",\"title\":\"Voir le résumé de cette édition\",\"target\":\"_blank\",\"children\":[null,[[\"$\",\"span\",\"0\",{\"children\":\"#ChtiJS10\"}]]]}],[\"$\",\"span\",\"4\",{\"children\":\", j'ai cédé au troll à propos du système de modules d'AngularJS. En effet, bien qu'il m'ait paru plutôt smart au début, j'ai vite compris ses limites.\"}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"En effet, le fait de devoir wrapper le moindre code JavaScript d'une série de lignes qui peuvent sembler un peu déroutante pour un non initié est particulièrement ennuyeux. De plus, la création de builds pour AngularJS est très fastidieux du fait de l'usage de bower pour les récupérer.\"}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Bref, à côté de la simplicité et de l'efficacité de NPM et des modules CommonJS ce système fait pâle figure. La question est donc, peut-on faire les même choses avec \"}],[\"$\",\"code\",null,{\"className\":\"code_root__5JLV_\",\"children\":\"require()\"}],[\"$\",\"span\",\"2\",{\"children\":\" qu'avec le système de gestion de modules d'Angular ? La réponse est oui et voici comment !\"}]]}],[\"$\",\"h2\",null,{\"className\":\"h2_root__Y02lX\",\"children\":[\"$\",\"span\",null,{\"className\":\"anchored_root__HWi6K\",\"children\":[[[\"$\",\"span\",\"0\",{\"children\":\"Service simple\"}]],\" \",[\"$\",\"small\",null,{\"children\":[\"$\",\"$L16\",null,{\"href\":\"#service-simple\",\"className\":\"anchored_icon__N5Sem\",\"id\":\"service-simple\",\"title\":\"Lien vers cette section\",\"children\":[\"$\",\"span\",null,{\"children\":\"🔗\"}]}]}]]}]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Si vous avez déjà utilisé Angular, vous savez que l'une des bonnes pratiques est de publier votre code sous forme de services. Les services sont une sorte de singleton namespacé et configurables pour votre application :\"}]]}],[\"$\",\"div\",null,{\"className\":\"code_root__5JLV_\",\"children\":[\"$\",\"code\",null,{\"children\":[\"$\",\"pre\",null,{\"children\":\"angular\\n  .module(\\\"my.app.namespace\\\", [\\\"my.dep1.namespace\\\", \\\"my.dep2.namespace\\\"])\\n  .service(\\\"MyService\\\", [\\n    \\\"dep1\\\",\\n    \\\"dep2\\\",\\n    function (dep1, dep2) {\\n      var _myPrivateVar = \\\"secret\\\";\\n      var myServiceInstance = {\\n        getPrivate: function () {\\n          return _myPrivateVar;\\n        },\\n        myPublicVar: \\\"hello!\\\",\\n        myPublicFunction: function () {},\\n      };\\n\\n      return myServiceInstance;\\n    },\\n  ]);\"}]}]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Cette syntaxe a plusieurs buts avoués :\"}]]}],[\"$\",\"ul\",null,{\"className\":\"ul_ul__qh0e9\",\"children\":[[\"$\",\"li\",null,{\"className\":\"li_root__oY9Dv\",\"children\":[[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"cloisonner le code en espace de noms (pour éviter les collisions),\"}]]}]]}],[\"$\",\"li\",null,{\"className\":\"li_root__oY9Dv\",\"children\":[[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"rendre le code maintenable et réutilisable (grâce à la modularisation),\"}]]}]]}],[\"$\",\"li\",null,{\"className\":\"li_root__oY9Dv\",\"children\":[[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"rendre le code testable (grâce à l'injection de dépendances).\"}]]}]]}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Cependant, elle est assez verbeuse. Voici son équivalent sous la forme de module CommonJS (pour NodeJS) :\"}]]}],[\"$\",\"div\",null,{\"className\":\"code_root__5JLV_\",\"children\":[\"$\",\"code\",null,{\"children\":[\"$\",\"pre\",null,{\"children\":\"var dep1 = require(\\\"dep1\\\");\\nvar dep2 = require(\\\"./lib/dep2\\\");\\n\\nvar _myPrivateVar = \\\"secret\\\";\\nvar myServiceInstance = {\\n  getPrivate: function () {\\n    return _myPrivateVar;\\n  },\\n  myPublicVar: \\\"hello!\\\",\\n  myPublicFunction: function () {},\\n};\\n\\nmodule.exports = myServiceInstance;\"}]}]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Au delà du fait qu'elle est plus concise, cette syntaxe est aussi plus claire. Il n'est pas nécessaire de connaître le fonctionnement de JavaScript pour comprendre ce que fait ce code.\"}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Tout d'abord, il requiert les dépendances dont il a besoin. Ici, les espaces de nom sont gérés d'une façon beaucoup plus intéressante. L'unicité de la dépendance \"}],[\"$\",\"code\",null,{\"className\":\"code_root__5JLV_\",\"children\":\"dep2\"}],[\"$\",\"span\",\"2\",{\"children\":\" est assurée par un dépôt centralisé de modules (ici NPM). Celle de la dépendance \"}],[\"$\",\"code\",null,{\"className\":\"code_root__5JLV_\",\"children\":\"dep1\"}],[\"$\",\"span\",\"4\",{\"children\":\" quand à elle est assurée par l'arborescence du projet.\"}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Enfin, il exporte le contenu de \"}],[\"$\",\"code\",null,{\"className\":\"code_root__5JLV_\",\"children\":\"myServiceInstance\"}],[\"$\",\"span\",\"2\",{\"children\":\" comme étant le \\\"contenu\\\" du module. Bref, le fonctionnement classique des modules CommonJS, jusqu'ici, rien d'insurmontable.\"}]]}],[\"$\",\"h2\",null,{\"className\":\"h2_root__Y02lX\",\"children\":[\"$\",\"span\",null,{\"className\":\"anchored_root__HWi6K\",\"children\":[[[\"$\",\"span\",\"0\",{\"children\":\"Service configuré\"}]],\" \",[\"$\",\"small\",null,{\"children\":[\"$\",\"$L16\",null,{\"href\":\"#service-configure\",\"className\":\"anchored_icon__N5Sem\",\"id\":\"service-configure\",\"title\":\"Lien vers cette section\",\"children\":[\"$\",\"span\",null,{\"children\":\"🔗\"}]}]}]]}]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Mais un habitué d'Angular me rétorquera que les services Angular sont configurables, grâce aux service providers. Ce qui en Angular, donne ça :\"}]]}],[\"$\",\"div\",null,{\"className\":\"code_root__5JLV_\",\"children\":[\"$\",\"code\",null,{\"children\":[\"$\",\"pre\",null,{\"children\":\"// Définition\\nangular\\n  .module(\\\"my.app.namespace\\\", [\\\"my.dep1.namespace\\\", \\\"my.dep2.namespace\\\"])\\n  .provider(\\\"MyServiceProvider\\\", [\\n    \\\"dep1\\\",\\n    \\\"dep2\\\",\\n    function (dep1, dep2) {\\n      var _myPrivateVar = \\\"secret\\\";\\n\\n      this.setSecret = function (newSecret) {\\n        _myPrivateVar = newSecret;\\n      };\\n\\n      this.$get(function () {\\n        var myServiceInstance = {\\n          getPrivate: function () {\\n            return _myPrivateVar;\\n          },\\n          myPublicVar: \\\"hello!\\\",\\n          myPublicFunction: function () {},\\n        };\\n\\n        return myServiceInstance;\\n      });\\n    },\\n  ]);\\n\\n// Configuration\\nmyApp.config(\\\"MyServiceProvider\\\", [\\n  \\\"MyServiceProvider\\\",\\n  function (MyServiceProvider) {\\n    MyServiceProvider.setSecret(\\\"kikoo\\\");\\n  },\\n]);\\n\\n// Utilisation par injection dans un controller/module...\\n// à la manière de dep1\"}]}]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Ça en fait du code. Je vous laisse voir ça en détail sur la\"}],[\"$\",\"$L16\",null,{\"href\":\"https://docs.angularjs.org/guide/providers\",\"className\":\"a_root__WEPS7\",\"title\":null,\"target\":\"_blank\",\"children\":[null,[[\"$\",\"span\",\"0\",{\"children\":\" documentation d'AngularJS\"}]]]}],[\"$\",\"span\",\"2\",{\"children\":\", retenez simplement que l'idée ici est de configurer un singleton global. Chose que l'on réalise comme ceci avec CommonJS :\"}]]}],[\"$\",\"div\",null,{\"className\":\"code_root__5JLV_\",\"children\":[\"$\",\"code\",null,{\"children\":[\"$\",\"pre\",null,{\"children\":\"// Définition getmyservice.js\\nfunction getMyServiceInstance(mySecret) {\\n  var dep1 = require(\\\"dep1\\\");\\n  var dep2 = require(\\\"./lib/dep2\\\");\\n\\n  var _myPrivateVar = \\\"secret\\\";\\n  var myServiceInstance = {\\n    getPrivate: function () {\\n      return _myPrivateVar;\\n    },\\n    myPublicVar: \\\"hello!\\\",\\n    myPublicFunction: function () {},\\n  };\\n\\n  return myServiceInstance;\\n}\\n\\nmodule.exports = getMyServiceInstance;\\n\\n// Configuration myservice.js\\nmodule.exports = require(\\\"./getmyservice\\\")(\\\"secretdefense\\\");\\n\\n// Utilisation par require dans n'importe quel module\\nvar myService = require(\\\"./myservice\\\");\\n\\nmyService.myPublicFunction(\\\"hello!\\\");\"}]}]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"L'idée est de créer un module qui soit simplement le retour d'appel d'une fonction permettant de récupérer une version configurée d'un service donné. De cette façon on peut accéder à celui-ci n'importe où dans le programme par simple appel à require.\"}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Cependant, j'ai rarement recours à cette technique car c'est une sorte de singleton et à vrai dire, ce design pattern est de plus en plus décrié car il fait rarement sens.\"}]]}],[\"$\",\"h2\",null,{\"className\":\"h2_root__Y02lX\",\"children\":[\"$\",\"span\",null,{\"className\":\"anchored_root__HWi6K\",\"children\":[[[\"$\",\"span\",\"0\",{\"children\":\"Services \\\"wrappés\\\"\"}]],\" \",[\"$\",\"small\",null,{\"children\":[\"$\",\"$L16\",null,{\"href\":\"#services-wrappes\",\"className\":\"anchored_icon__N5Sem\",\"id\":\"services-wrappes\",\"title\":\"Lien vers cette section\",\"children\":[\"$\",\"span\",null,{\"children\":\"🔗\"}]}]}]]}]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Angular a eu la merveilleuse idée de fournir des services pour les variables globales exposées par le système. Ainsi, pour accéder à \"}],[\"$\",\"code\",null,{\"className\":\"code_root__5JLV_\",\"children\":\"window\"}],[\"$\",\"span\",\"2\",{\"children\":\", il suffit d'injecter le service \"}],[\"$\",\"code\",null,{\"className\":\"code_root__5JLV_\",\"children\":\"$$window\"}],[\"$\",\"span\",\"4\",{\"children\":\", idem pour \"}],[\"$\",\"code\",null,{\"className\":\"code_root__5JLV_\",\"children\":\"window.location\"}],[\"$\",\"span\",\"6\",{\"children\":\" avec \"}],[\"$\",\"code\",null,{\"className\":\"code_root__5JLV_\",\"children\":\"$$location\"}],[\"$\",\"span\",\"8\",{\"children\":\" etc.\"}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Pour le code en lui-même ceci n'a pas d'intérêt, mais pour les tests unitaires cette façon de procéder est essentielle. Ainsi, on peut injecter un service dédié au test mockant les fonctionnalités exposées par le service requis.\"}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Avec \"}],[\"$\",\"code\",null,{\"className\":\"code_root__5JLV_\",\"children\":\"require()\"}],[\"$\",\"span\",\"2\",{\"children\":\", appliquer ce principe est également possible. Il suffit de créer le module correspondant. Ici, nous créons un \\\"service\\\" fournissant un accès au constructeur \"}],[\"$\",\"code\",null,{\"className\":\"code_root__5JLV_\",\"children\":\"Date\"}],[\"$\",\"span\",\"4\",{\"children\":\" :\"}]]}],[\"$\",\"div\",null,{\"className\":\"code_root__5JLV_\",\"children\":[\"$\",\"code\",null,{\"children\":[\"$\",\"pre\",null,{\"children\":\"// contenu de date.js\\nmodule.exports = Date;\\n\\n// utilisation\\nvar Date = require(\\\"./date\\\");\"}]}]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Il ne nous reste plus qu'à mocker les dates lors de nos tests unitaires.\"}]]}],[\"$\",\"h2\",null,{\"className\":\"h2_root__Y02lX\",\"children\":[\"$\",\"span\",null,{\"className\":\"anchored_root__HWi6K\",\"children\":[[[\"$\",\"span\",\"0\",{\"children\":\"Les tests\"}]],\" \",[\"$\",\"small\",null,{\"children\":[\"$\",\"$L16\",null,{\"href\":\"#les-tests\",\"className\":\"anchored_icon__N5Sem\",\"id\":\"les-tests\",\"title\":\"Lien vers cette section\",\"children\":[\"$\",\"span\",null,{\"children\":\"🔗\"}]}]}]]}]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Justement, parlons-en ! Angular a la réputation de faciliter les tests unitaires, en est-il de même pour les modules CommonJS.\"}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"La réponse est non. Ce n'est pas automatique. Là où Angular vous mâche le travail en vous imposant un cadre, avec CommonJS, nous l'avons vu, créer des modules testables est une démarche consciente et non-obligatoire.\"}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Cela reste cependant possible grâce au module \"}],[\"$\",\"code\",null,{\"className\":\"code_root__5JLV_\",\"children\":\"mockery\"}],[\"$\",\"span\",\"2\",{\"children\":\". Par exemple, pour tester un module qui reposerait sur notre service wrappant \"}],[\"$\",\"code\",null,{\"className\":\"code_root__5JLV_\",\"children\":\"Date\"}],[\"$\",\"span\",\"4\",{\"children\":\", il suffirait de procéder ainsi :\"}]]}],[\"$\",\"div\",null,{\"className\":\"code_root__5JLV_\",\"children\":[\"$\",\"code\",null,{\"children\":[\"$\",\"pre\",null,{\"children\":\"var mockery = require(\\\"mockery\\\");\\nvar DateMock = require(\\\"date-mock\\\");\\n\\ndescribe(\\\"myModule\\\", function () {\\n  beforeEach(function () {\\n    mockery.enable({ useCleanCache: true });\\n    mockery.registerMock(\\\"./date\\\", DateMock);\\n    DateMock.curTime = 360000;\\n  });\\n\\n  afterEach(function () {\\n    mockery.deregisterMock(\\\"./date\\\");\\n    mockery.disable();\\n  });\\n\\n  it(\\\"should do stuff\\\", function () {\\n    // Code des tests\\n  });\\n});\"}]}]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Ici \"}],[\"$\",\"code\",null,{\"className\":\"code_root__5JLV_\",\"children\":\"mockery\"}],[\"$\",\"span\",\"2\",{\"children\":\" substitue à la volée le module \"}],[\"$\",\"code\",null,{\"className\":\"code_root__5JLV_\",\"children\":\"./date\"}],[\"$\",\"span\",\"4\",{\"children\":\" par du code qui vous permet de simuler le temps. Il est également possible de simplement remplacer la variable globale Date, mais ceci peut avoir d'autres effets par ailleurs, je vous conseille donc plutôt cette technique.\"}]]}],[\"$\",\"h2\",null,{\"className\":\"h2_root__Y02lX\",\"children\":[\"$\",\"span\",null,{\"className\":\"anchored_root__HWi6K\",\"children\":[[[\"$\",\"span\",\"0\",{\"children\":\"Quel rapport avec le front ?\"}]],\" \",[\"$\",\"small\",null,{\"children\":[\"$\",\"$L16\",null,{\"href\":\"#quel-rapport-avec-le-front\",\"className\":\"anchored_icon__N5Sem\",\"id\":\"quel-rapport-avec-le-front\",\"title\":\"Lien vers cette section\",\"children\":[\"$\",\"span\",null,{\"children\":\"🔗\"}]}]}]]}]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"À ce stade il se peut que vous vous demandiez comment utiliser des modules CommonJS pour vos projets front. Autrefois on \"}],[\"$\",\"$L16\",null,{\"href\":\"./utiliser_requirejs\",\"className\":\"a_root__WEPS7\",\"title\":null,\"target\":\"_self\",\"children\":[null,[[\"$\",\"span\",\"0\",{\"children\":\"utilisait RequireJS\"}]]]}],[\"$\",\"span\",\"2\",{\"children\":\" et on créait ses \"}],[\"$\",\"$L16\",null,{\"href\":\"./module_javascript\",\"className\":\"a_root__WEPS7\",\"title\":null,\"target\":\"_self\",\"children\":[null,[[\"$\",\"span\",\"0\",{\"children\":\"modules AMD\"}]]]}],[\"$\",\"span\",\"4\",{\"children\":\" avec ses p'tites mimines (ne faîtes plus ça !).\"}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Avec \"}],[\"$\",\"$L16\",null,{\"href\":\"./browserify\",\"className\":\"a_root__WEPS7\",\"title\":null,\"target\":\"_self\",\"children\":[null,[[\"$\",\"span\",\"0\",{\"children\":\"browserify\"}]]]}],[\"$\",\"span\",\"2\",{\"children\":\" ou webpack vous pourrez gérer finement la façon dont vous consommerez vos modules CommonJS sans efforts ;).\"}]]}],[\"$\",\"h2\",null,{\"className\":\"h2_root__Y02lX\",\"children\":[\"$\",\"span\",null,{\"className\":\"anchored_root__HWi6K\",\"children\":[[[\"$\",\"span\",\"0\",{\"children\":\"ES6\"}]],\" \",[\"$\",\"small\",null,{\"children\":[\"$\",\"$L16\",null,{\"href\":\"#es6\",\"className\":\"anchored_icon__N5Sem\",\"id\":\"es6\",\"title\":\"Lien vers cette section\",\"children\":[\"$\",\"span\",null,{\"children\":\"🔗\"}]}]}]]}]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Les modules ES6 vont bientôt être la règle et vous vous posez sûrement la question. Comment appliquer les préceptes ci-dessus à vos modules ES6 ?\"}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"À ce jour, vos modules ES6 sont en fait transformés en modules CommonJS et utilisés via \"}],[\"$\",\"code\",null,{\"className\":\"code_root__5JLV_\",\"children\":\"require()\"}],[\"$\",\"span\",\"2\",{\"children\":\". La question ne se pose donc pas vraiment.\"}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"À l'avenir, en revanche, nos amis d'ECMA ont tout prévu, notamment une façon d'overrider le comportement du loader de module à la volée. Ça devrait se concrétiser via \"}],[\"$\",\"$L16\",null,{\"href\":\"http://babeljs.io/docs/learn-es6/#module-loaders\",\"className\":\"a_root__WEPS7\",\"title\":null,\"target\":\"_blank\",\"children\":[null,[[\"$\",\"span\",\"0\",{\"children\":\"System\"}]]]}],[\"$\",\"span\",\"2\",{\"children\":\". Cette fonctionnalité devrait pouvoir être utilisée comme \"}],[\"$\",\"code\",null,{\"className\":\"code_root__5JLV_\",\"children\":\"mockery\"}],[\"$\",\"span\",\"4\",{\"children\":\" pour modifier le comportement de l'injection de dépendance d'ES6.\"}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Voilà, j'espère que ce petit article vous a plût. Pour les angulariens, sachez que Angular 2.0 va supprimer son ancien système de module ce qui n'est pas une mauvaise nouvelles ;).\"}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Petite mise à jour pour ajouter qu'il est possible d'appliquer ceci aux applications Angular également pour simplifier les tests et se passer de Karma, \"}],[\"$\",\"$L16\",null,{\"href\":\"https://github.com/SimpliField/angular-sf-load/blob/7ae1467c4ce914fdc8fed940d96a39c6b4cce026/src/load.service.specs.js#L8-L18\",\"className\":\"a_root__WEPS7\",\"title\":null,\"target\":\"_blank\",\"children\":[null,[[\"$\",\"span\",\"0\",{\"children\":\"voici un exemple\"}]]]}],[\"$\",\"span\",\"2\",{\"children\":\".\"}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Le système d'injection d'Angular reste sympa malgré tout pour gérer les états globaux, mais son principal soucis est d'être trop intrusif sur la façon de gérer le code à mon goût. C'est pourquoi j'ai créé \"}],[\"$\",\"$L16\",null,{\"href\":\"https://github.com/nfroidure/knifecycle\",\"className\":\"a_root__WEPS7\",\"title\":null,\"target\":\"_blank\",\"children\":[null,[[\"$\",\"span\",\"0\",{\"children\":\"Knifecycle\"}]]]}],[\"$\",\"span\",\"2\",{\"children\":\" qui reprend ses concepts mais de façon moins intrusive et surtout applicable pour le backend (prise en compte du graceful shutdown).\"}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"span\",\"0\",{\"children\":\"Enfin, le système d'injection d'Angular2 a tiré pas mal de leçons des erreurs précédentes et même si je ne suis pas fan d'Angular2 je reconnais qu'il y a eu des progrès de ce côté.\"}]]}]],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[\"Published at\",\" \",\"jeudi 12 mars 2015 à 08:49:00\",\".\"]}]]}],[\"$\",\"section\",null,{\"className\":\"contentBlock_root__802UK\",\"children\":[\"$\",\"aside\",null,{\"className\":\"share_root__Qm_RR\",\"children\":[[\"$\",\"h2\",null,{\"className\":\"h2_root__Y02lX\",\"children\":\"Commenter et partager\"}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[[\"$\",\"$L16\",null,{\"href\":\"https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Finsertafter.com%2Fblog%2Ffaire-mieux-qu-angular-avec-require\",\"className\":\"a_root__WEPS7\",\"title\":\"Commenter sur Facebook\",\"target\":\"_blank\",\"children\":[null,[[\"$\",\"span\",null,{\"className\":\"share_icon__bi4Q3 share_facebook__JKn8d\"}],\"Facebook\"]]}],\" - \",[\"$\",\"$L16\",null,{\"href\":\"https://twitter.com/intent/tweet/?url=https%3A%2F%2Finsertafter.com%2Fblog%2Ffaire-mieux-qu-angular-avec-require\u0026text=Faire%20mieux%20qu'AngularJS%20avec%20require()\u0026via=nfroidure\",\"className\":\"a_root__WEPS7\",\"title\":\"Commenter sur Twitter\",\"target\":\"_blank\",\"children\":[null,[[\"$\",\"span\",null,{\"className\":\"share_icon__bi4Q3 \"}],\"Twitter\"]]}],\" - \",[\"$\",\"$L16\",null,{\"href\":\"mailto:nicolas.froidure@gmail.com\",\"className\":\"a_root__WEPS7\",\"title\":\"Me répondre par mail\",\"target\":\"_self\",\"children\":[null,[[\"$\",\"span\",null,{\"className\":\"share_icon__bi4Q3 share_mail__yvBDK\"}],\"Courriel\"]]}]]}]]}]}],[\"$\",\"section\",null,{\"className\":\"contentBlock_root__802UK\",\"children\":[\"$\",\"aside\",null,{\"className\":\"page_linkedEntries__jiPuT\",\"children\":[[\"$\",\"h2\",null,{\"className\":\"h2_root__Y02lX\",\"children\":\"Articles similaires\"}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W\",\"children\":[\"Dans les catégories\",\" \",\"JavaScript\",\".\"]}],[\"$\",\"div\",null,{\"className\":\"items_entries__5hkLG\",\"children\":[[\"$\",\"div\",\"watchdeps\",{\"className\":\"items_entry_item__GWeg7\",\"children\":[null,[\"$\",\"h2\",null,{\"className\":\"h2_root__Y02lX items_entry_title__vJ_8h\",\"children\":[\"$\",\"$L16\",null,{\"href\":\".//watchdeps\",\"className\":\"a_root__WEPS7 items_entry_link__EtVod\",\"title\":\"Lire cet article de blog\",\"target\":\"_self\",\"children\":[null,\"Surveillez les dépendances de vos projets NodeJS\"]}]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W items_entry_description__ZWt9y\",\"children\":[\"Avec watchdeps abonnez-vous automatiquement aux dépendences de vos projets NodeJS sur GitHub.\",\" \",[\"$\",\"br\",null,{}],[\"$\",\"$L16\",null,{\"href\":\".//watchdeps\",\"className\":\"a_root__WEPS7\",\"title\":\"Lire cet article de blog\",\"target\":\"_self\",\"children\":[null,\"Lire la suite\"]}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W items_entry_time__iNrot\",\"children\":[\"Published at\",\" \",\"dimanche 8 mars 2015 à 11:07:32\",\".\"]}],[\"$\",\"div\",null,{\"className\":\"items_clear__3fyGk\"}]]}],[\"$\",\"div\",\"isomorphisme_par_l_exemple\",{\"className\":\"items_entry_item__GWeg7\",\"children\":[null,[\"$\",\"h2\",null,{\"className\":\"h2_root__Y02lX items_entry_title__vJ_8h\",\"children\":[\"$\",\"$L16\",null,{\"href\":\".//isomorphisme_par_l_exemple\",\"className\":\"a_root__WEPS7 items_entry_link__EtVod\",\"title\":\"Lire cet article de blog\",\"target\":\"_self\",\"children\":[null,\"L'isomorphisme par l'exemple\"]}]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W items_entry_description__ZWt9y\",\"children\":[\"Présentation sur la gestion des droits dans une application JavaScript de façon universelle.\",\" \",[\"$\",\"br\",null,{}],[\"$\",\"$L16\",null,{\"href\":\".//isomorphisme_par_l_exemple\",\"className\":\"a_root__WEPS7\",\"title\":\"Lire cet article de blog\",\"target\":\"_self\",\"children\":[null,\"Lire la suite\"]}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W items_entry_time__iNrot\",\"children\":[\"Published at\",\" \",\"mardi 3 février 2015 à 08:08:19\",\".\"]}],[\"$\",\"div\",null,{\"className\":\"items_clear__3fyGk\"}]]}],[\"$\",\"div\",\"retour_experience_gulp\",{\"className\":\"items_entry_item__GWeg7\",\"children\":[null,[\"$\",\"h2\",null,{\"className\":\"h2_root__Y02lX items_entry_title__vJ_8h\",\"children\":[\"$\",\"$L16\",null,{\"href\":\".//retour_experience_gulp\",\"className\":\"a_root__WEPS7 items_entry_link__EtVod\",\"title\":\"Lire cet article de blog\",\"target\":\"_self\",\"children\":[null,\"Gulp : Retour d'expérience\"]}]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W items_entry_description__ZWt9y\",\"children\":[\"Comme promis, Gulp revient à l'ordre du jour de ce Blog avec un retour d'expérience sur l'utilisation de Gulp et le développement de plugins.\",\" \",[\"$\",\"br\",null,{}],[\"$\",\"$L16\",null,{\"href\":\".//retour_experience_gulp\",\"className\":\"a_root__WEPS7\",\"title\":\"Lire cet article de blog\",\"target\":\"_self\",\"children\":[null,\"Lire la suite\"]}]]}],[\"$\",\"p\",null,{\"className\":\"p_root__SHE_W items_entry_time__iNrot\",\"children\":[\"Published at\",\" \",\"dimanche 26 janvier 2014 à 09:01:26\",\".\"]}],[\"$\",\"div\",null,{\"className\":\"items_clear__3fyGk\"}]]}]]}]]}]}]]\n"])</script><script>self.__next_f.push([1,"10:[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"name\":\"theme-color\",\"content\":\"#3e78b2\"}],[\"$\",\"meta\",\"2\",{\"charSet\":\"utf-8\"}],[\"$\",\"title\",\"3\",{\"children\":\"Faire mieux qu'AngularJS avec require() - Nicolas Froidure\"}],[\"$\",\"meta\",\"4\",{\"name\":\"description\",\"content\":\"Le système CommonJS-like de NodeJS permet un grand nombre de subtilités. Je vous propose de les découvrir en reproduisant les fonctionnalités du système de modules d'AngularJS.\"}],[\"$\",\"link\",\"5\",{\"rel\":\"author\",\"href\":\"https://insertafter.com\"}],[\"$\",\"meta\",\"6\",{\"name\":\"author\",\"content\":\"Nicolas Froidure\"}],[\"$\",\"meta\",\"7\",{\"name\":\"robots\",\"content\":\"index, follow\"}],[\"$\",\"link\",\"8\",{\"rel\":\"canonical\",\"href\":\"https://insertafter.com/fr/blog/faire-mieux-qu-angular-avec-require\"}],[\"$\",\"meta\",\"9\",{\"property\":\"og:title\",\"content\":\"Faire mieux qu'AngularJS avec require() - Nicolas Froidure\"}],[\"$\",\"meta\",\"10\",{\"property\":\"og:description\",\"content\":\"Le système CommonJS-like de NodeJS permet un grand nombre de subtilités. Je vous propose de les découvrir en reproduisant les fonctionnalités du système de modules d'AngularJS.\"}],[\"$\",\"meta\",\"11\",{\"property\":\"og:url\",\"content\":\"https://insertafter.com/fr/blog/faire-mieux-qu-angular-avec-require\"}],[\"$\",\"meta\",\"12\",{\"property\":\"og:site_name\",\"content\":\"Nicolas Froidure\"}],[\"$\",\"meta\",\"13\",{\"property\":\"og:locale\",\"content\":\"fr_FR\"}],[\"$\",\"meta\",\"14\",{\"property\":\"og:image:alt\",\"content\":\"Bannière du site\"}],[\"$\",\"meta\",\"15\",{\"property\":\"og:image\",\"content\":\"https://insertafter.com/images/banner.png\"}],[\"$\",\"meta\",\"16\",{\"property\":\"og:type\",\"content\":\"article\"}],[\"$\",\"meta\",\"17\",{\"name\":\"twitter:card\",\"content\":\"summary\"}],[\"$\",\"meta\",\"18\",{\"name\":\"twitter:site\",\"content\":\"@nfroidure\"}],[\"$\",\"meta\",\"19\",{\"name\":\"twitter:creator\",\"content\":\"@nfroidure\"}],[\"$\",\"meta\",\"20\",{\"name\":\"twitter:title\",\"content\":\"Faire mieux qu'AngularJS avec require() - Nicolas Froidure\"}],[\"$\",\"meta\",\"21\",{\"name\":\"twitter:description\",\"content\":\"Le système CommonJS-like de NodeJS permet un grand nombre de subtilités. Je vous propose de les découvrir en reproduisant les fonctionnalités du système de modules d'AngularJS.\"}],[\"$\",\"meta\",\"22\",{\"name\":\"twitter:image:alt\",\"content\":\"Bannière du site\"}],[\"$\",\"meta\",\"23\",{\"name\":\"twitter:image\",\"content\":\"https://insertafter.com/images/banner.png\"}],[\"$\",\"link\",\"24\",{\"rel\":\"icon\",\"href\":\"/images/favicon.svg\",\"type\":\"image/svg+xml\",\"sizes\":\"any\"}],[\"$\",\"link\",\"25\",{\"rel\":\"icon\",\"href\":\"/images/favicon-16.png\",\"type\":\"image/png\",\"sizes\":\"16x16\"}],[\"$\",\"link\",\"26\",{\"rel\":\"icon\",\"href\":\"/images/favicon-128.png\",\"type\":\"image/png\",\"sizes\":\"128x128\"}]]\n"])</script><script>self.__next_f.push([1,"5:null\n"])</script><script>self.__next_f.push([1,""])</script></body></html>

@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<feed xmlns="http://www.w3.org/2005/Atom">    
+  <id>https://insertafter.com/fr/blog</id>
+  <title>Blog technique de Nicolas Froidure - page 1 - Nicolas Froidure - Nicolas Froidure</title>
+  <subtitle>Découvrez le blog technique sur le quel je parle de développement web.</subtitle>
+  <link href="https://insertafter.com/fr/blog.atom" rel="self" type="application/atom+xml" />
+  <link href="https://insertafter.com/fr/blog" rel="alternate" type="text/html" />
+  <updated>2021-12-01T22:00:00.000Z</updated>
+  <entry>
+    <id>https://insertafter.com/fr/blog/markdown_ast_vers_react</id>
+    <title>Rendre votre contenu Markdown avec React via l&apos;AST</title>
+    <link href="https://insertafter.com/fr/blog/markdown_ast_vers_react" rel="alternate" type="text/html" />
+    <updated>2021-12-01T22:00:00.000Z</updated>
+    <published>2021-12-01T22:00:00.000Z</published>
+    <summary>Où comment ne plus jamais utiliser dangerouslySetInnerHTML.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/hacktobefest_4_pr_facilement</id>
+    <title>Obtenir 4 PR facilement et utilement pour l&apos;Hacktoberfest</title>
+    <link href="https://insertafter.com/fr/blog/hacktobefest_4_pr_facilement" rel="alternate" type="text/html" />
+    <updated>2021-10-12T09:07:32.000Z</updated>
+    <published>2021-10-12T09:07:32.000Z</published>
+    <summary>Vous voulez participer à l&apos;Hacktoberfest et gagner un t-shirt, voire mieux, planter un arbre ? Suivez le guide !</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/kafka_docker_compose</id>
+    <title>Kafka avec docker-compose</title>
+    <link href="https://insertafter.com/fr/blog/kafka_docker_compose" rel="alternate" type="text/html" />
+    <updated>2020-12-31T13:07:32.000Z</updated>
+    <published>2020-12-31T13:07:32.000Z</published>
+    <summary>Faire tourner Apache Kafka en local avec docker-compose.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/injection_de_dependance_nodejs</id>
+    <title>Injection de dépendances avec NodeJS </title>
+    <link href="https://insertafter.com/fr/blog/injection_de_dependance_nodejs" rel="alternate" type="text/html" />
+    <updated>2019-02-02T07:00:00.000Z</updated>
+    <published>2019-02-02T07:00:00.000Z</published>
+    <summary>Présentation donnée lors du ChtiJS 21 à propos de l&apos;injection de dépendances en JavaScript.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/ma_config_vscode</id>
+    <title>Ma configuration VSCode</title>
+    <link href="https://insertafter.com/fr/blog/ma_config_vscode" rel="alternate" type="text/html" />
+    <updated>2018-12-30T20:00:00.000Z</updated>
+    <published>2018-12-30T20:00:00.000Z</published>
+    <summary>Petit tour d&apos;horizon de ma configuration VSCode pour ceux que ça peut intéresser ;).</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/les_7_habitudes</id>
+    <title>Critique du livre : Les 7 habitudes de Stephen R. Covey</title>
+    <link href="https://insertafter.com/fr/blog/les_7_habitudes" rel="alternate" type="text/html" />
+    <updated>2017-10-28T12:16:03.000Z</updated>
+    <published>2017-10-28T12:16:03.000Z</published>
+    <summary>Les 7 habitudes des gens qui réussissent tout ce qu&apos;ils entreprennent de Stephen R. Covey vous propose de diriger votre vie selon vos principes. Pas si évident que cela à la lecture de ce livre.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/developper_de_l_impact</id>
+    <title>Développer de l&apos;impact</title>
+    <link href="https://insertafter.com/fr/blog/developper_de_l_impact" rel="alternate" type="text/html" />
+    <updated>2017-10-25T13:00:00.000Z</updated>
+    <published>2017-10-25T13:00:00.000Z</published>
+    <summary>Présentation donnée lors du Club Tech à Euratechnologies.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/documentation_du_code</id>
+    <title>Documentation d&apos;applications en JavaScript</title>
+    <link href="https://insertafter.com/fr/blog/documentation_du_code" rel="alternate" type="text/html" />
+    <updated>2017-03-11T18:02:27.000Z</updated>
+    <published>2017-03-11T18:02:27.000Z</published>
+    <summary>Documenter son code est parfois fastidieux. Pourtant, c&apos;est une nécessité. Petit retour d&apos;expérience sur les techniques et outils que j&apos;utilise.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/normalisation_retours_json</id>
+    <title>Normalisation des retours JSON</title>
+    <link href="https://insertafter.com/fr/blog/normalisation_retours_json" rel="alternate" type="text/html" />
+    <updated>2017-03-03T10:07:32.000Z</updated>
+    <published>2017-03-03T10:07:32.000Z</published>
+    <summary>Peu de gens pensent à normaliser les JSON en début de projet. C&apos;est dommage car c&apos;est le meilleur moment pour.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/generation_api_cliente</id>
+    <title>Génération automatique de clients d&apos;APIs</title>
+    <link href="https://insertafter.com/fr/blog/generation_api_cliente" rel="alternate" type="text/html" />
+    <updated>2017-02-19T15:00:00.000Z</updated>
+    <published>2017-02-19T15:00:00.000Z</published>
+    <summary>Personne de devrait perdre du temps à écrire du code qui peut être généré automatiquement. Voici comment je m&apos;y prends pour les clients d&apos;APIs.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/histoire_des_mathematiques</id>
+    <title>«Histoire des Mathématiques» par Mickaël Launay</title>
+    <link href="https://insertafter.com/fr/blog/histoire_des_mathematiques" rel="alternate" type="text/html" />
+    <updated>2017-02-11T18:02:27.000Z</updated>
+    <published>2017-02-11T18:02:27.000Z</published>
+    <summary>Critique du livre «Histoire des Mathématiques» par Mickaël Launay.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/metapak</id>
+    <title>Méta-paquets NPM avec metapak</title>
+    <link href="https://insertafter.com/fr/blog/metapak" rel="alternate" type="text/html" />
+    <updated>2017-02-05T07:46:44.000Z</updated>
+    <published>2017-02-05T07:46:44.000Z</published>
+    <summary>Présentation sur metapak, un module d&apos;aide à la création de méta-paquets NPM.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/presentation_nodejs_rest_microservices</id>
+    <title>Micro-services first avec NodeJS</title>
+    <link href="https://insertafter.com/fr/blog/presentation_nodejs_rest_microservices" rel="alternate" type="text/html" />
+    <updated>2016-02-28T20:32:43.033Z</updated>
+    <published>2016-02-28T20:32:43.033Z</published>
+    <summary>Retour rapide sur ma présentation au ChtiJS 15 sur les microservices et le design d&apos;APIs avec NodeJS.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/es6_dans_ton_code</id>
+    <title>ES6 dans ton code</title>
+    <link href="https://insertafter.com/fr/blog/es6_dans_ton_code" rel="alternate" type="text/html" />
+    <updated>2015-05-12T08:21:43.000Z</updated>
+    <published>2015-05-12T08:21:43.000Z</published>
+    <summary>Présentation sur les évolutions apportées par la version 6 d&apos;ECMAScript donnée à l&apos;occasion de ChtiJS.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/infrastructure_microservices</id>
+    <title>Architecture d&apos;une API NodeJS</title>
+    <link href="https://insertafter.com/fr/blog/infrastructure_microservices" rel="alternate" type="text/html" />
+    <updated>2015-05-12T08:21:43.000Z</updated>
+    <published>2015-05-12T08:21:43.000Z</published>
+    <summary>Présentation d&apos;une architecture d&apos;API REST réalisée avec des microservices.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/design_probabiliste_mongodb</id>
+    <title>MongoDB ou la conception probabiliste</title>
+    <link href="https://insertafter.com/fr/blog/design_probabiliste_mongodb" rel="alternate" type="text/html" />
+    <updated>2015-04-04T13:29:02.000Z</updated>
+    <published>2015-04-04T13:29:02.000Z</published>
+    <summary>Concevoir une base de donnée MongoDB c&apos;est composer avec le hasard. Dans ce billet je vous propose de découvrir pourquoi et comment.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/design_base_donnee_mongodb</id>
+    <title>Design de bases de données MongoDB</title>
+    <link href="https://insertafter.com/fr/blog/design_base_donnee_mongodb" rel="alternate" type="text/html" />
+    <updated>2015-03-28T12:40:32.000Z</updated>
+    <published>2015-03-28T12:40:32.000Z</published>
+    <summary>Le design de bases de données MongoDB est une activité complexe qui nécessite d&apos;avoir une profonde connaissance des implications des divers choix possibles.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/erreurs_javascript_ameliorees</id>
+    <title>Améliorer les erreurs JavaScript</title>
+    <link href="https://insertafter.com/fr/blog/erreurs_javascript_ameliorees" rel="alternate" type="text/html" />
+    <updated>2015-03-15T11:04:02.000Z</updated>
+    <published>2015-03-15T11:04:02.000Z</published>
+    <summary>Pour un meilleur débogage, il faut de meilleures erreurs. C&apos;est pourquoi j&apos;ai mis en place une stratégie pour les rendre plus pertinentes.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/faire-mieux-qu-angular-avec-require</id>
+    <title>Faire mieux qu&apos;AngularJS avec require()</title>
+    <link href="https://insertafter.com/fr/blog/faire-mieux-qu-angular-avec-require" rel="alternate" type="text/html" />
+    <updated>2015-03-12T07:49:00.000Z</updated>
+    <published>2015-03-12T07:49:00.000Z</published>
+    <summary>Le système CommonJS-like de NodeJS permet un grand nombre de subtilités. Je vous propose de les découvrir en reproduisant les fonctionnalités du système de modules d&apos;AngularJS.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/watchdeps</id>
+    <title>Surveillez les dépendances de vos projets NodeJS</title>
+    <link href="https://insertafter.com/fr/blog/watchdeps" rel="alternate" type="text/html" />
+    <updated>2015-03-08T10:07:32.000Z</updated>
+    <published>2015-03-08T10:07:32.000Z</published>
+    <summary>Avec watchdeps abonnez-vous automatiquement aux dépendences de vos projets NodeJS sur GitHub.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/bref_j_ai_lu_lean_startup</id>
+    <title>Bref, j&apos;ai lu Lean Startup</title>
+    <link href="https://insertafter.com/fr/blog/bref_j_ai_lu_lean_startup" rel="alternate" type="text/html" />
+    <updated>2015-03-02T18:02:27.000Z</updated>
+    <published>2015-03-02T18:02:27.000Z</published>
+    <summary>Critique du livre Lean Startup à travers le prisme d&apos;un développeur.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/isomorphisme_par_l_exemple</id>
+    <title>L&apos;isomorphisme par l&apos;exemple</title>
+    <link href="https://insertafter.com/fr/blog/isomorphisme_par_l_exemple" rel="alternate" type="text/html" />
+    <updated>2015-02-03T07:08:19.000Z</updated>
+    <published>2015-02-03T07:08:19.000Z</published>
+    <summary>Présentation sur la gestion des droits dans une application JavaScript de façon universelle.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/retour_xp_mongodb</id>
+    <title>MongoDB : Retour d&apos;expérience</title>
+    <link href="https://insertafter.com/fr/blog/retour_xp_mongodb" rel="alternate" type="text/html" />
+    <updated>2014-12-04T19:44:40.000Z</updated>
+    <published>2014-12-04T19:44:40.000Z</published>
+    <summary>Je travaille avec MongoDB depuis maintenant presque un an, il est temps pour moi de faire un petit retour sur cette base de données et sur le NoSQL de manière générale.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/retour_experience_gulp</id>
+    <title>Gulp : Retour d&apos;expérience</title>
+    <link href="https://insertafter.com/fr/blog/retour_experience_gulp" rel="alternate" type="text/html" />
+    <updated>2014-01-26T08:01:26.000Z</updated>
+    <published>2014-01-26T08:01:26.000Z</published>
+    <summary>Comme promis, Gulp revient à l&apos;ordre du jour de ce Blog avec un retour d&apos;expérience sur l&apos;utilisation de Gulp et le développement de plugins.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/gulp_vs_grunt</id>
+    <title>Gulp remplacera-t-il Grunt ?</title>
+    <link href="https://insertafter.com/fr/blog/gulp_vs_grunt" rel="alternate" type="text/html" />
+    <updated>2013-12-23T22:25:29.000Z</updated>
+    <published>2013-12-23T22:25:29.000Z</published>
+    <summary>Gulp est un concurrent de Grunt qui se targue d&apos;exploiter les capacités des streams NodeJS. Petit passage en revue de cet outil.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/browserify</id>
+    <title>Browserify : Partager le code JavaScript entre front et back end</title>
+    <link href="https://insertafter.com/fr/blog/browserify" rel="alternate" type="text/html" />
+    <updated>2013-12-16T12:23:52.000Z</updated>
+    <published>2013-12-16T12:23:52.000Z</published>
+    <summary>Exécuter du JavaScript aussi bien côté serveur que dans le navigateur de vos clients devient possible grâce à Browserify.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/gruntjs_font_icons</id>
+    <title>Générer des fontes d&apos;icônes avec GruntJS</title>
+    <link href="https://insertafter.com/fr/blog/gruntjs_font_icons" rel="alternate" type="text/html" />
+    <updated>2013-11-09T14:25:29.000Z</updated>
+    <published>2013-11-09T14:25:29.000Z</published>
+    <summary>Cette semaine, je me suis penché sur la génération de fontes automatiquement avec GruntJS. Compte rendu de mes découvertes et des développements qui les ont suivies.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/livre_javascript</id>
+    <title>Un livre pour apprendre JavaScript</title>
+    <link href="https://insertafter.com/fr/blog/livre_javascript" rel="alternate" type="text/html" />
+    <updated>2013-09-22T15:45:27.000Z</updated>
+    <published>2013-09-22T15:45:27.000Z</published>
+    <summary>En Avril 2013 j&apos;ai été contacté par MA-Édition pour écrire un livre sur JavaScript. Aujourd&apos;hui, il est en librairie. Retour sur cette belle aventure.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/enseignement_dirige_par_tests</id>
+    <title>L&apos;enseignement dirigé par les tests</title>
+    <link href="https://insertafter.com/fr/blog/enseignement_dirige_par_tests" rel="alternate" type="text/html" />
+    <updated>2013-09-04T09:22:53.000Z</updated>
+    <published>2013-09-04T09:22:53.000Z</published>
+    <summary>Les tests unitaires et fonctionnels ont véritablement révolutionné le développement professionnel, pourquoi pas également celui de l&apos;enseignement et de la formation ?</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/tester_javascript_frontend</id>
+    <title>Tester son JavaScript front end</title>
+    <link href="https://insertafter.com/fr/blog/tester_javascript_frontend" rel="alternate" type="text/html" />
+    <updated>2013-08-25T13:24:22.000Z</updated>
+    <published>2013-08-25T13:24:22.000Z</published>
+    <summary>Depuis que j&apos;ai découvert Karma, je ne me lasse plus de convertir mes projets pour lancer les tests grâce à cet outil. Retour d&apos;expérience et conseils pour une utilisation pleine et entière.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/erreurs_javascript</id>
+    <title>Gestion des erreurs en JavaScript</title>
+    <link href="https://insertafter.com/fr/blog/erreurs_javascript" rel="alternate" type="text/html" />
+    <updated>2013-07-30T13:18:42.000Z</updated>
+    <published>2013-07-30T13:18:42.000Z</published>
+    <summary>Gérer les erreurs en JavaScript peut paraître simple, mais il n&apos;est pas toujours évident de choisir entre exceptions, retours d&apos;erreurs et callbacks d&apos;erreurs.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/choisir_module_nodejs</id>
+    <title>Bien choisir ses modules NodeJS : ma méthode</title>
+    <link href="https://insertafter.com/fr/blog/choisir_module_nodejs" rel="alternate" type="text/html" />
+    <updated>2013-07-26T14:04:25.000Z</updated>
+    <published>2013-07-26T14:04:25.000Z</published>
+    <summary>Hier à la troisième édition de ChtiJS, un question a été soulevée sur la confiance que l&apos;on pouvait avoir dans les modules NodeJS. Je vous dévoile donc ma méthode pour trancher entre npm install et npm remove ;).</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/utiliser_requirejs</id>
+    <title>Astuces pour utiliser pleinement RequireJS</title>
+    <link href="https://insertafter.com/fr/blog/utiliser_requirejs" rel="alternate" type="text/html" />
+    <updated>2013-07-11T09:57:45.000Z</updated>
+    <published>2013-07-11T09:57:45.000Z</published>
+    <summary>Pour un projet dont je vous reparlerai bientôt, j&apos;ai utilisé RequireJS pour la première fois en production. J&apos;en profite pour vous faire un petit retour d&apos;expérience avec quelques astuces de mon cru ;).</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/promises_javascript_ouvrons_capot</id>
+    <title>Les promises avec JavaScript : ouvrons le capot !</title>
+    <link href="https://insertafter.com/fr/blog/promises_javascript_ouvrons_capot" rel="alternate" type="text/html" />
+    <updated>2013-06-08T10:04:17.000Z</updated>
+    <published>2013-06-08T10:04:17.000Z</published>
+    <summary>Dans le petit monde de JavaScript les promises font l&apos;actualité. Je vous propose de comprendre les promises par l&apos;implémentation.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/creer_bot_irc_avec_nodejs</id>
+    <title>Créer un bot IRC avec NodeJS</title>
+    <link href="https://insertafter.com/fr/blog/creer_bot_irc_avec_nodejs" rel="alternate" type="text/html" />
+    <updated>2013-05-05T08:04:57.000Z</updated>
+    <published>2013-05-05T08:04:57.000Z</published>
+    <summary>J&apos;ai récemment pu tester la création d&apos;un bot NodeJS grâce à la mise en place de Marionnette, le bot IRC de FranceJS.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/animations_css3</id>
+    <title>Les animations sur les sites web en 2013</title>
+    <link href="https://insertafter.com/fr/blog/animations_css3" rel="alternate" type="text/html" />
+    <updated>2013-04-03T16:02:18.000Z</updated>
+    <published>2013-04-03T16:02:18.000Z</published>
+    <summary>On a d&apos;abord connu les animations avec Flash, puis les animations sans Flash grâce aux frameworks JavaScript. Aujourd&apos;hui, ce sont les animations CSS3 qui occupent le devant de la scène et, a priori, ça va durer.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/xinetd_super_server</id>
+    <title>Gestion de flotte X1 Intellitrac avec xinetd sur Debian GNU Linux</title>
+    <link href="https://insertafter.com/fr/blog/xinetd_super_server" rel="alternate" type="text/html" />
+    <updated>2013-04-01T14:35:58.000Z</updated>
+    <published>2013-04-01T14:35:58.000Z</published>
+    <summary>Le super server xinetd est vraiment très pratique pour des petits projets ne dépassant pas un certain nombre de clients. Voici une petite illustration de son utilité pour la localisation de flotte de véhicules.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/capskiller_stop_aux_majuscules</id>
+    <title>CapsKiller : Stop aux majuscules</title>
+    <link href="https://insertafter.com/fr/blog/capskiller_stop_aux_majuscules" rel="alternate" type="text/html" />
+    <updated>2013-02-23T11:05:23.000Z</updated>
+    <published>2013-02-23T11:05:23.000Z</published>
+    <summary>Les digital natives supportent mal les majuscules dans les courriels. En effet, cela est assimilé à des cris. Malheureusement, tout le monde n&apos;en fait pas grand cas. CapsKiller pour Thunderbird est là pour vous en protéger.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/application_desktop_avec_chrome</id>
+    <title>Une application desktop avec Chrome</title>
+    <link href="https://insertafter.com/fr/blog/application_desktop_avec_chrome" rel="alternate" type="text/html" />
+    <updated>2013-02-08T15:54:30.000Z</updated>
+    <published>2013-02-08T15:54:30.000Z</published>
+    <summary>Bien que HTML5 progresse de jour en jour, on aimerait parfois pouvoir accéder à n&apos;importe quoi dans son navigateur. C&apos;est déjà possible, grâce à un nouveau petit projet NodeJS.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/subtilites_de_regexp</id>
+    <title>Les subtilités de RegExp en Javascript</title>
+    <link href="https://insertafter.com/fr/blog/subtilites_de_regexp" rel="alternate" type="text/html" />
+    <updated>2013-02-02T09:41:13.000Z</updated>
+    <published>2013-02-02T09:41:13.000Z</published>
+    <summary>Les expressions régulières sont très peu populaires, elles sont pourtant surpuissantes. Néanmoins, il y a quelques subtilités à connaître, dont une que j&apos;ai récemment apprise.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/jeux_html5_sympas</id>
+    <title>Quelques jeux HTML5 sympas</title>
+    <link href="https://insertafter.com/fr/blog/jeux_html5_sympas" rel="alternate" type="text/html" />
+    <updated>2013-01-27T12:03:52.000Z</updated>
+    <published>2013-01-27T12:03:52.000Z</published>
+    <summary>Dans mes recherches pour tenter de trouver la meilleure formule pour créer des jeux HTML5 addictifs et de bonne qualité, j&apos;ai trouvé plusieurs jeux aux finitions plus qu&apos;acceptables. Découvrez-les !</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/performance_et_svg</id>
+    <title>Performance des sites web avec SVG</title>
+    <link href="https://insertafter.com/fr/blog/performance_et_svg" rel="alternate" type="text/html" />
+    <updated>2013-01-13T21:09:05.000Z</updated>
+    <published>2013-01-13T21:09:05.000Z</published>
+    <summary>SVG est de plus en plus supporté par les navigateurs. Cela peut nous amener à reconsidérer nos choix en ce qui concerne la performance du front-end. Petit tour d&apos;horizon des plus de ce format.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/applications_vehicules</id>
+    <title>Et si HTML5 accédait à mon véhicule ?</title>
+    <link href="https://insertafter.com/fr/blog/applications_vehicules" rel="alternate" type="text/html" />
+    <updated>2013-01-09T08:54:05.000Z</updated>
+    <published>2013-01-09T08:54:05.000Z</published>
+    <summary>Citroën vient de lancer un petit concours tout simple auquel je vais proposer une idée. Découvrez là, mais aussi, comment elle pourrait être mise en oeuvre.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/applications_html5</id>
+    <title>Un futur radieux pour les applications HTML5</title>
+    <link href="https://insertafter.com/fr/blog/applications_html5" rel="alternate" type="text/html" />
+    <updated>2013-01-05T15:06:11.000Z</updated>
+    <published>2013-01-05T15:06:11.000Z</published>
+    <summary>L&apos;importance des applications HTML5 va croissante, les acteurs qui parient sur ces dernières aussi. L&apos;avenir des applications HTML5 s&apos;annonce épique.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/hackaton_microsoft</id>
+    <title>Hackathon Windows Phone 8</title>
+    <link href="https://insertafter.com/fr/blog/hackaton_microsoft" rel="alternate" type="text/html" />
+    <updated>2012-12-25T20:11:57.000Z</updated>
+    <published>2012-12-25T20:11:57.000Z</published>
+    <summary>Depuis que Windows 8 gère le HTML5, je me suis un peu plus rapproché de la communauté Microsoft grâce notamment à un développeur de mon coin. Petit retour sur ce hackathon.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/systeme_template_ideal</id>
+    <title>Le système de template idéal</title>
+    <link href="https://insertafter.com/fr/blog/systeme_template_ideal" rel="alternate" type="text/html" />
+    <updated>2012-11-30T10:16:24.000Z</updated>
+    <published>2012-11-30T10:16:24.000Z</published>
+    <summary>L&apos;utilisation d&apos;un système de template est très avantageuse, mais apporte également d&apos;autres problématiques. L&apos;existant ne me satisfait pas vraiment, voyons pourquoi et comment faire mieux.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/streamer_donnees</id>
+    <title>Devenez un homme, streamez vos données !</title>
+    <link href="https://insertafter.com/fr/blog/streamer_donnees" rel="alternate" type="text/html" />
+    <updated>2012-11-23T10:11:41.000Z</updated>
+    <published>2012-11-23T10:11:41.000Z</published>
+    <summary>Peut-être ne le saviez-vous pas, mais XMLHttpRequest Level 2 permet d&apos;accéder vos données avant leur chargement complet grâce à l&apos;écouteur d&apos;évènement onProgress. Il est temps de grandir et de l&apos;utiliser.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/gerer_monnaies_logiciel</id>
+    <title>Gérer les monnaies dans un logiciel (CRM,ERP)</title>
+    <link href="https://insertafter.com/fr/blog/gerer_monnaies_logiciel" rel="alternate" type="text/html" />
+    <updated>2012-11-16T09:24:57.000Z</updated>
+    <published>2012-11-16T09:24:57.000Z</published>
+    <summary>Je suis actuellement entrain de développer une solution CRM basée sur mon framework Rest PHP. Il faut donc gérer les différentes monnaies.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/bugmeback</id>
+    <title>BugMeBack : La solution pour venir à bout de vos bugs ?</title>
+    <link href="https://insertafter.com/fr/blog/bugmeback" rel="alternate" type="text/html" />
+    <updated>2012-10-27T21:53:43.000Z</updated>
+    <published>2012-10-27T21:53:43.000Z</published>
+    <summary>Le problème avec les bugs, c&apos;est qu&apos;ils ont la fâcheuse tendance à être détectés par des novices. C&apos;est alors le parcours du combattant pour se les faire expliquer. BugMeBack va vous aider !</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/polyfill_or_not</id>
+    <title>Faut-il utiliser les polyfills ?</title>
+    <link href="https://insertafter.com/fr/blog/polyfill_or_not" rel="alternate" type="text/html" />
+    <updated>2012-10-21T07:23:29.000Z</updated>
+    <published>2012-10-21T07:23:29.000Z</published>
+    <summary>Tout à chacun est tenté d&apos;utiliser HTML5 pour créer des applications sympa expérimentant le champs des possibles. Malheureusement, HTML5 n&apos;est pas supporté par tous les navigateurs. C&apos;est alors que se pose la question des polyfills.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/tester_virtualhost_avant_dns</id>
+    <title>Tester un virtualhost avant de changer les DNS</title>
+    <link href="https://insertafter.com/fr/blog/tester_virtualhost_avant_dns" rel="alternate" type="text/html" />
+    <updated>2012-10-18T08:29:18.000Z</updated>
+    <published>2012-10-18T08:29:18.000Z</published>
+    <summary>Quand on migre un site vers un nouveau serveur, on a besoin de tester le bon fonctionnement de ce dernier avant de mettre à jour les DNS. Petite astuce à base de telnet et openssl.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/creer_un_bon_service_rest</id>
+    <title>Créer un service REST</title>
+    <link href="https://insertafter.com/fr/blog/creer_un_bon_service_rest" rel="alternate" type="text/html" />
+    <updated>2012-10-06T13:04:04.000Z</updated>
+    <published>2012-10-06T13:04:04.000Z</published>
+    <summary>REST est de plus en plus utilisé pour la création de services web. J&apos;ai moi-même créé un framework basé sur ce principe. Découvrez mes petits plus pour créer un bon service REST !</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/resume_septembre_2012</id>
+    <title>Mes trouvailles de septembre 2012</title>
+    <link href="https://insertafter.com/fr/blog/resume_septembre_2012" rel="alternate" type="text/html" />
+    <updated>2012-09-29T10:54:05.000Z</updated>
+    <published>2012-09-29T10:54:05.000Z</published>
+    <summary>Ce mois-ci, j&apos;ai vu passer assez de petites choses pour faire un point rapide sur les dernières nouveautés et actualités du développement web.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/devcamp_microsoft_lille</id>
+    <title>Dev camp Microsoft Lille : Bienvenue en boîte !</title>
+    <link href="https://insertafter.com/fr/blog/devcamp_microsoft_lille" rel="alternate" type="text/html" />
+    <updated>2012-09-28T12:50:44.000Z</updated>
+    <published>2012-09-28T12:50:44.000Z</published>
+    <summary>Hier je suis allé au Devcamp Microsoft organisé à Lille pour découvrir le nouveau Windows et ses nouvelles possibilités pour la création de logiciels. Je pense que l&apos;expérience mérite un petit résumé, surtout en ce qui concerne HTML5 / Javascript.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/gestion_collisions_html5_canvas</id>
+    <title>Gestion des collisions 2D dans un jeu HTML5 / Javascript</title>
+    <link href="https://insertafter.com/fr/blog/gestion_collisions_html5_canvas" rel="alternate" type="text/html" />
+    <updated>2012-09-23T10:29:46.000Z</updated>
+    <published>2012-09-23T10:29:46.000Z</published>
+    <summary>L&apos;expérience du développement de Tank Arena m&apos;amène à faire un petit point sur la gestion des collisions dans un jeu 2D écrit avec Javascript/HTML5.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/champs_set_et_group_by</id>
+    <title>Les champs SET et les requêtes GROUP BY</title>
+    <link href="https://insertafter.com/fr/blog/champs_set_et_group_by" rel="alternate" type="text/html" />
+    <updated>2012-08-28T07:34:25.000Z</updated>
+    <published>2012-08-28T07:34:25.000Z</published>
+    <summary>J&apos;adore utiliser les champs de type SET pour leur souplesse et leur nature multivaluées, mais quand GROUP BY entre dans la place, attention les dégâts !</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/module_javascript</id>
+    <title>Les modules Javascript : Un joyeux B</title>
+    <link href="https://insertafter.com/fr/blog/module_javascript" rel="alternate" type="text/html" />
+    <updated>2012-08-17T11:34:48.000Z</updated>
+    <published>2012-08-17T11:34:48.000Z</published>
+    <summary>Dès lors que l&apos;on tente de créer des applications complexes en Javascript, la segmentation du code en divers fichiers devient nécessaire. Cela génère une nouvelle difficulté, la modularisation du Javascript.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/accelerometre_casse_briques</id>
+    <title>Utilisation de l&apos;accéléromètre dans le Casse Brique</title>
+    <link href="https://insertafter.com/fr/blog/accelerometre_casse_briques" rel="alternate" type="text/html" />
+    <updated>2012-08-09T12:14:36.000Z</updated>
+    <published>2012-08-09T12:14:36.000Z</published>
+    <summary>HTML5 expose via l&apos;API accelerometer des information sur l&apos;inclinaison de l&apos;appareil en fonction des trois axes de l&apos;espace, utilisons les pour notre Casse brique.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/critique_livre_base_de_donnees</id>
+    <title>Bases de données : Concepts, utilisation et développement de Jean-Luc Hainaut</title>
+    <link href="https://insertafter.com/fr/blog/critique_livre_base_de_donnees" rel="alternate" type="text/html" />
+    <updated>2012-08-02T09:43:00.000Z</updated>
+    <published>2012-08-02T09:43:00.000Z</published>
+    <summary>J&apos;ai terminé ce livre sur les bases de donnée et je l&apos;ai trouvé très intéressant et instructif, voici un petit résumé de ce qu&apos;il m&apos;a apporté.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/trouvailles_juillet_2012</id>
+    <title>Mes trouvailles de juillet 2012</title>
+    <link href="https://insertafter.com/fr/blog/trouvailles_juillet_2012" rel="alternate" type="text/html" />
+    <updated>2012-07-27T15:00:07.000Z</updated>
+    <published>2012-07-27T15:00:07.000Z</published>
+    <summary>Voici quelques liens sur l&apos;actualité du développement Web en ce mois de juillet 2012.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/comparatif_appstores</id>
+    <title>Comparatif des webapp stores</title>
+    <link href="https://insertafter.com/fr/blog/comparatif_appstores" rel="alternate" type="text/html" />
+    <updated>2012-07-27T14:28:05.000Z</updated>
+    <published>2012-07-27T14:28:05.000Z</published>
+    <summary>Une fois qu&apos;une application web est développée, il peut être intéressant de lui donner de la visibilité. Les AppStores sont censés aider les développeurs dans cette tâche.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/request_animation_frame</id>
+    <title>Utilisation de requestAnimationFrame pour les jeux HTML5</title>
+    <link href="https://insertafter.com/fr/blog/request_animation_frame" rel="alternate" type="text/html" />
+    <updated>2012-07-26T08:13:35.000Z</updated>
+    <published>2012-07-26T08:13:35.000Z</published>
+    <summary>Une nouvelle spécification permet d&apos;optimiser l&apos;affichage des jeux HTML5 en synchronisant ces derniers avec le moteur graphique du navigateur. Petit exemple de mise en oeuvre avec notre casse brique.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/nommenclature_table_sql_base</id>
+    <title>Conventions de nommage des bases de données</title>
+    <link href="https://insertafter.com/fr/blog/nommenclature_table_sql_base" rel="alternate" type="text/html" />
+    <updated>2012-07-18T14:34:39.000Z</updated>
+    <published>2012-07-18T14:34:39.000Z</published>
+    <summary>Depuis que j&apos;ai découvert les bases de données avec MySQL, je n&apos;ai pas cessé de m&apos;en servir, tant et si bien que j&apos;ai fini par définir une convention de nommage.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/application_des_varstreams_avec_websockipc</id>
+    <title>Exemple de mise en oeuvre des VarStreams avec WebSockIPC et NodeJS</title>
+    <link href="https://insertafter.com/fr/blog/application_des_varstreams_avec_websockipc" rel="alternate" type="text/html" />
+    <updated>2012-07-09T11:57:39.000Z</updated>
+    <published>2012-07-09T11:57:39.000Z</published>
+    <summary>Afin de mieux mettre en exergue l&apos;intérêt des VarStreams, j&apos;ai créé une petite application NodeJS mettant en oeuvre une communication inter processus avec les WebSockets.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/remplacer_json_par_varstream</id>
+    <title>Pourquoi j&apos;ai remplacé JSON par VarStream</title>
+    <link href="https://insertafter.com/fr/blog/remplacer_json_par_varstream" rel="alternate" type="text/html" />
+    <updated>2012-07-06T08:56:35.000Z</updated>
+    <published>2012-07-06T08:56:35.000Z</published>
+    <summary>JSON est très connu et semble bon pour la plupart des utilisations, cependant, par &quot;hasard&quot;, j&apos;ai créé un format de données que je trouve supérieur et que j&apos;ai décidé d&apos;appeler VarStream.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/bien_designer_url_site_applications_web</id>
+    <title>Comment bien designer les url de son site ou application web</title>
+    <link href="https://insertafter.com/fr/blog/bien_designer_url_site_applications_web" rel="alternate" type="text/html" />
+    <updated>2012-06-30T10:02:27.000Z</updated>
+    <published>2012-06-30T10:02:27.000Z</published>
+    <summary>Les URL ou URI d&apos;une application ou d&apos;un site Internet nécessitent de prendre un moment pour réfléchir à leur schema. Voici quelques bonnes pratiques issues de mon expérience REST.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/firefox_mobile_console</id>
+    <title>Firefox Mobile Android : Accéder aux consoles d&apos;erreur Javascript / stderr</title>
+    <link href="https://insertafter.com/fr/blog/firefox_mobile_console" rel="alternate" type="text/html" />
+    <updated>2012-06-18T07:49:47.000Z</updated>
+    <published>2012-06-18T07:49:47.000Z</published>
+    <summary>Pour développer pour Firefox Mobile, mieux vaut avoir la console d&apos;erreur à portée de main. Voici la méthode.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/orange_hackaton</id>
+    <title>Orange HTML5 Hackathon : Pourquoi j&apos;ai aimé !</title>
+    <link href="https://insertafter.com/fr/blog/orange_hackaton" rel="alternate" type="text/html" />
+    <updated>2012-06-13T08:28:45.000Z</updated>
+    <published>2012-06-13T08:28:45.000Z</published>
+    <summary>Dans le cadre du programme Orange Partner, un hackathon HTML5 de 30h non-stop a été organisé. Avec mon équipe, nous avons remporté le grand prix du jury.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/tank_arena_html5</id>
+    <title>Jeux HTML5 : Défi Tank Arena</title>
+    <link href="https://insertafter.com/fr/blog/tank_arena_html5" rel="alternate" type="text/html" />
+    <updated>2012-06-09T14:20:22.000Z</updated>
+    <published>2012-06-09T14:20:22.000Z</published>
+    <summary>Si vous avez déjà joué à Tank Arena, alors vous savez que c&apos;est un excellent jeu. Malheureusement, il n&apos;existe que pour Windows. Relevons le défi d&apos;en faire un jeu HTML5 !</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/recuperer_privilege_root_mysql</id>
+    <title>Récupérer les privilèges de l&apos;utilisateur root de MySQL</title>
+    <link href="https://insertafter.com/fr/blog/recuperer_privilege_root_mysql" rel="alternate" type="text/html" />
+    <updated>2012-05-19T13:02:39.000Z</updated>
+    <published>2012-05-19T13:02:39.000Z</published>
+    <summary>En administration système, tout arrive, même les cas les plus désespérés. Perdre le mot de passe ou les privilèges de root de MySQL en fait partie. Voici comment s&apos;en sortir.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/meilleur_pere_grace_a_cron</id>
+    <title>Comment devenir un meilleur père grâce à Cron</title>
+    <link href="https://insertafter.com/fr/blog/meilleur_pere_grace_a_cron" rel="alternate" type="text/html" />
+    <updated>2012-05-12T10:24:25.000Z</updated>
+    <published>2012-05-12T10:24:25.000Z</published>
+    <summary>Décrocher de l&apos;écran en plein milieu d&apos;une session de code est difficile. Mais arriver en retard à la garderie, c&apos;est pas cool. Heureusement cron et Patrick Sébastien sont là !</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/html5_casse_brique</id>
+    <title>Jeux HTML5 : Développement d&apos;un casse brique</title>
+    <link href="https://insertafter.com/fr/blog/html5_casse_brique" rel="alternate" type="text/html" />
+    <updated>2012-05-11T08:51:19.000Z</updated>
+    <published>2012-05-11T08:51:19.000Z</published>
+    <summary>Créer un jeu en HTML5 est simple. Cependant, il faut respecter quelques bonnes pratiques pour éviter que cela tourne au cauchemar.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/migrer_base_de_donnees_utf8</id>
+    <title>Migrer toute une base de données vers UTF8</title>
+    <link href="https://insertafter.com/fr/blog/migrer_base_de_donnees_utf8" rel="alternate" type="text/html" />
+    <updated>2012-05-10T06:48:13.000Z</updated>
+    <published>2012-05-10T06:48:13.000Z</published>
+    <summary>Vous avez peut-être commencé votre application avec les caractères latins et pour des besoins d&apos;internationalisation, vous souhaitez passer vos bases en UTF8 ? La solution tient en un seul script.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/developpement_web_mobile</id>
+    <title>Tester ses sites web sur les mobiles</title>
+    <link href="https://insertafter.com/fr/blog/developpement_web_mobile" rel="alternate" type="text/html" />
+    <updated>2012-05-09T17:47:14.000Z</updated>
+    <published>2012-05-09T17:47:14.000Z</published>
+    <summary>On ne peut pas toujours s&apos;offrir un téléphone haut de gamme pour tester son site web. Heureusement, les émulateurs sont là !</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/ameliration_casse_brique</id>
+    <title>Amélioration d&apos;un casse brique</title>
+    <link href="https://insertafter.com/fr/blog/ameliration_casse_brique" rel="alternate" type="text/html" />
+    <updated>2012-05-08T18:09:31.000Z</updated>
+    <published>2012-05-08T18:09:31.000Z</published>
+    <summary>J&apos;ai cliqué via Twitter sur un lien vers un casse brique en développement. Il avait des problèmes de performance étonnants. J&apos;y ai mis mon grain de sel.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/pourquoi_insert_after</id>
+    <title>Pourquoi j&apos;ai nommé ce blog InsertAfter</title>
+    <link href="https://insertafter.com/fr/blog/pourquoi_insert_after" rel="alternate" type="text/html" />
+    <updated>2012-05-08T12:23:29.000Z</updated>
+    <published>2012-05-08T12:23:29.000Z</published>
+    <summary>Je viens de m&apos;apercevoir que je n&apos;ai pas expliqué pourquoi ce blog s&apos;appelle InsertAfter, c&apos;est le moment de palier à ce manque.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/notepad_plus_plus_debian_gnu_linux</id>
+    <title>Installer/utiliser Notepad++ sous Debian GNU/Linux</title>
+    <link href="https://insertafter.com/fr/blog/notepad_plus_plus_debian_gnu_linux" rel="alternate" type="text/html" />
+    <updated>2012-05-08T07:36:03.000Z</updated>
+    <published>2012-05-08T07:36:03.000Z</published>
+    <summary>L&apos;univers windows est pour moi du passé, mais Notepad++ reste un must-have sans lequel coder serait bien moins sympa. Découvrez comment profiter de ce logiciel sous Linux.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/lecteur_fichiers_asc_php</id>
+    <title>Lecteur/parseur de fichiers de POIs .ASC en PHP</title>
+    <link href="https://insertafter.com/fr/blog/lecteur_fichiers_asc_php" rel="alternate" type="text/html" />
+    <updated>2012-05-05T20:16:48.000Z</updated>
+    <published>2012-05-05T20:16:48.000Z</published>
+    <summary>Peut-être avez vous déjà été confronté à ces infâmes fichiers de POI au format .ASC. Voici un petit parseur créé par mes soins.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/performances_php_lamp</id>
+    <title>Critique du livre : Performances PHP, audit et optimisation LAMP</title>
+    <link href="https://insertafter.com/fr/blog/performances_php_lamp" rel="alternate" type="text/html" />
+    <updated>2012-05-05T17:06:27.000Z</updated>
+    <published>2012-05-05T17:06:27.000Z</published>
+    <summary>Afin de compléter mes compétences en administration système, j&apos;ai acheté le livre Performance PHP aux éditions Eyrolles. Bonne pioche !</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/linux_embarque</id>
+    <title>Critique du livre : Linux embarqué. Comprendre, développer, réussir de Gilles Blanc</title>
+    <link href="https://insertafter.com/fr/blog/linux_embarque" rel="alternate" type="text/html" />
+    <updated>2012-04-08T02:16:03.000Z</updated>
+    <published>2012-04-08T02:16:03.000Z</published>
+    <summary>J&apos;ai récemment hacké mon Nas et mon routeur Linksys. Pour aller plus loin, j&apos;ai acheté un livre sur Linux dans le domaine de l&apos;embarqué.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/uml_par_la_pratique</id>
+    <title>Critique du livre : UML par la pratique par Pascal Roques</title>
+    <link href="https://insertafter.com/fr/blog/uml_par_la_pratique" rel="alternate" type="text/html" />
+    <updated>2012-02-26T20:18:55.000Z</updated>
+    <published>2012-02-26T20:18:55.000Z</published>
+    <summary>UML est un formidable outil pour modéliser vos futures applications. J&apos;ai compris cela en lisant ce livre.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/developpement_systeme_sous_linux</id>
+    <title>Critique du livre : Développement système sous Linux de Christophe Blaess</title>
+    <link href="https://insertafter.com/fr/blog/developpement_systeme_sous_linux" rel="alternate" type="text/html" />
+    <updated>2012-02-15T18:31:26.000Z</updated>
+    <published>2012-02-15T18:31:26.000Z</published>
+    <summary>Cette semaine, j&apos;ai lu l&apos;un des livres les plus intéressants qu&apos;il m&apos;ait été donné de lire.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/exercices_en_cplusplus</id>
+    <title>Critique du livre : Exercices en langage C++</title>
+    <link href="https://insertafter.com/fr/blog/exercices_en_cplusplus" rel="alternate" type="text/html" />
+    <updated>2012-01-26T20:28:14.000Z</updated>
+    <published>2012-01-26T20:28:14.000Z</published>
+    <summary>Afin de parfaire ma connaissance du C++, j&apos;ai entrepris la lecture de ce livre d&apos;exercices assez bien ficelé.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/desasembler_apk</id>
+    <title>Décompiler/désassembler un paquet Android (.apk)</title>
+    <link href="https://insertafter.com/fr/blog/desasembler_apk" rel="alternate" type="text/html" />
+    <updated>2012-01-19T12:11:27.000Z</updated>
+    <published>2012-01-19T12:11:27.000Z</published>
+    <summary>Grâce à la combinaison de deux outils simples et pratiques, il est possible d&apos;obtenir un code source assez fidèle à celui d&apos;origine pour un paquet Android.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/services_web_restful</id>
+    <title>Critique du livre : Services Web RESTful par Richarson &amp; Ruby</title>
+    <link href="https://insertafter.com/fr/blog/services_web_restful" rel="alternate" type="text/html" />
+    <updated>2012-01-17T19:44:40.000Z</updated>
+    <published>2012-01-17T19:44:40.000Z</published>
+    <summary>Si on me demandait quel livre a véritablement influencé mon quotidien de développeur web, ce serait sans hésitation celui-là.</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+  <entry>
+    <id>https://insertafter.com/fr/blog/creation_insert_after</id>
+    <title>Bonjour InsertAfter !</title>
+    <link href="https://insertafter.com/fr/blog/creation_insert_after" rel="alternate" type="text/html" />
+    <updated>2012-01-01T13:38:15.000Z</updated>
+    <published>2012-01-01T13:38:15.000Z</published>
+    <summary>Dix ans après, je décide de créer mon blog. Mieux vaut tard que jamais !</summary>
+    <author>
+      <name>Nicolas Froidure</name>
+    </author>
+  </entry>
+</feed>

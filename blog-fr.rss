@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog technique de Nicolas Froidure - page 1 - Nicolas Froidure - Nicolas Froidure</title>
+    <description>Découvrez le blog technique sur le quel je parle de développement web.</description>
+    <link>https://insertafter.com/fr/blog</link>
+    <atom:link href="https://insertafter.com/fr/blog.rss" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Dec 2021 22:00:00 GMT</lastBuildDate>
+    <pubDate>Sun, 14 Jan 2024 18:45:00 GMT</pubDate>
+    <ttl>1800</ttl>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/markdown_ast_vers_react</guid>
+        <title>Rendre votre contenu Markdown avec React via l&apos;AST</title>
+        <description>Où comment ne plus jamais utiliser dangerouslySetInnerHTML.</description>
+        <link>https://insertafter.com/fr/blog/markdown_ast_vers_react</link>
+        <pubDate>Wed, 01 Dec 2021 22:00:00 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/hacktobefest_4_pr_facilement</guid>
+        <title>Obtenir 4 PR facilement et utilement pour l&apos;Hacktoberfest</title>
+        <description>Vous voulez participer à l&apos;Hacktoberfest et gagner un t-shirt, voire mieux, planter un arbre ? Suivez le guide !</description>
+        <link>https://insertafter.com/fr/blog/hacktobefest_4_pr_facilement</link>
+        <pubDate>Tue, 12 Oct 2021 09:07:32 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/kafka_docker_compose</guid>
+        <title>Kafka avec docker-compose</title>
+        <description>Faire tourner Apache Kafka en local avec docker-compose.</description>
+        <link>https://insertafter.com/fr/blog/kafka_docker_compose</link>
+        <pubDate>Thu, 31 Dec 2020 13:07:32 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/injection_de_dependance_nodejs</guid>
+        <title>Injection de dépendances avec NodeJS </title>
+        <description>Présentation donnée lors du ChtiJS 21 à propos de l&apos;injection de dépendances en JavaScript.</description>
+        <link>https://insertafter.com/fr/blog/injection_de_dependance_nodejs</link>
+        <pubDate>Sat, 02 Feb 2019 07:00:00 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/ma_config_vscode</guid>
+        <title>Ma configuration VSCode</title>
+        <description>Petit tour d&apos;horizon de ma configuration VSCode pour ceux que ça peut intéresser ;).</description>
+        <link>https://insertafter.com/fr/blog/ma_config_vscode</link>
+        <pubDate>Sun, 30 Dec 2018 20:00:00 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/les_7_habitudes</guid>
+        <title>Critique du livre : Les 7 habitudes de Stephen R. Covey</title>
+        <description>Les 7 habitudes des gens qui réussissent tout ce qu&apos;ils entreprennent de Stephen R. Covey vous propose de diriger votre vie selon vos principes. Pas si évident que cela à la lecture de ce livre.</description>
+        <link>https://insertafter.com/fr/blog/les_7_habitudes</link>
+        <pubDate>Sat, 28 Oct 2017 12:16:03 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/developper_de_l_impact</guid>
+        <title>Développer de l&apos;impact</title>
+        <description>Présentation donnée lors du Club Tech à Euratechnologies.</description>
+        <link>https://insertafter.com/fr/blog/developper_de_l_impact</link>
+        <pubDate>Wed, 25 Oct 2017 13:00:00 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/documentation_du_code</guid>
+        <title>Documentation d&apos;applications en JavaScript</title>
+        <description>Documenter son code est parfois fastidieux. Pourtant, c&apos;est une nécessité. Petit retour d&apos;expérience sur les techniques et outils que j&apos;utilise.</description>
+        <link>https://insertafter.com/fr/blog/documentation_du_code</link>
+        <pubDate>Sat, 11 Mar 2017 18:02:27 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/normalisation_retours_json</guid>
+        <title>Normalisation des retours JSON</title>
+        <description>Peu de gens pensent à normaliser les JSON en début de projet. C&apos;est dommage car c&apos;est le meilleur moment pour.</description>
+        <link>https://insertafter.com/fr/blog/normalisation_retours_json</link>
+        <pubDate>Fri, 03 Mar 2017 10:07:32 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/generation_api_cliente</guid>
+        <title>Génération automatique de clients d&apos;APIs</title>
+        <description>Personne de devrait perdre du temps à écrire du code qui peut être généré automatiquement. Voici comment je m&apos;y prends pour les clients d&apos;APIs.</description>
+        <link>https://insertafter.com/fr/blog/generation_api_cliente</link>
+        <pubDate>Sun, 19 Feb 2017 15:00:00 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/histoire_des_mathematiques</guid>
+        <title>«Histoire des Mathématiques» par Mickaël Launay</title>
+        <description>Critique du livre «Histoire des Mathématiques» par Mickaël Launay.</description>
+        <link>https://insertafter.com/fr/blog/histoire_des_mathematiques</link>
+        <pubDate>Sat, 11 Feb 2017 18:02:27 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/metapak</guid>
+        <title>Méta-paquets NPM avec metapak</title>
+        <description>Présentation sur metapak, un module d&apos;aide à la création de méta-paquets NPM.</description>
+        <link>https://insertafter.com/fr/blog/metapak</link>
+        <pubDate>Sun, 05 Feb 2017 07:46:44 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/presentation_nodejs_rest_microservices</guid>
+        <title>Micro-services first avec NodeJS</title>
+        <description>Retour rapide sur ma présentation au ChtiJS 15 sur les microservices et le design d&apos;APIs avec NodeJS.</description>
+        <link>https://insertafter.com/fr/blog/presentation_nodejs_rest_microservices</link>
+        <pubDate>Sun, 28 Feb 2016 20:32:43 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/es6_dans_ton_code</guid>
+        <title>ES6 dans ton code</title>
+        <description>Présentation sur les évolutions apportées par la version 6 d&apos;ECMAScript donnée à l&apos;occasion de ChtiJS.</description>
+        <link>https://insertafter.com/fr/blog/es6_dans_ton_code</link>
+        <pubDate>Tue, 12 May 2015 08:21:43 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/infrastructure_microservices</guid>
+        <title>Architecture d&apos;une API NodeJS</title>
+        <description>Présentation d&apos;une architecture d&apos;API REST réalisée avec des microservices.</description>
+        <link>https://insertafter.com/fr/blog/infrastructure_microservices</link>
+        <pubDate>Tue, 12 May 2015 08:21:43 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/design_probabiliste_mongodb</guid>
+        <title>MongoDB ou la conception probabiliste</title>
+        <description>Concevoir une base de donnée MongoDB c&apos;est composer avec le hasard. Dans ce billet je vous propose de découvrir pourquoi et comment.</description>
+        <link>https://insertafter.com/fr/blog/design_probabiliste_mongodb</link>
+        <pubDate>Sat, 04 Apr 2015 13:29:02 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/design_base_donnee_mongodb</guid>
+        <title>Design de bases de données MongoDB</title>
+        <description>Le design de bases de données MongoDB est une activité complexe qui nécessite d&apos;avoir une profonde connaissance des implications des divers choix possibles.</description>
+        <link>https://insertafter.com/fr/blog/design_base_donnee_mongodb</link>
+        <pubDate>Sat, 28 Mar 2015 12:40:32 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/erreurs_javascript_ameliorees</guid>
+        <title>Améliorer les erreurs JavaScript</title>
+        <description>Pour un meilleur débogage, il faut de meilleures erreurs. C&apos;est pourquoi j&apos;ai mis en place une stratégie pour les rendre plus pertinentes.</description>
+        <link>https://insertafter.com/fr/blog/erreurs_javascript_ameliorees</link>
+        <pubDate>Sun, 15 Mar 2015 11:04:02 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/faire-mieux-qu-angular-avec-require</guid>
+        <title>Faire mieux qu&apos;AngularJS avec require()</title>
+        <description>Le système CommonJS-like de NodeJS permet un grand nombre de subtilités. Je vous propose de les découvrir en reproduisant les fonctionnalités du système de modules d&apos;AngularJS.</description>
+        <link>https://insertafter.com/fr/blog/faire-mieux-qu-angular-avec-require</link>
+        <pubDate>Thu, 12 Mar 2015 07:49:00 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/watchdeps</guid>
+        <title>Surveillez les dépendances de vos projets NodeJS</title>
+        <description>Avec watchdeps abonnez-vous automatiquement aux dépendences de vos projets NodeJS sur GitHub.</description>
+        <link>https://insertafter.com/fr/blog/watchdeps</link>
+        <pubDate>Sun, 08 Mar 2015 10:07:32 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/bref_j_ai_lu_lean_startup</guid>
+        <title>Bref, j&apos;ai lu Lean Startup</title>
+        <description>Critique du livre Lean Startup à travers le prisme d&apos;un développeur.</description>
+        <link>https://insertafter.com/fr/blog/bref_j_ai_lu_lean_startup</link>
+        <pubDate>Mon, 02 Mar 2015 18:02:27 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/isomorphisme_par_l_exemple</guid>
+        <title>L&apos;isomorphisme par l&apos;exemple</title>
+        <description>Présentation sur la gestion des droits dans une application JavaScript de façon universelle.</description>
+        <link>https://insertafter.com/fr/blog/isomorphisme_par_l_exemple</link>
+        <pubDate>Tue, 03 Feb 2015 07:08:19 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/retour_xp_mongodb</guid>
+        <title>MongoDB : Retour d&apos;expérience</title>
+        <description>Je travaille avec MongoDB depuis maintenant presque un an, il est temps pour moi de faire un petit retour sur cette base de données et sur le NoSQL de manière générale.</description>
+        <link>https://insertafter.com/fr/blog/retour_xp_mongodb</link>
+        <pubDate>Thu, 04 Dec 2014 19:44:40 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/retour_experience_gulp</guid>
+        <title>Gulp : Retour d&apos;expérience</title>
+        <description>Comme promis, Gulp revient à l&apos;ordre du jour de ce Blog avec un retour d&apos;expérience sur l&apos;utilisation de Gulp et le développement de plugins.</description>
+        <link>https://insertafter.com/fr/blog/retour_experience_gulp</link>
+        <pubDate>Sun, 26 Jan 2014 08:01:26 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/gulp_vs_grunt</guid>
+        <title>Gulp remplacera-t-il Grunt ?</title>
+        <description>Gulp est un concurrent de Grunt qui se targue d&apos;exploiter les capacités des streams NodeJS. Petit passage en revue de cet outil.</description>
+        <link>https://insertafter.com/fr/blog/gulp_vs_grunt</link>
+        <pubDate>Mon, 23 Dec 2013 22:25:29 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/browserify</guid>
+        <title>Browserify : Partager le code JavaScript entre front et back end</title>
+        <description>Exécuter du JavaScript aussi bien côté serveur que dans le navigateur de vos clients devient possible grâce à Browserify.</description>
+        <link>https://insertafter.com/fr/blog/browserify</link>
+        <pubDate>Mon, 16 Dec 2013 12:23:52 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/gruntjs_font_icons</guid>
+        <title>Générer des fontes d&apos;icônes avec GruntJS</title>
+        <description>Cette semaine, je me suis penché sur la génération de fontes automatiquement avec GruntJS. Compte rendu de mes découvertes et des développements qui les ont suivies.</description>
+        <link>https://insertafter.com/fr/blog/gruntjs_font_icons</link>
+        <pubDate>Sat, 09 Nov 2013 14:25:29 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/livre_javascript</guid>
+        <title>Un livre pour apprendre JavaScript</title>
+        <description>En Avril 2013 j&apos;ai été contacté par MA-Édition pour écrire un livre sur JavaScript. Aujourd&apos;hui, il est en librairie. Retour sur cette belle aventure.</description>
+        <link>https://insertafter.com/fr/blog/livre_javascript</link>
+        <pubDate>Sun, 22 Sep 2013 15:45:27 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/enseignement_dirige_par_tests</guid>
+        <title>L&apos;enseignement dirigé par les tests</title>
+        <description>Les tests unitaires et fonctionnels ont véritablement révolutionné le développement professionnel, pourquoi pas également celui de l&apos;enseignement et de la formation ?</description>
+        <link>https://insertafter.com/fr/blog/enseignement_dirige_par_tests</link>
+        <pubDate>Wed, 04 Sep 2013 09:22:53 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/tester_javascript_frontend</guid>
+        <title>Tester son JavaScript front end</title>
+        <description>Depuis que j&apos;ai découvert Karma, je ne me lasse plus de convertir mes projets pour lancer les tests grâce à cet outil. Retour d&apos;expérience et conseils pour une utilisation pleine et entière.</description>
+        <link>https://insertafter.com/fr/blog/tester_javascript_frontend</link>
+        <pubDate>Sun, 25 Aug 2013 13:24:22 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/erreurs_javascript</guid>
+        <title>Gestion des erreurs en JavaScript</title>
+        <description>Gérer les erreurs en JavaScript peut paraître simple, mais il n&apos;est pas toujours évident de choisir entre exceptions, retours d&apos;erreurs et callbacks d&apos;erreurs.</description>
+        <link>https://insertafter.com/fr/blog/erreurs_javascript</link>
+        <pubDate>Tue, 30 Jul 2013 13:18:42 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/choisir_module_nodejs</guid>
+        <title>Bien choisir ses modules NodeJS : ma méthode</title>
+        <description>Hier à la troisième édition de ChtiJS, un question a été soulevée sur la confiance que l&apos;on pouvait avoir dans les modules NodeJS. Je vous dévoile donc ma méthode pour trancher entre npm install et npm remove ;).</description>
+        <link>https://insertafter.com/fr/blog/choisir_module_nodejs</link>
+        <pubDate>Fri, 26 Jul 2013 14:04:25 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/utiliser_requirejs</guid>
+        <title>Astuces pour utiliser pleinement RequireJS</title>
+        <description>Pour un projet dont je vous reparlerai bientôt, j&apos;ai utilisé RequireJS pour la première fois en production. J&apos;en profite pour vous faire un petit retour d&apos;expérience avec quelques astuces de mon cru ;).</description>
+        <link>https://insertafter.com/fr/blog/utiliser_requirejs</link>
+        <pubDate>Thu, 11 Jul 2013 09:57:45 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/promises_javascript_ouvrons_capot</guid>
+        <title>Les promises avec JavaScript : ouvrons le capot !</title>
+        <description>Dans le petit monde de JavaScript les promises font l&apos;actualité. Je vous propose de comprendre les promises par l&apos;implémentation.</description>
+        <link>https://insertafter.com/fr/blog/promises_javascript_ouvrons_capot</link>
+        <pubDate>Sat, 08 Jun 2013 10:04:17 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/creer_bot_irc_avec_nodejs</guid>
+        <title>Créer un bot IRC avec NodeJS</title>
+        <description>J&apos;ai récemment pu tester la création d&apos;un bot NodeJS grâce à la mise en place de Marionnette, le bot IRC de FranceJS.</description>
+        <link>https://insertafter.com/fr/blog/creer_bot_irc_avec_nodejs</link>
+        <pubDate>Sun, 05 May 2013 08:04:57 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/animations_css3</guid>
+        <title>Les animations sur les sites web en 2013</title>
+        <description>On a d&apos;abord connu les animations avec Flash, puis les animations sans Flash grâce aux frameworks JavaScript. Aujourd&apos;hui, ce sont les animations CSS3 qui occupent le devant de la scène et, a priori, ça va durer.</description>
+        <link>https://insertafter.com/fr/blog/animations_css3</link>
+        <pubDate>Wed, 03 Apr 2013 16:02:18 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/xinetd_super_server</guid>
+        <title>Gestion de flotte X1 Intellitrac avec xinetd sur Debian GNU Linux</title>
+        <description>Le super server xinetd est vraiment très pratique pour des petits projets ne dépassant pas un certain nombre de clients. Voici une petite illustration de son utilité pour la localisation de flotte de véhicules.</description>
+        <link>https://insertafter.com/fr/blog/xinetd_super_server</link>
+        <pubDate>Mon, 01 Apr 2013 14:35:58 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/capskiller_stop_aux_majuscules</guid>
+        <title>CapsKiller : Stop aux majuscules</title>
+        <description>Les digital natives supportent mal les majuscules dans les courriels. En effet, cela est assimilé à des cris. Malheureusement, tout le monde n&apos;en fait pas grand cas. CapsKiller pour Thunderbird est là pour vous en protéger.</description>
+        <link>https://insertafter.com/fr/blog/capskiller_stop_aux_majuscules</link>
+        <pubDate>Sat, 23 Feb 2013 11:05:23 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/application_desktop_avec_chrome</guid>
+        <title>Une application desktop avec Chrome</title>
+        <description>Bien que HTML5 progresse de jour en jour, on aimerait parfois pouvoir accéder à n&apos;importe quoi dans son navigateur. C&apos;est déjà possible, grâce à un nouveau petit projet NodeJS.</description>
+        <link>https://insertafter.com/fr/blog/application_desktop_avec_chrome</link>
+        <pubDate>Fri, 08 Feb 2013 15:54:30 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/subtilites_de_regexp</guid>
+        <title>Les subtilités de RegExp en Javascript</title>
+        <description>Les expressions régulières sont très peu populaires, elles sont pourtant surpuissantes. Néanmoins, il y a quelques subtilités à connaître, dont une que j&apos;ai récemment apprise.</description>
+        <link>https://insertafter.com/fr/blog/subtilites_de_regexp</link>
+        <pubDate>Sat, 02 Feb 2013 09:41:13 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/jeux_html5_sympas</guid>
+        <title>Quelques jeux HTML5 sympas</title>
+        <description>Dans mes recherches pour tenter de trouver la meilleure formule pour créer des jeux HTML5 addictifs et de bonne qualité, j&apos;ai trouvé plusieurs jeux aux finitions plus qu&apos;acceptables. Découvrez-les !</description>
+        <link>https://insertafter.com/fr/blog/jeux_html5_sympas</link>
+        <pubDate>Sun, 27 Jan 2013 12:03:52 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/performance_et_svg</guid>
+        <title>Performance des sites web avec SVG</title>
+        <description>SVG est de plus en plus supporté par les navigateurs. Cela peut nous amener à reconsidérer nos choix en ce qui concerne la performance du front-end. Petit tour d&apos;horizon des plus de ce format.</description>
+        <link>https://insertafter.com/fr/blog/performance_et_svg</link>
+        <pubDate>Sun, 13 Jan 2013 21:09:05 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/applications_vehicules</guid>
+        <title>Et si HTML5 accédait à mon véhicule ?</title>
+        <description>Citroën vient de lancer un petit concours tout simple auquel je vais proposer une idée. Découvrez là, mais aussi, comment elle pourrait être mise en oeuvre.</description>
+        <link>https://insertafter.com/fr/blog/applications_vehicules</link>
+        <pubDate>Wed, 09 Jan 2013 08:54:05 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/applications_html5</guid>
+        <title>Un futur radieux pour les applications HTML5</title>
+        <description>L&apos;importance des applications HTML5 va croissante, les acteurs qui parient sur ces dernières aussi. L&apos;avenir des applications HTML5 s&apos;annonce épique.</description>
+        <link>https://insertafter.com/fr/blog/applications_html5</link>
+        <pubDate>Sat, 05 Jan 2013 15:06:11 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/hackaton_microsoft</guid>
+        <title>Hackathon Windows Phone 8</title>
+        <description>Depuis que Windows 8 gère le HTML5, je me suis un peu plus rapproché de la communauté Microsoft grâce notamment à un développeur de mon coin. Petit retour sur ce hackathon.</description>
+        <link>https://insertafter.com/fr/blog/hackaton_microsoft</link>
+        <pubDate>Tue, 25 Dec 2012 20:11:57 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/systeme_template_ideal</guid>
+        <title>Le système de template idéal</title>
+        <description>L&apos;utilisation d&apos;un système de template est très avantageuse, mais apporte également d&apos;autres problématiques. L&apos;existant ne me satisfait pas vraiment, voyons pourquoi et comment faire mieux.</description>
+        <link>https://insertafter.com/fr/blog/systeme_template_ideal</link>
+        <pubDate>Fri, 30 Nov 2012 10:16:24 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/streamer_donnees</guid>
+        <title>Devenez un homme, streamez vos données !</title>
+        <description>Peut-être ne le saviez-vous pas, mais XMLHttpRequest Level 2 permet d&apos;accéder vos données avant leur chargement complet grâce à l&apos;écouteur d&apos;évènement onProgress. Il est temps de grandir et de l&apos;utiliser.</description>
+        <link>https://insertafter.com/fr/blog/streamer_donnees</link>
+        <pubDate>Fri, 23 Nov 2012 10:11:41 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/gerer_monnaies_logiciel</guid>
+        <title>Gérer les monnaies dans un logiciel (CRM,ERP)</title>
+        <description>Je suis actuellement entrain de développer une solution CRM basée sur mon framework Rest PHP. Il faut donc gérer les différentes monnaies.</description>
+        <link>https://insertafter.com/fr/blog/gerer_monnaies_logiciel</link>
+        <pubDate>Fri, 16 Nov 2012 09:24:57 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/bugmeback</guid>
+        <title>BugMeBack : La solution pour venir à bout de vos bugs ?</title>
+        <description>Le problème avec les bugs, c&apos;est qu&apos;ils ont la fâcheuse tendance à être détectés par des novices. C&apos;est alors le parcours du combattant pour se les faire expliquer. BugMeBack va vous aider !</description>
+        <link>https://insertafter.com/fr/blog/bugmeback</link>
+        <pubDate>Sat, 27 Oct 2012 21:53:43 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/polyfill_or_not</guid>
+        <title>Faut-il utiliser les polyfills ?</title>
+        <description>Tout à chacun est tenté d&apos;utiliser HTML5 pour créer des applications sympa expérimentant le champs des possibles. Malheureusement, HTML5 n&apos;est pas supporté par tous les navigateurs. C&apos;est alors que se pose la question des polyfills.</description>
+        <link>https://insertafter.com/fr/blog/polyfill_or_not</link>
+        <pubDate>Sun, 21 Oct 2012 07:23:29 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/tester_virtualhost_avant_dns</guid>
+        <title>Tester un virtualhost avant de changer les DNS</title>
+        <description>Quand on migre un site vers un nouveau serveur, on a besoin de tester le bon fonctionnement de ce dernier avant de mettre à jour les DNS. Petite astuce à base de telnet et openssl.</description>
+        <link>https://insertafter.com/fr/blog/tester_virtualhost_avant_dns</link>
+        <pubDate>Thu, 18 Oct 2012 08:29:18 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/creer_un_bon_service_rest</guid>
+        <title>Créer un service REST</title>
+        <description>REST est de plus en plus utilisé pour la création de services web. J&apos;ai moi-même créé un framework basé sur ce principe. Découvrez mes petits plus pour créer un bon service REST !</description>
+        <link>https://insertafter.com/fr/blog/creer_un_bon_service_rest</link>
+        <pubDate>Sat, 06 Oct 2012 13:04:04 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/resume_septembre_2012</guid>
+        <title>Mes trouvailles de septembre 2012</title>
+        <description>Ce mois-ci, j&apos;ai vu passer assez de petites choses pour faire un point rapide sur les dernières nouveautés et actualités du développement web.</description>
+        <link>https://insertafter.com/fr/blog/resume_septembre_2012</link>
+        <pubDate>Sat, 29 Sep 2012 10:54:05 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/devcamp_microsoft_lille</guid>
+        <title>Dev camp Microsoft Lille : Bienvenue en boîte !</title>
+        <description>Hier je suis allé au Devcamp Microsoft organisé à Lille pour découvrir le nouveau Windows et ses nouvelles possibilités pour la création de logiciels. Je pense que l&apos;expérience mérite un petit résumé, surtout en ce qui concerne HTML5 / Javascript.</description>
+        <link>https://insertafter.com/fr/blog/devcamp_microsoft_lille</link>
+        <pubDate>Fri, 28 Sep 2012 12:50:44 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/gestion_collisions_html5_canvas</guid>
+        <title>Gestion des collisions 2D dans un jeu HTML5 / Javascript</title>
+        <description>L&apos;expérience du développement de Tank Arena m&apos;amène à faire un petit point sur la gestion des collisions dans un jeu 2D écrit avec Javascript/HTML5.</description>
+        <link>https://insertafter.com/fr/blog/gestion_collisions_html5_canvas</link>
+        <pubDate>Sun, 23 Sep 2012 10:29:46 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/champs_set_et_group_by</guid>
+        <title>Les champs SET et les requêtes GROUP BY</title>
+        <description>J&apos;adore utiliser les champs de type SET pour leur souplesse et leur nature multivaluées, mais quand GROUP BY entre dans la place, attention les dégâts !</description>
+        <link>https://insertafter.com/fr/blog/champs_set_et_group_by</link>
+        <pubDate>Tue, 28 Aug 2012 07:34:25 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/module_javascript</guid>
+        <title>Les modules Javascript : Un joyeux B</title>
+        <description>Dès lors que l&apos;on tente de créer des applications complexes en Javascript, la segmentation du code en divers fichiers devient nécessaire. Cela génère une nouvelle difficulté, la modularisation du Javascript.</description>
+        <link>https://insertafter.com/fr/blog/module_javascript</link>
+        <pubDate>Fri, 17 Aug 2012 11:34:48 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/accelerometre_casse_briques</guid>
+        <title>Utilisation de l&apos;accéléromètre dans le Casse Brique</title>
+        <description>HTML5 expose via l&apos;API accelerometer des information sur l&apos;inclinaison de l&apos;appareil en fonction des trois axes de l&apos;espace, utilisons les pour notre Casse brique.</description>
+        <link>https://insertafter.com/fr/blog/accelerometre_casse_briques</link>
+        <pubDate>Thu, 09 Aug 2012 12:14:36 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/critique_livre_base_de_donnees</guid>
+        <title>Bases de données : Concepts, utilisation et développement de Jean-Luc Hainaut</title>
+        <description>J&apos;ai terminé ce livre sur les bases de donnée et je l&apos;ai trouvé très intéressant et instructif, voici un petit résumé de ce qu&apos;il m&apos;a apporté.</description>
+        <link>https://insertafter.com/fr/blog/critique_livre_base_de_donnees</link>
+        <pubDate>Thu, 02 Aug 2012 09:43:00 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/trouvailles_juillet_2012</guid>
+        <title>Mes trouvailles de juillet 2012</title>
+        <description>Voici quelques liens sur l&apos;actualité du développement Web en ce mois de juillet 2012.</description>
+        <link>https://insertafter.com/fr/blog/trouvailles_juillet_2012</link>
+        <pubDate>Fri, 27 Jul 2012 15:00:07 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/comparatif_appstores</guid>
+        <title>Comparatif des webapp stores</title>
+        <description>Une fois qu&apos;une application web est développée, il peut être intéressant de lui donner de la visibilité. Les AppStores sont censés aider les développeurs dans cette tâche.</description>
+        <link>https://insertafter.com/fr/blog/comparatif_appstores</link>
+        <pubDate>Fri, 27 Jul 2012 14:28:05 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/request_animation_frame</guid>
+        <title>Utilisation de requestAnimationFrame pour les jeux HTML5</title>
+        <description>Une nouvelle spécification permet d&apos;optimiser l&apos;affichage des jeux HTML5 en synchronisant ces derniers avec le moteur graphique du navigateur. Petit exemple de mise en oeuvre avec notre casse brique.</description>
+        <link>https://insertafter.com/fr/blog/request_animation_frame</link>
+        <pubDate>Thu, 26 Jul 2012 08:13:35 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/nommenclature_table_sql_base</guid>
+        <title>Conventions de nommage des bases de données</title>
+        <description>Depuis que j&apos;ai découvert les bases de données avec MySQL, je n&apos;ai pas cessé de m&apos;en servir, tant et si bien que j&apos;ai fini par définir une convention de nommage.</description>
+        <link>https://insertafter.com/fr/blog/nommenclature_table_sql_base</link>
+        <pubDate>Wed, 18 Jul 2012 14:34:39 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/application_des_varstreams_avec_websockipc</guid>
+        <title>Exemple de mise en oeuvre des VarStreams avec WebSockIPC et NodeJS</title>
+        <description>Afin de mieux mettre en exergue l&apos;intérêt des VarStreams, j&apos;ai créé une petite application NodeJS mettant en oeuvre une communication inter processus avec les WebSockets.</description>
+        <link>https://insertafter.com/fr/blog/application_des_varstreams_avec_websockipc</link>
+        <pubDate>Mon, 09 Jul 2012 11:57:39 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/remplacer_json_par_varstream</guid>
+        <title>Pourquoi j&apos;ai remplacé JSON par VarStream</title>
+        <description>JSON est très connu et semble bon pour la plupart des utilisations, cependant, par &quot;hasard&quot;, j&apos;ai créé un format de données que je trouve supérieur et que j&apos;ai décidé d&apos;appeler VarStream.</description>
+        <link>https://insertafter.com/fr/blog/remplacer_json_par_varstream</link>
+        <pubDate>Fri, 06 Jul 2012 08:56:35 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/bien_designer_url_site_applications_web</guid>
+        <title>Comment bien designer les url de son site ou application web</title>
+        <description>Les URL ou URI d&apos;une application ou d&apos;un site Internet nécessitent de prendre un moment pour réfléchir à leur schema. Voici quelques bonnes pratiques issues de mon expérience REST.</description>
+        <link>https://insertafter.com/fr/blog/bien_designer_url_site_applications_web</link>
+        <pubDate>Sat, 30 Jun 2012 10:02:27 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/firefox_mobile_console</guid>
+        <title>Firefox Mobile Android : Accéder aux consoles d&apos;erreur Javascript / stderr</title>
+        <description>Pour développer pour Firefox Mobile, mieux vaut avoir la console d&apos;erreur à portée de main. Voici la méthode.</description>
+        <link>https://insertafter.com/fr/blog/firefox_mobile_console</link>
+        <pubDate>Mon, 18 Jun 2012 07:49:47 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/orange_hackaton</guid>
+        <title>Orange HTML5 Hackathon : Pourquoi j&apos;ai aimé !</title>
+        <description>Dans le cadre du programme Orange Partner, un hackathon HTML5 de 30h non-stop a été organisé. Avec mon équipe, nous avons remporté le grand prix du jury.</description>
+        <link>https://insertafter.com/fr/blog/orange_hackaton</link>
+        <pubDate>Wed, 13 Jun 2012 08:28:45 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/tank_arena_html5</guid>
+        <title>Jeux HTML5 : Défi Tank Arena</title>
+        <description>Si vous avez déjà joué à Tank Arena, alors vous savez que c&apos;est un excellent jeu. Malheureusement, il n&apos;existe que pour Windows. Relevons le défi d&apos;en faire un jeu HTML5 !</description>
+        <link>https://insertafter.com/fr/blog/tank_arena_html5</link>
+        <pubDate>Sat, 09 Jun 2012 14:20:22 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/recuperer_privilege_root_mysql</guid>
+        <title>Récupérer les privilèges de l&apos;utilisateur root de MySQL</title>
+        <description>En administration système, tout arrive, même les cas les plus désespérés. Perdre le mot de passe ou les privilèges de root de MySQL en fait partie. Voici comment s&apos;en sortir.</description>
+        <link>https://insertafter.com/fr/blog/recuperer_privilege_root_mysql</link>
+        <pubDate>Sat, 19 May 2012 13:02:39 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/meilleur_pere_grace_a_cron</guid>
+        <title>Comment devenir un meilleur père grâce à Cron</title>
+        <description>Décrocher de l&apos;écran en plein milieu d&apos;une session de code est difficile. Mais arriver en retard à la garderie, c&apos;est pas cool. Heureusement cron et Patrick Sébastien sont là !</description>
+        <link>https://insertafter.com/fr/blog/meilleur_pere_grace_a_cron</link>
+        <pubDate>Sat, 12 May 2012 10:24:25 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/html5_casse_brique</guid>
+        <title>Jeux HTML5 : Développement d&apos;un casse brique</title>
+        <description>Créer un jeu en HTML5 est simple. Cependant, il faut respecter quelques bonnes pratiques pour éviter que cela tourne au cauchemar.</description>
+        <link>https://insertafter.com/fr/blog/html5_casse_brique</link>
+        <pubDate>Fri, 11 May 2012 08:51:19 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/migrer_base_de_donnees_utf8</guid>
+        <title>Migrer toute une base de données vers UTF8</title>
+        <description>Vous avez peut-être commencé votre application avec les caractères latins et pour des besoins d&apos;internationalisation, vous souhaitez passer vos bases en UTF8 ? La solution tient en un seul script.</description>
+        <link>https://insertafter.com/fr/blog/migrer_base_de_donnees_utf8</link>
+        <pubDate>Thu, 10 May 2012 06:48:13 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/developpement_web_mobile</guid>
+        <title>Tester ses sites web sur les mobiles</title>
+        <description>On ne peut pas toujours s&apos;offrir un téléphone haut de gamme pour tester son site web. Heureusement, les émulateurs sont là !</description>
+        <link>https://insertafter.com/fr/blog/developpement_web_mobile</link>
+        <pubDate>Wed, 09 May 2012 17:47:14 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/ameliration_casse_brique</guid>
+        <title>Amélioration d&apos;un casse brique</title>
+        <description>J&apos;ai cliqué via Twitter sur un lien vers un casse brique en développement. Il avait des problèmes de performance étonnants. J&apos;y ai mis mon grain de sel.</description>
+        <link>https://insertafter.com/fr/blog/ameliration_casse_brique</link>
+        <pubDate>Tue, 08 May 2012 18:09:31 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/pourquoi_insert_after</guid>
+        <title>Pourquoi j&apos;ai nommé ce blog InsertAfter</title>
+        <description>Je viens de m&apos;apercevoir que je n&apos;ai pas expliqué pourquoi ce blog s&apos;appelle InsertAfter, c&apos;est le moment de palier à ce manque.</description>
+        <link>https://insertafter.com/fr/blog/pourquoi_insert_after</link>
+        <pubDate>Tue, 08 May 2012 12:23:29 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/notepad_plus_plus_debian_gnu_linux</guid>
+        <title>Installer/utiliser Notepad++ sous Debian GNU/Linux</title>
+        <description>L&apos;univers windows est pour moi du passé, mais Notepad++ reste un must-have sans lequel coder serait bien moins sympa. Découvrez comment profiter de ce logiciel sous Linux.</description>
+        <link>https://insertafter.com/fr/blog/notepad_plus_plus_debian_gnu_linux</link>
+        <pubDate>Tue, 08 May 2012 07:36:03 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/lecteur_fichiers_asc_php</guid>
+        <title>Lecteur/parseur de fichiers de POIs .ASC en PHP</title>
+        <description>Peut-être avez vous déjà été confronté à ces infâmes fichiers de POI au format .ASC. Voici un petit parseur créé par mes soins.</description>
+        <link>https://insertafter.com/fr/blog/lecteur_fichiers_asc_php</link>
+        <pubDate>Sat, 05 May 2012 20:16:48 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/performances_php_lamp</guid>
+        <title>Critique du livre : Performances PHP, audit et optimisation LAMP</title>
+        <description>Afin de compléter mes compétences en administration système, j&apos;ai acheté le livre Performance PHP aux éditions Eyrolles. Bonne pioche !</description>
+        <link>https://insertafter.com/fr/blog/performances_php_lamp</link>
+        <pubDate>Sat, 05 May 2012 17:06:27 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/linux_embarque</guid>
+        <title>Critique du livre : Linux embarqué. Comprendre, développer, réussir de Gilles Blanc</title>
+        <description>J&apos;ai récemment hacké mon Nas et mon routeur Linksys. Pour aller plus loin, j&apos;ai acheté un livre sur Linux dans le domaine de l&apos;embarqué.</description>
+        <link>https://insertafter.com/fr/blog/linux_embarque</link>
+        <pubDate>Sun, 08 Apr 2012 02:16:03 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/uml_par_la_pratique</guid>
+        <title>Critique du livre : UML par la pratique par Pascal Roques</title>
+        <description>UML est un formidable outil pour modéliser vos futures applications. J&apos;ai compris cela en lisant ce livre.</description>
+        <link>https://insertafter.com/fr/blog/uml_par_la_pratique</link>
+        <pubDate>Sun, 26 Feb 2012 20:18:55 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/developpement_systeme_sous_linux</guid>
+        <title>Critique du livre : Développement système sous Linux de Christophe Blaess</title>
+        <description>Cette semaine, j&apos;ai lu l&apos;un des livres les plus intéressants qu&apos;il m&apos;ait été donné de lire.</description>
+        <link>https://insertafter.com/fr/blog/developpement_systeme_sous_linux</link>
+        <pubDate>Wed, 15 Feb 2012 18:31:26 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/exercices_en_cplusplus</guid>
+        <title>Critique du livre : Exercices en langage C++</title>
+        <description>Afin de parfaire ma connaissance du C++, j&apos;ai entrepris la lecture de ce livre d&apos;exercices assez bien ficelé.</description>
+        <link>https://insertafter.com/fr/blog/exercices_en_cplusplus</link>
+        <pubDate>Thu, 26 Jan 2012 20:28:14 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/desasembler_apk</guid>
+        <title>Décompiler/désassembler un paquet Android (.apk)</title>
+        <description>Grâce à la combinaison de deux outils simples et pratiques, il est possible d&apos;obtenir un code source assez fidèle à celui d&apos;origine pour un paquet Android.</description>
+        <link>https://insertafter.com/fr/blog/desasembler_apk</link>
+        <pubDate>Thu, 19 Jan 2012 12:11:27 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/services_web_restful</guid>
+        <title>Critique du livre : Services Web RESTful par Richarson &amp; Ruby</title>
+        <description>Si on me demandait quel livre a véritablement influencé mon quotidien de développeur web, ce serait sans hésitation celui-là.</description>
+        <link>https://insertafter.com/fr/blog/services_web_restful</link>
+        <pubDate>Tue, 17 Jan 2012 19:44:40 GMT</pubDate>
+      </item>
+      <item>
+        <guid isPermaLink="true">https://insertafter.com/fr/blog/creation_insert_after</guid>
+        <title>Bonjour InsertAfter !</title>
+        <description>Dix ans après, je décide de créer mon blog. Mieux vaut tard que jamais !</description>
+        <link>https://insertafter.com/fr/blog/creation_insert_after</link>
+        <pubDate>Sun, 01 Jan 2012 13:38:15 GMT</pubDate>
+      </item>
+  </channel>
+</rss>
