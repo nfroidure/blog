@@ -1,8 +1,9 @@
 {
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && touch out/.nojekyll && echo 'insertafter.com' > out/CNAME",
     "start": "next start",
     "types": "tsc --pretty --noEmit",
     "tootNewPosts": "tsx bin/tootNewPosts.ts",

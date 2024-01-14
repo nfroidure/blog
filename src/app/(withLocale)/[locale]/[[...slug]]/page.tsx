@@ -70,7 +70,7 @@ export default async function Page({
   const locale = params.locale || i18n.defaultLocale;
   const dictionary = await getDictionary(locale);
   const slug = params.slug || [];
-  const entry = await parsePage(params.locale ? [locale, ...slug] : slug);
+  const entry = await parsePage(locale ? [locale, ...slug] : slug);
 
   return (
     <ContentBlock className={styles.contents}>
@@ -78,7 +78,7 @@ export default async function Page({
       <div className={styles.clear}></div>
       {slug.length ? (
         <Paragraph className={styles.back}>
-          <Anchor href={`/${params.locale}`} title={dictionary.pages.back.title}>
+          <Anchor href={`/${locale}`} title={dictionary.pages.back.title}>
             {dictionary.pages.back.label}
           </Anchor>
         </Paragraph>
