@@ -1,0 +1,9 @@
+.root {
+  padding: 0 0 var(--vRhythm) 0;
+}
+.root iframe {
+  width: 100%;
+  max-width: 100%;
+  border: 0;
+  height: calc(var(--vRhythm) * 16);
+}

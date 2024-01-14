@@ -1,0 +1,71 @@
+@import "../variables.scss";
+
+.iaMenu {
+  grid-area: menu;
+  background: var(--primary);
+  color: var(--light);
+  font-size: var(--bigFontSize);
+  line-height: calc(var(--vRhythm) * 2);
+  text-align: right;
+}
+
+.iaMenuBody,
+.iaMenuItem {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.iaMenuBody {
+  display: flex;
+  flex-direction: column;
+}
+
+.iaMenuItem {
+  display: block;
+}
+.iaMenuItem a {
+  display: block;
+  text-decoration: none;
+  color: var(--light);
+  padding: 0 var(--gutter);
+}
+.iaMenuItem a:hover {
+  background-color: #ffffff0f;
+  color: var(--light);
+}
+.iaMenuItem a:visited {
+  color: var(--light);
+}
+.iaMenuItem a.selected:before {
+  content: ">\a0";
+}
+
+@media screen and (min-width: $CSS_BREAKPOINT_START_M) {
+  .iaMenu {
+    line-height: calc(var(--vRhythm) * 3);
+    text-align: center;
+  }
+
+  .iaMenuBody {
+    display: flex;
+    flex-direction: row;
+  }
+  .iaMenuItem a {
+    padding: 0 calc(var(--gutter) * 2);
+  }
+  .iaMenuItem a:hover,
+  .iaMenuItem a.selected {
+    background-color: #ffffff0f;
+  }
+  .iaMenuItem a.selected:before {
+    content: "";
+  }
+}
+
+@media screen and (min-width: $CSS_BREAKPOINT_START_L) {
+  .iaMenuBody {
+    max-width: calc(var(--gutter) * var(--maxWritingsWidth));
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,32 @@
+@import "../../../../variables.scss";
+
+.entries .entry_item {
+  padding: var(--vRhythm) 0 calc(var(--vRhythm) - var(--border)) 0;
+  border-bottom: var(--border) solid var(--secondary);
+}
+.entries .entry_item:first-child {
+  padding-top: calc(var(--vRhythm) - var(--border));
+  border-top: var(--border) solid var(--secondary);
+}
+.entries .entry_title {
+  margin-top: 0 !important;
+  font-size: var(--bigFontSize);
+}
+.entries .entry_link {
+  text-decoration: none !important;
+}
+.entries .entry_illustration {
+  margin: 0 !important;
+}
+.entries .entry_description {
+  margin: 0 0 var(--vRhythm) 0;
+}
+.entries .entry_time {
+  font-size: var(--smallFontSize);
+}
+
+@media screen and (min-width: $CSS_BREAKPOINT_START_L) {
+  .clear {
+    clear: left;
+  }
+}

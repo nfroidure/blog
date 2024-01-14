@@ -1,19 +1,20 @@
-<!--VarStream
-title=About Nicolas Froidure
-description=Read how I define myself. My thoughts, not those of my family.
-shortTitle=About
-shortDesc=Learn more about me
-keywords.+=about
-keywords.+=developer
-keywords.+=nodejs
-keywords.+=JavaScript
-keywords.+=Nicolas
-keywords.+=Froidure
-lang=en
-location=US
--->
+---
+title: About Nicolas Froidure
+description: Read how I define myself. My thoughts, not those of my family.
+date: "2024-01-01T08:00:00Z"
+draft: false
+keywords:
+  - about
+  - developer
+  - NodeJS
+  - JavaScript
+  - Nicolas
+  - Froidure
+lang: en
+location: US
+---
 
-## About
+# About
 
 I follow an ideal of getting technologies to really help the mankind by putting
 in practice my ethical principles : ecology, humanism and knowledge sharing.

@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "locale": "fr_FR",
+    "banner": {
+      "alt": "Bannière du site"
+    }
+  },
+  "notFound": {
+    "title": "Page non-trouvée",
+    "description": "La page que vous recherchez n’existe pas ou plus."
+  },
+  "pages": {
+    "back": {
+      "label": "Retour",
+      "title": "Retour à l’accueil"
+    }
+  },
+  "header": {
+    "alt": "Logo d’InsertAfter"
+  },
+  "menu": {
+    "home": {
+      "label": "Accueil",
+      "title": "Retour à l’accueil"
+    },
+    "blog": {
+      "label": "Blog",
+      "title": "Retour à l’index du blog"
+    },
+    "projects": {
+      "label": "Projets",
+      "title": "Découvrir mes divers projets"
+    },
+    "about": {
+      "label": "À propos",
+      "title": "En savoir plus à mon sujet"
+    }
+  },
+  "social": {
+    "bluesky": {
+      "label": "Bluesky",
+      "title": "Me suivre sur Bluesky"
+    },
+    "mastodon": {
+      "label": "Mastodon",
+      "title": "Me suivre sur Mastodon"
+    },
+    "facebook": {
+      "label": "Facebook",
+      "title": "Me suivre sur Facebook"
+    },
+    "twitter": {
+      "label": "Twitter",
+      "title": "Me suivre sur Twitter"
+    },
+    "github": {
+      "label": "GitHub",
+      "title": "Voir mes projets sur GitHub"
+    },
+    "npm": {
+      "label": "NPM",
+      "title": "Voir mon compte NPM"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "title": "Voir mon profil LinkedIn"
+    },
+    "feed": {
+      "label": "Flux RSS",
+      "title": "S’abonner au flux RSS"
+    }
+  },
+  "share": {
+    "title": "Commenter et partager",
+    "facebook": {
+      "link": "Facebook",
+      "title": "Commenter sur Facebook"
+    },
+    "twitter": {
+      "link": "Twitter",
+      "title": "Commenter sur Twitter"
+    },
+    "answer": {
+      "link": "Courriel",
+      "title": "Me répondre par mail"
+    }
+  },
+  "blog": {
+    "title": "Blog technique de Nicolas Froidure",
+    "description": "Découvrez le blog technique sur le quel je parle de développement web.",
+    "publishedAt": "Published at",
+    "list": {
+      "title": "Blog",
+      "description": "Sur mon blog, vous trouverez de nombreux articles sur le développement web mais aussi sur l’administration système, l’informatique, le hacking et la programmation en général."
+    },
+    "read": {
+      "link": "Lire la suite",
+      "title": "Lire cet article de blog"
+    },
+    "next": {
+      "link": "Suivant",
+      "title": "Aller à la page suivante"
+    },
+    "previous": {
+      "link": "Précédent",
+      "title": "Aller à la page précédente"
+    },
+    "similar": {
+      "title": {
+        "one": "Article similaire",
+        "other": "Articles similaires"
+      },
+      "description": {
+        "one": "Dans la catégorie",
+        "other": "Dans les catégories"
+      }
+    }
+  }
+}

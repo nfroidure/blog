@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "locale": "en_US",
+    "banner": {
+      "alt": "Website banner"
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "It seems that the page you look for doesn't exist."
+  },
+  "pages": {
+    "back": {
+      "label": "Back",
+      "title": "Back to the homepage"
+    }
+  },
+  "header": {
+    "alt": "InsertAfter's Logo"
+  },
+  "menu": {
+    "home": {
+      "label": "Home",
+      "title": "Go back to home page"
+    },
+    "blog": {
+      "label": "Blog",
+      "title": "Read my blog posts"
+    },
+    "projects": {
+      "label": "Projects",
+      "title": "Discover my projects"
+    },
+    "about": {
+      "label": "About me",
+      "title": "Read more about me"
+    }
+  },
+  "social": {
+    "bluesky": {
+      "label": "Bluesky",
+      "title": "Follow me on Bluesky"
+    },
+    "mastodon": {
+      "label": "Mastodon",
+      "title": "Follow me on Mastodon"
+    },
+    "facebook": {
+      "label": "Facebook",
+      "title": "Follow me on Facebook"
+    },
+    "twitter": {
+      "label": "Twitter",
+      "title": "Follow me on Twitter"
+    },
+    "github": {
+      "label": "GitHub",
+      "title": "See my GitHub projects"
+    },
+    "npm": {
+      "label": "NPM",
+      "title": "Check my NPM modules"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "title": "See my LinkedIn profile"
+    },
+    "feed": {
+      "label": "RSS Feed",
+      "title": "Subscribe to my RSS feed"
+    }
+  },
+  "share": {
+    "title": "Comment and share",
+    "facebook": {
+      "link": "Facebook",
+      "title": "Comment on Facebook"
+    },
+    "twitter": {
+      "link": "Twitter",
+      "title": "Comment on Twitter"
+    },
+    "answer": {
+      "link": "Email",
+      "title": "Answer via email"
+    }
+  },
+  "blog": {
+    "title": "Nicolas Froidure's Technical Blog",
+    "description": "Check the blog of a french JavaScript Developer.",
+    "publishedAt": "Published at",
+    "list": {
+      "title": "Blog",
+      "description": "Find on this blog many developer resources I find useful to share and more informations on my projects."
+    },
+    "next": {
+      "link": "Suivant",
+      "title": "Aller à la page suivante"
+    },
+    "previous": {
+      "link": "Précédent",
+      "title": "Aller à la page précédente"
+    },
+    "read": {
+      "link": "Read the full post",
+      "title": "Read this blog post"
+    },
+    "similar": {
+      "title": {
+        "one": "Similar post",
+        "other": "Similar posts"
+      },
+      "description": {
+        "one": "In the category",
+        "other": "In the categories"
+      }
+    }
+  }
+}

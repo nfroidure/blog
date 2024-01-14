@@ -1,0 +1,63 @@
+@import "../variables.scss";
+
+.iaLanguages {
+  grid-area: languages;
+  display: flex;
+  justify-content: flex-start;
+  padding: calc(var(--vRhythm) / 2) 0 calc(var(--vRhythm) / 2)
+    calc(var(--gutter) / 2);
+  text-align: right;
+}
+
+.iaLanguages ul,
+.iaLanguages li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.iaLanguages ul {
+  display: flex;
+  flex-direction: row;
+  gap: calc(var(--gutter) / 4);
+}
+
+.iaLanguages li {
+  display: block;
+}
+
+.iaLanguagesFlag a {
+  display: block;
+  width: calc(var(--vRhythm) * 1.5);
+  height: var(--vRhythm);
+  text-decoration: none;
+  background-size: cover;
+  background-position: center;
+}
+
+.iaLanguagesFlag span {
+  display: none;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.iaLanguagesFlagFr a {
+  background-image: url(/images/flags/fr.svg);
+}
+.iaLanguagesFlagFr:not(.selected) {
+  display: none;
+}
+.iaLanguagesFlagEn a {
+  background-image: url(/images/flags/en-US.svg);
+}
+.iaLanguagesFlagEn:not(.selected) {
+  display: none;
+}
+
+@media screen and (min-width: $CSS_BREAKPOINT_START_L) {
+  .iaLanguages {
+    margin-left: 0;
+    text-align: left;
+  }
+}

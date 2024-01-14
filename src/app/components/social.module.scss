@@ -1,0 +1,70 @@
+@import "../variables.scss";
+
+.iaSocial {
+  grid-area: icons;
+  display: flex;
+  justify-content: flex-end;
+  padding: calc(var(--vRhythm) / 2) 0;
+}
+
+.iaSocial ul,
+.iaSocial li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.iaSocial ul {
+  display: flex;
+  flex-direction: row;
+  gap: calc(var(--gutter) / 4);
+}
+
+.iaSocial li {
+  display: block;
+}
+
+.iaSocial a {
+  display: block;
+  height: var(--vRhythm);
+  width: var(--vRhythm);
+  background-color: var(--dark);
+  mask-size: cover;
+  mask-position: center;
+}
+
+.iaSocial span {
+  display: none;
+}
+
+.iaSocialFacebook {
+  mask-image: url(/images/icons/facebook.svg);
+}
+
+.iaSocialBluesky {
+  mask-image: url(/images/icons/bluesky.svg);
+}
+
+.iaSocialMastodon {
+  mask-image: url(/images/icons/mastodon.svg);
+}
+
+.iaSocialGithub {
+  mask-image: url(/images/icons/github.svg);
+}
+
+.iaSocialTwitter {
+  mask-image: url(/images/icons/twitter.svg);
+}
+
+.iaSocialLinkedin {
+  mask-image: url(/images/icons/linkedin.svg);
+}
+
+.iaSocialNpm {
+  mask-image: url(/images/icons/npm.svg);
+}
+
+.iaSocialFeed {
+  mask-image: url(/images/icons/feed.svg);
+}

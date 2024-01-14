@@ -1,32 +1,33 @@
-<!--VarStream
-title=Projects
-description=Discover my side projects (web apps, games, add-ons etc.).
-shortTitle=Projects
-shortDesc=Learn more about my projects
-keywords.+=projects
-keywords.+=developer
-keywords.+=Nicolas
-keywords.+=Froidure
-lang=en
-location=US
--->
+---
+title: Projects
+description: Discover my side projects (web apps, games, add-ons etc.).
+date: "2024-01-01T08:00:00Z"
+draft: false
+keywords:
+  - projects
+  - developer
+  - Nicolas
+  - Froidure
+lang: en
+location: US
+---
 
-## Projects
+# Projects
 
 I'm involved in a lot of different projects from add-ons to games, It's a good
 way to stay informed on new development features and improve my skills.
 
 I particularily like JavaScript, TypeScript and Rust languages.
 
-### NodeJS
+## NodeJS
 
 As an early NodeJS user, I made several modules I
-[published on NPM](https://www.npmjs.org/~nfroidure 'View my NPM profile').
+[published on NPM](https://www.npmjs.org/~nfroidure "View my NPM profile").
 
 In particular, I like to create JavaScript parsers (CSV, VarStream, SVG...),
 work with streams, make plugins and tools for developers.
 
-### Web apps
+## Web apps
 
 I also build HTML5 games for fun and skills, like:
 
@@ -49,7 +50,7 @@ And other wierd stuff:
 - [Hexadecimal Editor](https://hexa.insertafter.com/): a web based hexadecimal
   editor.
 
-### Firefox / Chrome / Opera add-ons
+## Firefox / Chrome / Opera add-ons
 
 If you are old enough and used to work with SEO/web contents, you may have used
 some of my now unmaintained Firefox add-ons
@@ -67,11 +68,10 @@ and
 [KGen](https://chrome.google.com/webstore/detail/kgen/jkpcelefglapiahikhocfdcigfpaagcl?hl=fr)
 seems live but with no maintenance either.
 
-### And many more
+## And many more
 
 You can get the source of my public projects in
  [my GitHub home](https://github.com/nfroidure).
 
-You can also find open-source projects I made for my successive employers:
-[Sencrop](https://github.com/Sencrop), [7Digital](https://github.com/7Digital)
+You can also find open-source projects I made for my successive employers: [DiagRAMS Technologies](https://github.com/DiagRAMS-Technologies), [Sencrop](https://github.com/Sencrop), [7Digital](https://github.com/7Digital)
 and [SimpliField](https://github.com/SimpliField).

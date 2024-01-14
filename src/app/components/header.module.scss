@@ -1,0 +1,21 @@
+@import "../variables.scss";
+
+.iaHeader {
+  grid-area: header;
+}
+.iaHeaderLogo {
+  text-align: center;
+}
+.iaHeaderLogo img {
+  display: block;
+  height: calc(var(--vRhythm) * 2);
+  max-width: 100%;
+  margin: calc(var(--vRhythm) / 2) auto;
+}
+
+@media screen and (min-width: $CSS_BREAKPOINT_START_L) {
+  .iaHeaderLogo img {
+    height: calc(var(--vRhythm) * 4);
+    margin: var(--vRhythm) auto;
+  }
+}

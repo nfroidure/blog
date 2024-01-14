@@ -1,22 +1,24 @@
-<!--VarStream
-title=Mes projets
-description=Découvrez tous les projets que je mène et qui touchent de près ou de loin au développement web.
-shortTitle=Projets
-shortDesc=Découvrez mes divers projets
-keywords.+=JavaScript
-keywords.+=développeur
-keywords.+=Nicolas
-keywords.+=Froidure
-keywords.+=projets
-keywords.+=développement
-keywords.+=web
-lang=fr
-location=FR
--->
+---
+title: Mes projets
+description:
+  Découvrez tous les projets que je mène et qui touchent de près ou de loin au
+  développement web.
+date: "2024-01-01T08:00:00Z"
+draft: false
+keywords:
+  - JavaScript
+  - développeur
+  - Nicolas
+  - Froidure
+  - projets
+  - développement
+lang: fr
+location: FR
+---
 
-## Projets
+# Projets
 
-### Modules JavaScript / NodeJS
+## Modules JavaScript / NodeJS
 
 En tant qu'amoureux du JavaScript, je maintiens de nombreuses librairies ainsi
 qu'un bon nombre de modules NodeJS.
@@ -28,7 +30,7 @@ développeurses.
 J'utilise également intensivement TypeScript, et je me passione pour les
 langages comme Rust.
 
-### Applications Web
+## Applications Web
 
 Pour rester à jour et pour le fun, je crée régulièrement des applications web
 dont quelques jeux HTML5 :
@@ -52,7 +54,7 @@ Et d'autres choses un peu bizarres :
 - [Hexa](https://hexa.insertafter.com/): éditeur hexadécimal bien pratique pour
   voir rapidement un fichier en mode binaire.
 
-### Extensions Firefox / Chrome / Opéra
+## Extensions Firefox / Chrome / Opéra
 
 Les dinosaures du web connaissent sûrement quelques-unes des extensions Firefox
 que j'ai développées et maintenues pendant plusieurs années
@@ -71,7 +73,7 @@ et
 [KGen](https://chrome.google.com/webstore/detail/kgen/jkpcelefglapiahikhocfdcigfpaagcl?hl=fr)
 ne sont plus maintenues mais semblent toujours fonctionnelles.
 
-### Mais aussi
+## Mais aussi
 
 Vous trouverez sur mon [dépôt GitHub](http://github.com/nfroidure) tous les
 autres projets et travaux que je mets à disposition de la communauté.
@@ -79,7 +81,7 @@ Principalement des bouts de codes qui me sont utiles et qui pourraient profiter
 à d'autres.
 
 Vous pouvez également vois mes modules open-source sur
-[NPM](https://www.npmjs.org/~nfroidure 'Voir mon profil NPM').
+[NPM](https://www.npmjs.org/~nfroidure "Voir mon profil NPM").
 
 Retrouvez également les projets open-source que j'ai créé dans le cadre de mes
 emplois successifs chez

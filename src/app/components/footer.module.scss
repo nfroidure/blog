@@ -1,0 +1,15 @@
+.iaFooter {
+  grid-area: footer;
+  display: block;
+  background: var(--primary);
+  color: var(--light);
+  text-align: right;
+  font-size: var(--mediumFontSize);
+  line-height: var(--vRhythm);
+}
+
+.iaFooterContent {
+  max-width: calc(var(--gutter) * var(--maxWritingsWidth));
+  padding: var(--vRhythm) var(--gutter);
+  margin: 0 auto;
+}

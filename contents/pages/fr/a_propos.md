@@ -1,21 +1,21 @@
-<!--VarStream
-title=À propos de moi
-description=Découvrez mon côté mégalo. Cette description n'engage que moi et\
- ne saurait être le reflet de l'avis qu'ont mes proches de moi :).
-shortTitle=À propos
-shortDesc=Learn more about me
-keywords.+=JavaScript
-keywords.+=développeur
-keywords.+=Nicolas
-keywords.+=Froidure
-keywords.+=projets
-keywords.+=développement
-keywords.+=web
-lang=fr
-location=FR
--->
+---
+title: À propos de moi
+description: Découvrez mon côté mégalo. Cette description n'engage que moi et ne saurait être le reflet de l'avis qu'ont mes proches de moi :).
+date: "2024-01-01T08:00:00Z"
+draft: false
+keywords:
+  - JavaScript
+  - développeur
+  - Nicolas
+  - Froidure
+  - projets
+  - développement
+  - web
+lang: fr
+location: FR
+---
 
-## A propos de moi
+# A propos de moi
 
 Je poursuis l'idéal d'une technologie au service de l'homme en mettant en
 pratique des principes éthiques qui me sont chers : écologie, humanisme et
