@@ -15,10 +15,6 @@ import Paragraph from "../../../components/p";
 import Anchor from "../../../components/a";
 import { i18n, type Locale } from "../../../../i18n-config";
 import { getDictionary } from "../../../../dictionary";
-import ArticlePage, {
-  generateMetadata as articleGenerateMetadata,
-  generateStaticParams as articleGenerateStaticParams,
-} from "../blog/[id]/page";
 
 type PageFrontmatterMetadata = {
   date: string;
@@ -45,17 +41,6 @@ export async function generateMetadata({
 }) {
   const locale = params.locale || i18n.defaultLocale;
   const slug = params.slug || [];
-
-  // Temporary redirection
-  if (slug.length === 1 && slug[0].startsWith("articles-")) {
-    return articleGenerateMetadata({
-      params: {
-        locale,
-        id: slug[0].replace(/^articles\-/, ""),
-      },
-    });
-  }
-
   const entry = await parsePage([locale, ...slug]);
 
   return buildMetadata({
@@ -84,17 +69,6 @@ export default async function Page({
 }) {
   const locale = params.locale || i18n.defaultLocale;
   const slug = params.slug || [];
-
-  // Temporary redirection
-  if (slug.length === 1 && slug[0].startsWith("articles-")) {
-    return ArticlePage({
-      params: {
-        locale,
-        id: slug[0].replace(/^articles\-/, ""),
-      },
-    });
-  }
-
   const dictionary = await getDictionary(locale);
   const entry = await parsePage(locale ? [locale, ...slug] : slug);
 
@@ -135,25 +109,20 @@ export async function generateStaticParams({
   params: { locale: Locale };
 }) {
   const base = pathJoin(".", "contents", "pages", params.locale);
-  const paths = (await readDirDeep(`${base}/**/*.md`)).map((path) => {
-    const slug = path
-      .replace(base + "/", "")
-      .replace(".md", "")
-      .split("/");
+  const paths = (await readDirDeep(`${base}/*.md`))
+    .filter((path) => !path.startsWith("index"))
+    .map((path) => {
+      const slug = path
+        .replace(base + "/", "")
+        .replace(".md", "")
+        .split("/");
 
-    if (slug[slug.length - 1] === "index") {
-      slug.pop();
-    }
+      if (slug[slug.length - 1] === "index") {
+        slug.pop();
+      }
 
-    return { slug };
-  });
+      return { slug };
+    });
 
-  // Temporary redirection
-  const articlePaths = await articleGenerateStaticParams({ params });
-
-  return paths.concat(
-    articlePaths.map(({ id }) => ({
-      slug: [`articles-${id}`],
-    }))
-  );
+  return paths;
 }
