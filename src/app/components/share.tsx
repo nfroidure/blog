@@ -1,5 +1,9 @@
 import styles from "./share.module.scss";
-import { ORGANISATION_CONTACT, TWITTER_ACCOUNT } from "../../utils/constants";
+import {
+  DOMAIN_NAME,
+  ORGANISATION_CONTACT,
+  TWITTER_ACCOUNT,
+} from "../../utils/constants";
 import Paragraph from "./p";
 import Anchor from "./a";
 import Heading2 from "./h2";
@@ -19,9 +23,7 @@ export default function Share({
       <Heading2>{dictionary.title}</Heading2>
       <Paragraph>
         <Anchor
-          href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-            url
-          )}`}
+          href={`https://www.facebook.com/dialog/share?display=popup&href=${encodeURIComponent(url)}&redirect_uri=${encodeURIComponent(`https://${DOMAIN_NAME}`)}`}
           title={dictionary.facebook.title}
           target="_blank"
         >
