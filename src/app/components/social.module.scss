@@ -68,3 +68,9 @@
 .iaSocialFeed {
   mask-image: url(/images/icons/feed.svg);
 }
+
+@media print {
+  .iaSocial {
+    display: none;
+  }
+}

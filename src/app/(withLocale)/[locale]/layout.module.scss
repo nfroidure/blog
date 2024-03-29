@@ -48,3 +48,12 @@
     padding: calc(var(--vRhythm) * 3) var(--gutter);
   }
 }
+
+@media print {
+  .iaMenu {
+    grid-template-areas:
+      "header header"
+      "content content"
+      "footer footer";
+  }
+}
