@@ -87,7 +87,7 @@ define("moduleName", ["dep1", "dep2"], function (dep1, dep2) {
 
 On pourrait croire que tout est bien qui fini bien, mais il nous reste un gros problème à résoudre. Comment utiliser les modules AMD avec NodeJS et vice-versa ? Il [existe plusieurs solutions](http://www.2ality.com/2011/11/module-gap.html "Voir les solutions passe-partout existantes") pour rendre inter-compatibles les différents modules, mais cela reste une sorte de tambouille incompréhensible. D'ailleurs, je serais ravi d'avoir vos bonnes pratiques en la matière.
 
-Edit : On me [souffle dans l'oreille](https://twitter.com/%5FFlorian%5FR/status/236437043004207104 "Voir la conversation") que `require.js` est utilisable avec NodeJs, un petit lot de consolation donc ;).
+Edit : On me souffle dans l'oreille que `require.js` est utilisable avec NodeJs, un petit lot de consolation donc ;).
 
 ## ECMAScript 6 : La lumière au bout du tunnel
 

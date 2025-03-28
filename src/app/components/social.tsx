@@ -7,7 +7,6 @@ import {
   MASTODON_ACCOUNT,
   MASTODON_SERVER,
   NPM_ACCOUNT,
-  TWITTER_ACCOUNT,
 } from "../../utils/constants";
 import { type Locale } from "../../i18n-config";
 import { type Dictionary } from "../../dictionary";
@@ -41,15 +40,6 @@ export default function Social({
               className={styles.iaSocialBluesky}
             >
               <span>{dictionary.bluesky.label}</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href={`https://twitter.com/${TWITTER_ACCOUNT}`}
-              title={dictionary.twitter.title}
-              className={styles.iaSocialTwitter}
-            >
-              <span>{dictionary.twitter.label}</span>
             </a>
           </li>
           <li>

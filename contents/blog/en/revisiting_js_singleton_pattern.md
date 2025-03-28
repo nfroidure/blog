@@ -28,7 +28,7 @@ categories:
 
 JavaScript design patterns are quite good examples to sharpen your JavaScript skills. Let's take a look at the singleton pattern.
 
-I'm currently reading [Addy Osmani’s](https://twitter.com/addyosmani "Follow him on Twitter") [book about JavaScript design patterns](http://shop.oreilly.com/product/0636920025832.do "Buy this book"). It's a very interesting introduction and I strongly recommend you this read. Viewing his Singleton Pattern implementation I had two simple ideas of improvement to get them more powerful. Here is a basic implementation of this pattern:
+I'm currently reading [Addy Osmani’s](https://www.linkedin.com/in/addyosmani/ "Follow him on LinkedIn") [book about JavaScript design patterns](http://shop.oreilly.com/product/0636920025832.do "Buy this book"). It's a very interesting introduction and I strongly recommend you this read. Viewing his Singleton Pattern implementation I had two simple ideas of improvement to get them more powerful. Here is a basic implementation of this pattern:
 
 ```js
 // From the Gist: https://gist.github.com/nfroidure/5676292

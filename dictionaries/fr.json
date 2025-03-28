@@ -49,10 +49,6 @@
       "label": "Facebook",
       "title": "Me suivre sur Facebook"
     },
-    "twitter": {
-      "label": "Twitter",
-      "title": "Me suivre sur Twitter"
-    },
     "github": {
       "label": "GitHub",
       "title": "Voir mes projets sur GitHub"
@@ -76,9 +72,9 @@
       "link": "Facebook",
       "title": "Commenter sur Facebook"
     },
-    "twitter": {
-      "link": "Twitter",
-      "title": "Commenter sur Twitter"
+    "bluesky": {
+      "link": "Bluesky",
+      "title": "Commenter sur Bluesky"
     },
     "answer": {
       "link": "Courriel",

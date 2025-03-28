@@ -26,7 +26,7 @@ categories:
 
 Tout à chacun est tenté d'utiliser HTML5 pour créer des applications sympa expérimentant le champs des possibles. Malheureusement, HTML5 n'est pas supporté par tous les navigateurs. C'est alors que se pose la question des polyfills.
 
-Ce billet est basé sur une réflexion de fond qui a été réactivée hier à ParisWeb lors de l'atelier de [Corinne Schillinger](https://twitter.com/schillinger "Voir son profil Twitter") et [Jérémie Patonnier](https://twitter.com/JeremiePat "Voir son profil Twitter") intitulé [HTML5 / CSS3 et l'effet "Waouh !" : les dessous de la magie](http://www.paris-web.fr/2012/ateliers/html5css3-et-leffet-waouh-les-dessous-de-la-magie.php "Voir la fiche de l'atelier"). Commençons par présenter les polyfills.
+Ce billet est basé sur une réflexion de fond qui a été réactivée hier à ParisWeb lors de l'atelier de Corinne Schillinger et Jérémie Patonnier intitulé [HTML5 / CSS3 et l'effet "Waouh !" : les dessous de la magie](http://www.paris-web.fr/2012/ateliers/html5css3-et-leffet-waouh-les-dessous-de-la-magie.php "Voir la fiche de l'atelier"). Commençons par présenter les polyfills.
 
 ## Polyfills : HTML5 where you want
 

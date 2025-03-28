@@ -107,4 +107,4 @@ sed -i "s/PROD--/PROD-->/g" index.html
 
 Vos commentaires, avis, améliorations éventuelles sont les bienvenues ;).
 
-Ajout de dernière minute :[Florian](https://twitter.com/%5FFlorian%5FR "Voir son profil twitter") m'a appris sur Twitter l'existence du [projet almond](https://github.com/jrburke/almond "Voir le dépôt du projet") (tjrs du même auteur), visant à réduire au maximum l'empreinte de RequireJS. Une bonne alternative à ma méthode si vous décidez de conserver le chargement asynchrone.
+Ajout de dernière minute : on m'a appris sur Twitter l'existence du [projet almond](https://github.com/jrburke/almond "Voir le dépôt du projet") (tjrs du même auteur), visant à réduire au maximum l'empreinte de RequireJS. Une bonne alternative à ma méthode si vous décidez de conserver le chargement asynchrone.

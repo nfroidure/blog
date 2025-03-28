@@ -22,7 +22,7 @@ categories:
 
 Les URL ou URI d'une application ou d'un site Internet nécessitent de prendre un moment pour réfléchir à leur schema. Voici quelques bonnes pratiques issues de mon expérience REST.
 
-Suite à une question de [Nicolas Hoizey](https://twitter.com/nhoizey "Voir son profil") sur Twitter, j'ai décidé de parler un peu desURI,URL ou plus communément des adresses des pages web des sites Internet ou applications web. On pourrait croire que ces dernières ne nécessitent pas de se creuser la tête plus que cela, mais en fait elle sont fondamentales et nécessitent une réflexion de fond ainsi qu'une bonne compréhension des concepts sous-jacents.
+Suite à une question de [Nicolas Hoizey](https://github.com/nhoizey "Voir son profil") sur Twitter, j'ai décidé de parler un peu desURI,URL ou plus communément des adresses des pages web des sites Internet ou applications web. On pourrait croire que ces dernières ne nécessitent pas de se creuser la tête plus que cela, mais en fait elle sont fondamentales et nécessitent une réflexion de fond ainsi qu'une bonne compréhension des concepts sous-jacents.
 
 ## Tout est hyper-texte
 

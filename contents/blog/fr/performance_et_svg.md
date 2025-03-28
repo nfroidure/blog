@@ -41,7 +41,7 @@ En particulier pour la valeur cover de cette propriété qui permet de d'adapter
 
 A terme il semble qu'il sera possible de créer des feuilles de sprite en SVG grâce à un hash déterminant une vue sur le SVG. Par exemple, avec l'[image précédente](http://sumuray.insertafter.com/images/samurai.svg#svgView%28viewBox%28600,800,200,250%29%29 "Voir un vue de l'image"). Bon, pour être tout à fait honnête, à l'heure actuelle le support de cette astuce est un peu bancal et j'ai renoncé à le faire avec Sumuraÿ, mais cela promet. N'hésitez pas à laisser un commentaire si vous avez mis cette astuce en oeuvre avec succès.
 
-[@\_kud](https://twitter.com/%5Fkud "Voir son profil Twitter") me souffle sur Twitter que les sprites SVG via les polices perso, c'est bien aussi (même si c'est pas encore top sur certains navigateurs).
+[@\_kud](https://github.com/kud "Voir son profil GitHub") me souffle sur Twitter que les sprites SVG via les polices perso, c'est bien aussi (même si c'est pas encore top sur certains navigateurs).
 
 ## A savoir
 

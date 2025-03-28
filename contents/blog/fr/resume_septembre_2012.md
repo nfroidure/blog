@@ -34,7 +34,7 @@ Quelques infos sur l'état d'HTML5 :
 
 Un peu de programmation :
 
-- [@naholyr](https://twitter.com/naholyr "Voir son profil Twitter") a fait un excellent article sur le [profilage d'applications NodeJS](http://naholyr.fr/2012/09/profiler-son-application-nodejs/ "Voir son article"). Je vous recommande d'ailleurs chaudement le blog et le personnage qui sont intéressants et très au fait de NodeJs en général.
+- [@naholyr](https://bsky.app/profile/naholyr.fr "Voir son profil Bluesky") a fait un excellent article sur le [profilage d'applications NodeJS](http://naholyr.fr/2012/09/profiler-son-application-nodejs/ "Voir son article"). Je vous recommande d'ailleurs chaudement le blog et le personnage qui sont intéressants et très au fait de NodeJs en général.
 - Mettre une [application NodeJs en production](http://www.armetiz.info/node-js-mise-production-simple/ "Lire ce billet") rapidement.
 - [Comprendre le C en apprenant l'assembleur](https://www.hackerschool.com/blog/7-understanding-c-by-learning-assembly "Lire ce billet fort intéressant"), rien que ça !
 - Comment stocker et représenter des prix en Javascript ? Pour moi, l'objet Number est approprié, Il suffit de les formater avant de les afficher.[Voici une méthode](https://gist.github.com/3608274 "Voir la méthode Javascript créée par mes soins") faîte spécialement pour répondre à cette question de [Fabien Canu](http://fabiencanu.fr "Voir son blog") que certains d'entre vous doivent connaître. Cette méthode est perfectible notamment pour représenter les grand nombres et pour être facilement localisable.
@@ -49,4 +49,4 @@ Du fun :
 
 Un peu d'humour pour finir :  
 ! [Un homme qui mange un ver vivant](/public/illustrations/omfg-man-vs-wild.gif)  
-Quand je dois faire du sysadmin sur Windows Server ! via [@Karlesnine](https://twitter.com/Karlesnine "Voir son profil Twitter")
+Quand je dois faire du sysadmin sur Windows Server ! via [@Karlesnine](https://github.com/karlesnine "Voir son profil GitHub")

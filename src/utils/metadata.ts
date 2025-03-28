@@ -1,5 +1,5 @@
 import { OpenGraphType } from "next/dist/lib/metadata/types/opengraph-types";
-import { ORGANISATION_NAME, DOMAIN_NAME, TWITTER_ACCOUNT } from "./constants";
+import { ORGANISATION_NAME, DOMAIN_NAME } from "./constants";
 import type { Metadata, ResolvedMetadata } from "next";
 import { getDictionary } from "../dictionary";
 import { type Locale } from "../i18n-config";
@@ -12,10 +12,7 @@ type OGImageDescriptor = {
   width?: number;
   height?: number;
 };
-type OGAudioDescriptor = {
-  url: string;
-  type?: string;
-};
+type OGAudioDescriptor = { url: string; type?: string };
 export type OGAudio = NonNullable<
   NonNullable<ResolvedMetadata["openGraph"]>["audio"]
 >[number];
@@ -60,38 +57,16 @@ export default async function buildMetadata({
     title: fullTitle,
     description,
     metadataBase: new URL(`https://${DOMAIN_NAME}`),
-    alternates: {
-      canonical: canonicalURL,
-    },
-    authors: [
-      {
-        name: ORGANISATION_NAME,
-        url: `https://${DOMAIN_NAME}`,
-      },
-    ],
+    alternates: { canonical: canonicalURL },
+    authors: [{ name: ORGANISATION_NAME, url: `https://${DOMAIN_NAME}` }],
     icons: {
       icon: [
-        {
-          url: "/images/favicon.svg",
-          type: "image/svg+xml",
-          sizes: "any",
-        },
-        {
-          url: "/images/favicon-16.png",
-          type: "image/png",
-          sizes: "16x16",
-        },
-        {
-          url: "/images/favicon-128.png",
-          type: "image/png",
-          sizes: "128x128",
-        },
+        { url: "/images/favicon.svg", type: "image/svg+xml", sizes: "any" },
+        { url: "/images/favicon-16.png", type: "image/png", sizes: "16x16" },
+        { url: "/images/favicon-128.png", type: "image/png", sizes: "128x128" },
       ],
     },
-    robots: {
-      index: true,
-      follow: true,
-    },
+    robots: { index: true, follow: true },
     openGraph: {
       url: canonicalURL,
       title: fullTitle,
@@ -100,15 +75,7 @@ export default async function buildMetadata({
       siteName: ORGANISATION_NAME,
       locale: dictionary.meta.locale,
       type,
-      ...(typeof audio !== "undefined"
-        ? {
-            audio: [audio],
-          }
-        : {}),
-    },
-    twitter: {
-      site: `@${TWITTER_ACCOUNT}`,
-      creator: `@${TWITTER_ACCOUNT}`,
+      ...(typeof audio !== "undefined" ? { audio: [audio] } : {}),
     },
   };
 }

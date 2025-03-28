@@ -42,7 +42,7 @@ Je ne sais pas encore ce que ma version proposera, mais j'aimerai bien proposer 
 
 ## Mon plan d'action
 
-J'ai contacté le [développeur de Browser Quest](http://twitter.com/whatthefranck "Voir son profil Twitter") et lui ai posé quelques questions à propos de la façon dont il avait travaillé sur le projet. Je voulais surtout savoir si ils avaient rencontré des problèmes de performance. Je ne veux surtout pas me retrouver avec un jeu injouable à cause d'une architecture mal pensée. En effet, là ou le code natif permet quelques écarts, la programmation d'un jeu avec HTML5 / Javascript nécessite de bien penser aux performances.
+J'ai contacté le développeur de Browser Quest et lui ai posé quelques questions à propos de la façon dont il avait travaillé sur le projet. Je voulais surtout savoir si ils avaient rencontré des problèmes de performance. Je ne veux surtout pas me retrouver avec un jeu injouable à cause d'une architecture mal pensée. En effet, là ou le code natif permet quelques écarts, la programmation d'un jeu avec HTML5 / Javascript nécessite de bien penser aux performances.
 
 Finalement, un jeu de ce type se compose d'un plan (avec étages dans notre cas) sur lequel se trouvent des objets dont un certain nombre sont animés ou se déplacent contrôlés par le joueur ou par l'ordinateur. Chaque objet est donc affiché en fonction d'une part de son état (position, orientation, niveau z etc..) et/ou du temps. Le jeu se résumera donc à une boucle qui parcourra successivement tous les objets se trouvant sur le plan pour les modifier en fonction du temps pour les éléments dynamiques et pour les dessiner en fonction du point de vue actuel sur ce plan.
 

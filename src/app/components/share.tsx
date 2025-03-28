@@ -1,9 +1,5 @@
 import styles from "./share.module.scss";
-import {
-  DOMAIN_NAME,
-  ORGANISATION_CONTACT,
-  TWITTER_ACCOUNT,
-} from "../../utils/constants";
+import { DOMAIN_NAME, ORGANISATION_CONTACT } from "../../utils/constants";
 import Paragraph from "./p";
 import Anchor from "./a";
 import Heading2 from "./h2";
@@ -32,18 +28,16 @@ export default function Share({
         </Anchor>
         {" - "}
         <Anchor
-          href={`https://twitter.com/intent/tweet/?url=${encodeURIComponent(
-            url
-          )}&text=${encodeURIComponent(title)}&via=${TWITTER_ACCOUNT}`}
-          title={dictionary.twitter.title}
+          href={`https://bsky.app/intent/compose?text=${encodeURIComponent(url)}`}
+          title={dictionary.bluesky.title}
           target="_blank"
         >
-          <span className={[styles.icon, styles.twitter].join(" ")} />
-          {dictionary.twitter.link}
+          <span className={[styles.icon, styles.bluesky].join(" ")} />
+          {dictionary.bluesky.link}
         </Anchor>
         {" - "}
         <Anchor
-          href={`mailto:${ORGANISATION_CONTACT}`}
+          href={`mailto:${ORGANISATION_CONTACT}?subject=${encodeURIComponent(title)}`}
           title={dictionary.answer.title}
           target="_blank"
         >

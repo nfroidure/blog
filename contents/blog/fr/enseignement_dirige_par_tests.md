@@ -20,7 +20,7 @@ categories:
 
 Les tests unitaires et fonctionnels ont véritablement révolutionné le développement professionnel, pourquoi pas également celui de l'enseignement et de la formation ?
 
-[Remi Grumeau](https://twitter.com/remi%5Fgrumeau "Voir son profil Twitter"), un développeur lillois, m'a récemment sollicité sur l'idée d'un DevCamp spécial mobile dont le but serait de créer et publier sur GitHub des modules open-source. J'ai aussi été sollicité pour être jury aux [OpenDuWeb](http://www.open-du-web.fr/ "Voir le site de ce concours"). À première vue, rien à voir avec le titre de ce post.
+Remi Grumeau, un développeur lillois, m'a récemment sollicité sur l'idée d'un DevCamp spécial mobile dont le but serait de créer et publier sur GitHub des modules open-source. J'ai aussi été sollicité pour être jury aux [OpenDuWeb](http://www.open-du-web.fr/ "Voir le site de ce concours"). À première vue, rien à voir avec le titre de ce post.
 
 Je me suis donc mis à imaginer comment de tels évènements devraient être organisés et j'ai donc pensé aux exigences que nous devrions avoir sur la qualité des modules ainsi créés de manière à pouvoir rendre ces derniers utiles.
 

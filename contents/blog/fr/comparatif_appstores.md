@@ -25,7 +25,7 @@ categories:
 
 Une fois qu'une application web est développée, il peut être intéressant de lui donner de la visibilité. Les AppStores sont censés aider les développeurs dans cette tâche.
 
-J'ai soumis le casse brique développé récemment sur le~~Chrome Web Store~~ ([plus désormais](https://twitter.com/nfroidure/status/571987728352612352 "Voir pourquoi")) et Mozilla Market Place (n'existe plus). Les deux plateformes ont un look complètement différent, mais c'est aussi la façon de mettre en avant qui diffère. Petit résumé de mes pérégrinations.
+J'ai soumis le casse brique développé récemment sur le~~Chrome Web Store~~ (plus désormais) et Mozilla Market Place (n'existe plus). Les deux plateformes ont un look complètement différent, mais c'est aussi la façon de mettre en avant qui diffère. Petit résumé de mes pérégrinations.
 
 ## Chrome Web Store
 

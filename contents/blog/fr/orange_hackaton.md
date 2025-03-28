@@ -34,7 +34,7 @@ Les seuls bémols que je poserais sont les problèmes de connexion parfois renco
 
 ## Ma team et notre App
 
-![Formulaire d'enregistrement](/public/illustrations/helpme3.png) J'ai eu le plaisir de travailler avec Rocky Lal, développeur VB.net intéressé par Javascript/HTML5 et [Julien Picaud](https://twitter.com/#%21/julpics "Voir son profil Twitter"), product manager dans une boîte de développement applicatif. Nous nous sommes tout de suite regroupés et nous avons décidé de développer une application mobile HTML5. Afin de coller aux critères du hackathon, nous avons tenté de trouver une idée au business model réaliste et utilisant un maximum d'API parmi les suivantes (Orange API, HTML5 API, Facebook API).
+![Formulaire d'enregistrement](/public/illustrations/helpme3.png) J'ai eu le plaisir de travailler avec Rocky Lal, développeur VB.net intéressé par Javascript/HTML5 et Julien Picaud, product manager dans une boîte de développement applicatif. Nous nous sommes tout de suite regroupés et nous avons décidé de développer une application mobile HTML5. Afin de coller aux critères du hackathon, nous avons tenté de trouver une idée au business model réaliste et utilisant un maximum d'API parmi les suivantes (Orange API, HTML5 API, Facebook API).
 
 HelpMe! matche les deux premières. Son concept est simple : fédérer une communauté d'entraide dont chaque membre déclare son n° de GSM, ses compétences et les langues qu'il parle. Les GSM sont géolocalisés régulièrement grâce à l'API Geolocation d'Orange.
 

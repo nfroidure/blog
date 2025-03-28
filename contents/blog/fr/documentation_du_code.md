@@ -68,6 +68,6 @@ Cela me permet de séparer le monde des fonctions pures de celui des fonctions q
 
 Ça fonctionne assez bien avec React ;). Je gère le bootstrap de l'application avec et, par exemple, je peux remplacer des services par d'autres de mock pour mon React storybook.
 
-Grâce à mon ex-collègue et ami [Sébastien Elet](https://twitter.com/SebastienElet), j'ai découvert [mermaid](https://github.com/knsv/mermaid) un outil permettant de générer des graphes. Pour améliorer encore cette vision macroscopique de l'architecture de mes applications, j'ai ajouté à Knifecycle une fonction d'export qui me permet de générer des graphes de dépendances comme celui que vous avez pu apercevoir dans le fichier d'architecture de jsarch ou dans le tweet suivant avec des exemple issus des applications que je crée pour 7Digital.
+Grâce à mon ex-collègue et ami [Sébastien Elet](https://github.com/sebastienelet), j'ai découvert [mermaid](https://github.com/knsv/mermaid) un outil permettant de générer des graphes. Pour améliorer encore cette vision macroscopique de l'architecture de mes applications, j'ai ajouté à Knifecycle une fonction d'export qui me permet de générer des graphes de dépendances comme celui que vous avez pu apercevoir dans le fichier d'architecture de jsarch ou dans le tweet suivant avec des exemple issus des applications que je crée pour 7Digital.
 
 Voilà ! Si vous avez d'autres astuces pour documenter son code JavaScript comme un as, je suis clairement preneur !

@@ -49,6 +49,6 @@ Côté technos, c'est 100% HTML5 pour la partie dont je me suis occupé. L'appli
 
 Toss s'est occupé de l'application mobile pour Windows Phone 7, pour la version Windows 8, on ne sait pas encore si on va utiliser la version HTML5 ou si on va rester sur du natif.
 
-Enfin, j'ai codé la partie serveur grâce à Node JS. C'est la deuxième fois que je l'[utilise lors d'un hackathon](./orange_hackaton "Voir l'article sur le hackathon Orange"), il faut dire que Node se prête parfaitement à l'exercice vu la rapidité de développement et la souplesse qu'il offre. Contrairement au dernier hackathon, cette application aura une vie par la suite puisque je l'ai proposée sur le ~~Chrome Web Store~~ ([désormais retiré par Google](https://twitter.com/nfroidure/status/571987728352612352 "Voir pourquoi")) et sur le Mozilla Marketplace (n'existe plus).
+Enfin, j'ai codé la partie serveur grâce à Node JS. C'est la deuxième fois que je l'[utilise lors d'un hackathon](./orange_hackaton "Voir l'article sur le hackathon Orange"), il faut dire que Node se prête parfaitement à l'exercice vu la rapidité de développement et la souplesse qu'il offre. Contrairement au dernier hackathon, cette application aura une vie par la suite puisque je l'ai proposée sur le ~~Chrome Web Store~~ (désormais retiré par Google) et sur le Mozilla Marketplace (n'existe plus).
 
 Bref, si je suis de nouveau dispo lors du prochain hackathon, c'est plutôt deux fois qu'une que je m'y rendrai.
