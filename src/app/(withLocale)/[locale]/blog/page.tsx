@@ -18,19 +18,15 @@ import { getDictionary } from "../../../../dictionary";
 export type Props = BasePagingPageMetadata<BlogPost>;
 
 const PARAMS_DEFINITIONS = {
-  page: {
-    type: "number",
-    mode: "unique",
-  },
+  page: { type: "number", mode: "unique" },
 } as const;
 
 type Params = BuildQueryParamsType<typeof PARAMS_DEFINITIONS>;
 
-export async function generateMetadata({
-  params,
-}: {
-  params?: { locale: Locale; page: string };
+export async function generateMetadata(props: {
+  params?: Promise<{ locale: Locale; page: string }>;
 }): Promise<Metadata> {
+  const params = await props.params;
   const locale = params?.locale || i18n.defaultLocale;
   const page = params?.page || 1;
   const dictionary = await getDictionary(locale);
@@ -60,11 +56,10 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({
-  params,
-}: {
-  params: { locale: Locale; page: string };
+export default async function Page(props: {
+  params: Promise<{ locale: Locale; page: string }>;
 }) {
+  const params = await props.params;
   const locale = params?.locale || i18n.defaultLocale;
   const dictionary = await getDictionary(locale);
   const castedParams = readParams(PARAMS_DEFINITIONS, params || {}) as Params;

@@ -21,24 +21,17 @@ type PageFrontmatterMetadata = {
   title: string;
   description: string;
   author: string;
-  illustration?: {
-    url: string;
-    alt: string;
-  };
+  illustration?: { url: string; alt: string };
 };
 type Entry = {
   id: string;
   content: MarkdownRootNode;
 } & PageFrontmatterMetadata;
 
-export async function generateMetadata({
-  params,
-}: {
-  params: {
-    locale?: Locale;
-    slug?: string[];
-  };
+export async function generateMetadata(props: {
+  params: Promise<{ locale?: Locale; slug?: string[] }>;
 }) {
+  const params = await props.params;
   const locale = params.locale || i18n.defaultLocale;
   const slug = params.slug || [];
   const entry = await parsePage([locale, ...slug]);
@@ -59,14 +52,10 @@ export async function generateMetadata({
   });
 }
 
-export default async function Page({
-  params,
-}: {
-  params: {
-    locale?: Locale;
-    slug: string[];
-  };
+export default async function Page(props: {
+  params: Promise<{ locale?: Locale; slug: string[] }>;
 }) {
+  const params = await props.params;
   const locale = params.locale || i18n.defaultLocale;
   const slug = params.slug || [];
   const dictionary = await getDictionary(locale);
@@ -93,7 +82,7 @@ async function parsePage(slug: string[] = []): Promise<Entry> {
 
   try {
     result = await readEntry<PageFrontmatterMetadata>(path + ".md");
-  } catch (err) {
+  } catch {
     result = await readEntry<PageFrontmatterMetadata>(path + "/index.md");
   }
   return {
@@ -103,11 +92,10 @@ async function parsePage(slug: string[] = []): Promise<Entry> {
   };
 }
 
-export async function generateStaticParams({
-  params,
-}: {
-  params: { locale: Locale };
+export async function generateStaticParams(props: {
+  params: Promise<{ locale: Locale }>;
 }) {
+  const params = await props.params;
   const base = pathJoin(".", "contents", "pages", params.locale);
   const paths = (await readDirDeep(`${base}/*.md`))
     .filter((path) => !path.startsWith("index"))

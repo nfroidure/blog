@@ -6,11 +6,10 @@ import buildMetadata from "../../../utils/metadata";
 import { i18n, type Locale } from "../../../i18n-config";
 import { getDictionary } from "../../../dictionary";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: Locale };
+export async function generateMetadata(props: {
+  params: Promise<{ locale: Locale }>;
 }) {
+  const params = await props.params;
   const locale = params?.locale || i18n.defaultLocale;
   const dictionary = await getDictionary(locale);
 
@@ -25,9 +24,9 @@ export async function generateMetadata({
 export default async function NotFound({
   params,
 }: {
-  params: { locale: Locale };
+  params: Promise<{ locale: Locale }>;
 }) {
-  const locale = params?.locale || i18n.defaultLocale;
+  const locale = (await params)?.locale || i18n.defaultLocale;
   const dictionary = await getDictionary(locale);
 
   return (

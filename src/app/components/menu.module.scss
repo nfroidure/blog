@@ -1,4 +1,4 @@
-@import "../variables.scss";
+@use "../variables.scss";
 
 .iaMenu {
   grid-area: menu;
@@ -41,7 +41,7 @@
   content: ">\a0";
 }
 
-@media screen and (min-width: $CSS_BREAKPOINT_START_M) {
+@media screen and (min-width: variables.$CSS_BREAKPOINT_START_M) {
   .iaMenu {
     line-height: calc(var(--vRhythm) * 3);
     text-align: center;
@@ -63,7 +63,7 @@
   }
 }
 
-@media screen and (min-width: $CSS_BREAKPOINT_START_L) {
+@media screen and (min-width: variables.$CSS_BREAKPOINT_START_L) {
   .iaMenuBody {
     max-width: calc(var(--gutter) * var(--maxWritingsWidth));
     margin: 0 auto;

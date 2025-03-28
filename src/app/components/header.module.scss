@@ -1,4 +1,4 @@
-@import "../variables.scss";
+@use "../variables.scss";
 
 .iaHeader {
   grid-area: header;
@@ -13,7 +13,7 @@
   margin: calc(var(--vRhythm) / 2) auto;
 }
 
-@media screen and (min-width: $CSS_BREAKPOINT_START_L) {
+@media screen and (min-width: variables.$CSS_BREAKPOINT_START_L) {
   .iaHeaderLogo img {
     height: calc(var(--vRhythm) * 4);
     margin: var(--vRhythm) auto;

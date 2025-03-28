@@ -11,25 +11,26 @@
   },
   "dependencies": {
     "front-matter": "^4.0.2",
-    "glob": "^10.3.10",
-    "inline-style-prefixer": "^7.0.0",
-    "next": "14.0.4",
-    "prettier": "^3.2.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "glob": "^11.0.1",
+    "inline-style-prefixer": "^7.0.1",
+    "next": "15.2.4",
+    "prettier": "^3.5.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "remark-parse": "^11.0.0",
-    "sass": "^1.69.7",
+    "sass": "^1.86.0",
     "server-only": "0.0.1",
-    "unified": "^11.0.4",
-    "yaml": "^2.3.4",
+    "unified": "11.0.5",
+    "yaml": "2.7.0",
     "yerror": "^8.0.0"
   },
   "devDependencies": {
-    "@types/inline-style-prefixer": "^5.0.3",
-    "@types/node": "^20.11.0",
-    "@types/react": "^18.2.47",
-    "@types/react-dom": "^18.2.18",
-    "tsx": "^4.7.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.4",
+    "@eslint/eslintrc": "^3"
   }
 }

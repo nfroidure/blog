@@ -1,4 +1,4 @@
-@import "../../../../variables.scss";
+@use "../../../../variables.scss";
 
 .entries .entry_item {
   padding: var(--vRhythm) 0 calc(var(--vRhythm) - var(--border)) 0;
@@ -25,7 +25,7 @@
   font-size: var(--smallFontSize);
 }
 
-@media screen and (min-width: $CSS_BREAKPOINT_START_L) {
+@media screen and (min-width: variables.$CSS_BREAKPOINT_START_L) {
   .clear {
     clear: left;
   }

@@ -30,12 +30,13 @@ export async function generateStaticParams() {
 
 export default async function Root({
   children,
-  params,
+  ...props
 }: {
   children: React.ReactNode;
-  params: { locale?: Locale };
+  params: Promise<{ locale?: Locale }>;
 }) {
-  const locale = params.locale || i18n.defaultLocale;
+  const params = await props.params;
+  const locale = (await params).locale || i18n.defaultLocale;
   const dictionary = await getDictionary(locale);
 
   return (

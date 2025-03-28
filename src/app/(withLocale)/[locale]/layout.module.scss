@@ -1,4 +1,4 @@
-@import "../../variables.scss";
+@use "../../variables.scss";
 
 .body {
   font-display: fallback;
@@ -19,7 +19,7 @@
   grid-template-columns: 3fr 1fr;
 }
 
-@media screen and (min-width: $CSS_BREAKPOINT_START_L) {
+@media screen and (min-width: variables.$CSS_BREAKPOINT_START_L) {
   .body {
     grid-template-columns: 1fr 1fr;
   }
@@ -38,12 +38,12 @@
   margin: 0 auto;
 }
 
-@media screen and (min-width: $CSS_BREAKPOINT_START_L) {
+@media screen and (min-width: variables.$CSS_BREAKPOINT_START_L) {
   .iaMain > div {
     padding: calc(var(--vRhythm) * 2) var(--gutter);
   }
 }
-@media screen and (min-width: $CSS_BREAKPOINT_START_XL) {
+@media screen and (min-width: variables.$CSS_BREAKPOINT_START_XL) {
   .iaMain > div {
     padding: calc(var(--vRhythm) * 3) var(--gutter);
   }

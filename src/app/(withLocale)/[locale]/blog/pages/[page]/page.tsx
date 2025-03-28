@@ -11,11 +11,10 @@ import { type Locale } from "../../../../../../i18n-config";
 export { generateMetadata };
 export default Page;
 
-export async function generateStaticParams({
-  params,
-}: {
-  params: { locale: Locale };
+export async function generateStaticParams(props: {
+  params: Promise<{ locale: Locale }>;
 }) {
+  const params = await props.params;
   const baseListingMetadata = entriesToBaseListingMetadata(
     await readEntries<BlogPostFrontmatterMetadata>(
       pathJoin(".", "contents", "blog", params.locale)

@@ -20,11 +20,10 @@ import { Fragment } from "react";
 import { i18n, type Locale } from "../../../../../i18n-config";
 import { getDictionary } from "../../../../../dictionary";
 
-export async function generateMetadata({
-  params,
-}: {
-  params?: { locale: Locale; id: string };
+export async function generateMetadata(props: {
+  params?: Promise<{ locale: Locale; id: string }>;
 }) {
+  const params = await props.params;
   const locale = params?.locale || i18n.defaultLocale;
   const baseListingMetadata = entriesToBaseListingMetadata(
     await readEntries<BlogPostFrontmatterMetadata>(
@@ -60,11 +59,10 @@ export async function generateMetadata({
   });
 }
 
-export default async function Page({
-  params,
-}: {
-  params: { locale: Locale; id: string };
+export default async function Page(props: {
+  params: Promise<{ locale: Locale; id: string }>;
 }) {
+  const params = await props.params;
   const locale = params?.locale || i18n.defaultLocale;
   const dictionary = await getDictionary(locale);
   const baseListingMetadata = entriesToBaseListingMetadata(

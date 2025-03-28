@@ -6,13 +6,13 @@ import ContentPage, {
   generateMetadata as contentGenerateMetadata,
 } from "../../(withLocale)/[locale]/[...slug]/page";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: {
+export async function generateMetadata(props: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 }) {
+  const params = await props.params;
+
   // Temporary redirection
   if (params.locale.startsWith("articles-")) {
     return articleGenerateMetadata({
@@ -38,13 +38,13 @@ export async function generateMetadata({
   });
 }
 
-export default async function Page({
-  params,
-}: {
-  params: {
+export default async function Page(props: {
+  params: Promise<{
     locale: string;
-  };
+  }>;
 }) {
+  const params = await props.params;
+
   // Temporary redirection
   if (params.locale.startsWith("articles-")) {
     return ArticlePage({
