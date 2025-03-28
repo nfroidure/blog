@@ -3,7 +3,7 @@
 import { useGridScroll } from "../../hooks/useGridScroll";
 import styles from "./_gridSystem.module.scss";
 
-export default function GridSystem(): JSX.Element {
+export default function GridSystem() {
   useGridScroll("rhythm");
 
   return (

@@ -17,7 +17,7 @@ export default function Share({
   url: string;
   title: string;
   dictionary: Dictionary["share"];
-}): JSX.Element {
+}) {
   return (
     <aside className={styles.root}>
       <Heading2>{dictionary.title}</Heading2>

@@ -7,86 +7,72 @@ import ContentPage, {
 } from "../../(withLocale)/[locale]/[...slug]/page";
 
 export async function generateMetadata(props: {
-  params: Promise<{
-    locale: string;
-  }>;
+  params: Promise<{ locale: string }>;
 }) {
   const params = await props.params;
 
   // Temporary redirection
   if (params.locale.startsWith("articles-")) {
     return articleGenerateMetadata({
-      params: {
+      params: Promise.resolve({
         locale: "fr",
         id: params.locale.replace(/^articles\-/, ""),
-      },
+      }),
     });
   }
   if (params.locale.startsWith("blog-")) {
     return articleGenerateMetadata({
-      params: {
+      params: Promise.resolve({
         locale: "en",
         id: params.locale.replace(/^blog\-/, ""),
-      },
+      }),
     });
   }
 
   return contentGenerateMetadata({
-    params: {
-      locale: params.locale === "fr" ? "fr" : "en",
-    },
+    params: Promise.resolve({ locale: params.locale === "fr" ? "fr" : "en" }),
   });
 }
 
 export default async function Page(props: {
-  params: Promise<{
-    locale: string;
-  }>;
+  params: Promise<{ locale: string }>;
 }) {
   const params = await props.params;
 
   // Temporary redirection
   if (params.locale.startsWith("articles-")) {
     return ArticlePage({
-      params: {
+      params: Promise.resolve({
         locale: "fr",
         id: params.locale.replace(/^articles\-/, ""),
-      },
+      }),
     });
   }
   if (params.locale.startsWith("blog-")) {
     return ArticlePage({
-      params: {
+      params: Promise.resolve({
         locale: "en",
         id: params.locale.replace(/^blog\-/, ""),
-      },
+      }),
     });
   }
 
   return ContentPage({
-    params: {
+    params: Promise.resolve({
       locale: params.locale === "fr" ? "fr" : "en",
       slug: [],
-    },
+    }),
   });
 }
 
 export async function generateStaticParams() {
   // Temporary redirection
   const enArticlePaths = (
-    await articleGenerateStaticParams({
-      params: { locale: "en" },
-    })
-  ).map(({ id }) => ({
-    locale: `blog-${id}`,
-  }));
+    await articleGenerateStaticParams({ params: { locale: "en" } })
+  ).map(({ id }) => ({ locale: `blog-${id}` }));
   const frArticlePaths = (
-    await articleGenerateStaticParams({
-      params: { locale: "fr" },
-    })
-  ).map(({ id }) => ({
-    locale: `articles-${id}`,
-  }));
+    await articleGenerateStaticParams({ params: { locale: "fr" } })
+  ).map(({ id }) => ({ locale: `articles-${id}` }));
 
   return enArticlePaths
     .concat(frArticlePaths)

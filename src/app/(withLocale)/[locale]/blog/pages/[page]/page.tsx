@@ -22,7 +22,7 @@ export async function generateStaticParams(props: {
   );
 
   const { title, description } = await generateMetadata({
-    params: { locale: params.locale, page: "1" },
+    params: Promise.resolve({ locale: params.locale, page: "1" }),
   });
 
   // WARNING: This is not a nice way to generate the feeds
