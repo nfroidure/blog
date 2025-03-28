@@ -15,8 +15,10 @@ export default function createUseOnClickOutside(
         HTMLElement | null,
         React.Dispatch<React.SetStateAction<HTMLElement | null>>,
       ]
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     > = new Array(nbRef).fill("").map(() => useState<HTMLElement | null>(null));
     const arrayNodeRef: Array<React.MutableRefObject<HTMLElement | null>> =
+      // eslint-disable-next-line react-hooks/rules-of-hooks
       new Array(nbRef).fill("").map((_, index) => useRef(arrayNode[index][0]));
     const arrayRef: Array<(node: HTMLElement) => void> = new Array(nbRef)
       .fill("")
@@ -28,6 +30,7 @@ export default function createUseOnClickOutside(
           setNode(node);
         };
 
+        // eslint-disable-next-line react-hooks/rules-of-hooks
         const ref = useCallback((node: HTMLElement | null) => {
           _setNode(node);
         }, []);

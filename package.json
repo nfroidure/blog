@@ -7,7 +7,8 @@
     "start": "next start",
     "types": "tsc --pretty --noEmit",
     "tootNewPosts": "tsx bin/tootNewPosts.ts",
-    "format": "prettier --write contents src"
+    "format": "prettier --write contents src",
+    "lint": "next lint"
   },
   "dependencies": {
     "front-matter": "^4.0.2",

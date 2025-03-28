@@ -32,18 +32,12 @@ import SlidesDotCom from "../app/components/slidesDotCom";
 import { type ReactNode } from "react";
 import type { ImageFloating, ImageOrientation } from "../app/components/img";
 
-export type MarkdownRootNode = {
-  type: "root";
-  children: MarkdownNode[];
-};
+export type MarkdownRootNode = { type: "root"; children: MarkdownNode[] };
 export type MarkdownParagraphNode = {
   type: "paragraph";
   children: MarkdownNode[];
 };
-export type MarkdownTextNode = {
-  type: "text";
-  value: "string";
-};
+export type MarkdownTextNode = { type: "text"; value: "string" };
 export type MarkdownBoldNode = {
   type: "bold" | "strong";
   value: "string";
@@ -54,14 +48,8 @@ export type MarkdownEmphasisNode = {
   value: "string";
   children: MarkdownNode[];
 };
-export type MarkdownInlineCodeNode = {
-  type: "inlineCode";
-  value: string;
-};
-export type MarkdownCodeNode = {
-  type: "code";
-  value: string;
-};
+export type MarkdownInlineCodeNode = { type: "inlineCode"; value: string };
+export type MarkdownCodeNode = { type: "code"; value: string };
 export type MarkdownHeadingNode = {
   type: "heading";
   depth: 1 | 2 | 3 | 4 | 5 | 6;
@@ -82,18 +70,14 @@ export type MarkdownBlockquoteNode = {
   type: "blockquote";
   children: MarkdownNode[];
 };
-export type MarkdownHRNode = {
-  type: "thematicBreak";
-};
+export type MarkdownHRNode = { type: "thematicBreak" };
 export type MarkdownImageNode = {
   type: "image";
   url: string;
   alt: string;
   title: string;
 };
-export type MarkdownBreakNode = {
-  type: "break";
-};
+export type MarkdownBreakNode = { type: "break" };
 export type MarkdownLinkNode = {
   type: "link";
   url: string;
@@ -126,27 +110,24 @@ export type MarkdownNodeType = MarkdownNode["type"];
 export type MappingContext = { index: number };
 export type NodeToElementMapper<T extends MarkdownNode> = (
   context: MappingContext,
-  node: T,
+  node: T
 ) => ReactNode;
 
 const rootMap: NodeToElementMapper<MarkdownRootNode> = (
   context: MappingContext,
-  node,
+  node
 ) =>
   node.children.map((node, index) =>
-    renderMarkdown({ ...context, index }, node),
+    renderMarkdown({ ...context, index }, node)
   );
 const paragraphMap: NodeToElementMapper<MarkdownParagraphNode> = (
   context: MappingContext,
-  node,
+  node
 ) => {
   const { onlyImages, images } = node.children.reduce(
     (summary, childNode) => {
       if (childNode.type === "image") {
-        return {
-          ...summary,
-          images: [...summary.images, childNode],
-        };
+        return { ...summary, images: [...summary.images, childNode] };
       }
       if (
         childNode.type === "text" &&
@@ -154,15 +135,9 @@ const paragraphMap: NodeToElementMapper<MarkdownParagraphNode> = (
       ) {
         return summary;
       }
-      return {
-        ...summary,
-        onlyImages: false,
-      };
+      return { ...summary, onlyImages: false };
     },
-    {
-      images: [] as MarkdownImageNode[],
-      onlyImages: node.children.length > 0,
-    },
+    { images: [] as MarkdownImageNode[], onlyImages: node.children.length > 0 }
   );
 
   if (onlyImages === true) {
@@ -178,14 +153,14 @@ const paragraphMap: NodeToElementMapper<MarkdownParagraphNode> = (
   return (
     <Paragraph key={context.index}>
       {node.children.map((node, index) =>
-        renderMarkdown({ ...context, index }, node),
+        renderMarkdown({ ...context, index }, node)
       )}
     </Paragraph>
   );
 };
 const headingMap: NodeToElementMapper<MarkdownHeadingNode> = (
   context: MappingContext,
-  node,
+  node
 ) => {
   const HeadingComponent =
     node.depth === 1
@@ -203,14 +178,14 @@ const headingMap: NodeToElementMapper<MarkdownHeadingNode> = (
   return node.depth === 1 ? (
     <HeadingComponent key={context.index}>
       {node.children.map((node, index) =>
-        renderMarkdown({ ...context, index }, node),
+        renderMarkdown({ ...context, index }, node)
       )}
     </HeadingComponent>
   ) : (
     <HeadingComponent key={context.index}>
       <Anchored id={toASCIIString(collectMarkdownText(node))}>
         {node.children.map((node, index) =>
-          renderMarkdown({ ...context, index }, node),
+          renderMarkdown({ ...context, index }, node)
         )}
       </Anchored>
     </HeadingComponent>
@@ -222,27 +197,27 @@ const textMap: NodeToElementMapper<MarkdownTextNode> = (context, node) => (
 const boldMap: NodeToElementMapper<MarkdownEmphasisNode> = (context, node) => (
   <Strong key={context.index}>
     {node.children.map((node, index) =>
-      renderMarkdown({ ...context, index }, node),
+      renderMarkdown({ ...context, index }, node)
     )}
   </Strong>
 );
 const emphasisMap: NodeToElementMapper<MarkdownEmphasisNode> = (
   context,
-  node,
+  node
 ) => (
   <Emphasis key={context.index}>
     {node.children.map((node, index) =>
-      renderMarkdown({ ...context, index }, node),
+      renderMarkdown({ ...context, index }, node)
     )}
   </Emphasis>
 );
 const inlineCodeMap: NodeToElementMapper<MarkdownInlineCodeNode> = (
   context,
-  node,
+  node
 ) => <InlineCode key={context.index}>{node.value}</InlineCode>;
 const codeMap: NodeToElementMapper<MarkdownCodeNode> = (context, node) => {
   const gist = node.value.match(
-    /^(?:\/\/|#|\/\*) From the Gist:\s+https:\/\/gist.github.com\/(\w+)\/(\w+)/,
+    /^(?:\/\/|#|\/\*) From the Gist:\s+https:\/\/gist.github.com\/(\w+)\/(\w+)/
   );
 
   if (gist) {
@@ -257,28 +232,28 @@ const codeMap: NodeToElementMapper<MarkdownCodeNode> = (context, node) => {
 };
 const listMap: NodeToElementMapper<MarkdownListNode> = (
   context: MappingContext,
-  node,
+  node
 ) =>
   node.ordered ? (
     <OrderedList key={context.index}>
       {node.children.map((node, index) =>
-        renderMarkdown({ ...context, index }, node),
+        renderMarkdown({ ...context, index }, node)
       )}
     </OrderedList>
   ) : (
     <UnorderedList key={context.index}>
       {node.children.map((node, index) =>
-        renderMarkdown({ ...context, index }, node),
+        renderMarkdown({ ...context, index }, node)
       )}
     </UnorderedList>
   );
 const listItemMap: NodeToElementMapper<MarkdownListItemNode> = (
   context: MappingContext,
-  node,
+  node
 ) => (
   <ListItem key={context.index}>
     {node.children.map((node, index) =>
-      renderMarkdown({ ...context, index }, node),
+      renderMarkdown({ ...context, index }, node)
     )}
   </ListItem>
 );
@@ -290,18 +265,18 @@ const breakMap: NodeToElementMapper<MarkdownBreakNode> = (context) => (
 );
 const htmlMap: NodeToElementMapper<MarkdownHTMLNode> = (
   context: MappingContext,
-  node,
+  node
 ) =>
   node.value === "cite" ? (
     <Cite key={context.index}>
       {(node.children || []).map((node, index) =>
-        renderMarkdown({ ...context, index }, node),
+        renderMarkdown({ ...context, index }, node)
       )}
     </Cite>
   ) : null;
 const blockquoteMap: NodeToElementMapper<MarkdownBlockquoteNode> = (
   context,
-  node,
+  node
 ) => {
   const lastNode = node.children[node.children.length - 1];
   const linkNode =
@@ -312,7 +287,7 @@ const blockquoteMap: NodeToElementMapper<MarkdownBlockquoteNode> = (
     return (
       <TootQuote url={linkNode.url} key={context.index}>
         {node.children.map((node, index) =>
-          renderMarkdown({ ...context, index }, node),
+          renderMarkdown({ ...context, index }, node)
         )}
       </TootQuote>
     );
@@ -320,7 +295,7 @@ const blockquoteMap: NodeToElementMapper<MarkdownBlockquoteNode> = (
   return (
     <Blockquote key={context.index}>
       {node.children.map((node, index) =>
-        renderMarkdown({ ...context, index }, node),
+        renderMarkdown({ ...context, index }, node)
       )}
     </Blockquote>
   );
@@ -346,7 +321,7 @@ const hyperlinkMap: NodeToElementMapper<MarkdownLinkNode> = (context, node) => {
         key={context.index}
       >
         {node.children.map((node, index) =>
-          renderMarkdown({ ...context, index }, node),
+          renderMarkdown({ ...context, index }, node)
         )}
       </Anchor>
     </SlidesDotCom>
@@ -373,13 +348,13 @@ const hyperlinkMap: NodeToElementMapper<MarkdownLinkNode> = (context, node) => {
   ) : (
     <Anchor href={node.url} title={node.title} key={context.index}>
       {node.children.map((node, index) =>
-        renderMarkdown({ ...context, index }, node),
+        renderMarkdown({ ...context, index }, node)
       )}
     </Anchor>
   );
 };
 
-const elementsMapping: Record<MarkdownNodeType, NodeToElementMapper<any>> = {
+const elementsMapping = {
   root: rootMap,
   paragraph: paragraphMap,
   heading: headingMap,
@@ -397,7 +372,7 @@ const elementsMapping: Record<MarkdownNodeType, NodeToElementMapper<any>> = {
   bold: boldMap,
   strong: boldMap,
   html: htmlMap,
-};
+} as Record<MarkdownNodeType, NodeToElementMapper<MarkdownNode>>;
 
 export function parseMarkdown(input: string): MarkdownNode {
   return unified().use(remarkParse).parse(input) as unknown as MarkdownNode;
@@ -405,7 +380,7 @@ export function parseMarkdown(input: string): MarkdownNode {
 
 export function renderMarkdown<T extends MappingContext>(
   context: T,
-  node: MarkdownNode,
+  node: MarkdownNode
 ): ReactNode {
   if ("children" in node) {
     node = eventuallyConvertHTMLNodes(node as MarkdownRootNode);
@@ -422,7 +397,7 @@ export function renderMarkdown<T extends MappingContext>(
 
 export function collectMarkdownText(
   node: MarkdownNode,
-  str: string = "",
+  str: string = ""
 ): string {
   if ("children" in node) {
     str += (node.children || [])
@@ -441,7 +416,7 @@ function eventuallyConvertHTMLNodes(rootNode: MarkdownRootNode): MarkdownNode {
   let firstHTMLNode: MarkdownHTMLNode | undefined;
   do {
     firstHTMLNode = rootNode.children.find(
-      (node) => node.type === "html" && node.value.startsWith("<"),
+      (node) => node.type === "html" && node.value.startsWith("<")
     ) as MarkdownHTMLNode;
 
     if (typeof firstHTMLNode !== "undefined") {
@@ -483,7 +458,7 @@ function eventuallyConvertHTMLNodes(rootNode: MarkdownRootNode): MarkdownNode {
       }
 
       const correspondingHTMLNodeIndex = rootNode.children.indexOf(
-        correspondingHTMLNode,
+        correspondingHTMLNode
       );
 
       rootNode = {
@@ -499,14 +474,14 @@ function eventuallyConvertHTMLNodes(rootNode: MarkdownRootNode): MarkdownNode {
               firstHTMLNodeIndex < correspondingHTMLNodeIndex - 1
                 ? rootNode.children.slice(
                     firstHTMLNodeIndex + 1,
-                    correspondingHTMLNodeIndex,
+                    correspondingHTMLNodeIndex
                   )
                 : [],
           },
           ...(correspondingHTMLNodeIndex < rootNode.children.length - 1
             ? rootNode.children.slice(
                 correspondingHTMLNodeIndex + 1,
-                rootNode.children.length,
+                rootNode.children.length
               )
             : []),
         ],
@@ -538,12 +513,7 @@ function parseImageProps(node: MarkdownImageNode): {
       : "landscape";
   const src = qualifyPath(node.url);
 
-  return {
-    title,
-    float,
-    orientation,
-    src,
-  };
+  return { title, float, orientation, src };
 }
 
 // Change VSCode autocompleted paths to URLs
